@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Me - Professional Portfolio | Rabiu S.M.</title>
-  <meta name="description" content="Learn about Rabiu S.M., a passionate software engineering student and developer with expertise in modern web technologies, software development, and innovative solutions.">
-  <meta name="keywords" content="software engineer, web developer, full-stack developer, software development, portfolio, about me, technology expert">
+  <meta name="description" content="Rabiu S.M. - Software Systems Engineer & Mobile Application Developer specializing in scalable mobile solutions, cross-platform development, and enterprise mobile architectures.">
+  <meta name="keywords" content="software systems engineer, mobile application developer, iOS developer, Android developer, cross-platform development, mobile architecture, flutter developer, react native, mobile devops">
   
   <!-- Favicons -->
   <link href="assets/img/favicon.png" rel="icon">
@@ -31,7 +31,13 @@
             accent: '#022b46',
             light: '#f8f9fa',
             dark: '#343a40',
-            success: '#27ae60'
+            success: '#27ae60',
+            mobile: {
+              ios: '#007AFF',
+              android: '#3DDC84',
+              flutter: '#02569B',
+              react: '#61DAFB'
+            }
           },
           fontFamily: {
             'roboto': ['Roboto', 'sans-serif'],
@@ -42,7 +48,8 @@
             'fade-in': 'fadeIn 0.8s ease-in-out',
             'slide-up': 'slideUp 0.8s ease-out',
             'slide-down': 'slideDown 0.3s ease-out',
-            'slide-in-left': 'slideInLeft 0.3s ease-out'
+            'slide-in-left': 'slideInLeft 0.3s ease-out',
+            'bounce-slow': 'bounce 3s infinite'
           },
           keyframes: {
             fadeIn: {
@@ -207,6 +214,53 @@
     .progress-bar {
       animation: fillProgress 1.5s ease-out forwards;
     }
+
+    /* Mobile development tech badges */
+    .tech-badge {
+      display: inline-flex;
+      align-items: center;
+      padding: 0.25rem 0.75rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin: 0.25rem;
+    }
+    
+    .tech-badge.ios {
+      background-color: rgba(0, 122, 255, 0.1);
+      color: #007AFF;
+      border: 1px solid rgba(0, 122, 255, 0.2);
+    }
+    
+    .tech-badge.android {
+      background-color: rgba(61, 220, 132, 0.1);
+      color: #3DDC84;
+      border: 1px solid rgba(61, 220, 132, 0.2);
+    }
+    
+    .tech-badge.flutter {
+      background-color: rgba(2, 86, 155, 0.1);
+      color: #02569B;
+      border: 1px solid rgba(2, 86, 155, 0.2);
+    }
+    
+    .tech-badge.react {
+      background-color: rgba(97, 218, 251, 0.1);
+      color: #61DAFB;
+      border: 1px solid rgba(97, 218, 251, 0.2);
+    }
+    
+    .tech-badge.firebase {
+      background-color: rgba(255, 202, 40, 0.1);
+      color: #FFCA28;
+      border: 1px solid rgba(255, 202, 40, 0.2);
+    }
+    
+    .tech-badge.aws {
+      background-color: rgba(255, 153, 0, 0.1);
+      color: #FF9900;
+      border: 1px solid rgba(255, 153, 0, 0.2);
+    }
   </style>
 </head>
 <body class="bg-gray-50 font-roboto">
@@ -228,8 +282,8 @@
                  class="w-full h-full object-cover">
           </div>
           <h2 class="text-lg font-bold">Rabiu S.M.</h2>
-          <p class="text-white/70 text-sm mt-1">Software System Engineer</p>
-          <p class="text-white/70 text-sm mt-1">(Mobile App Developer)</p>
+          <p class="text-white/70 text-sm mt-1">Software Systems Engineer</p>
+          <p class="text-white/70 text-sm mt-1">(Mobile Application Developer)</p>
         </div>
       </div>
       
@@ -337,10 +391,24 @@
       <div class="absolute inset-0 bg-gradient-to-r from-primary/90 to-secondary/90"></div>
       <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto text-center animate-fade-in">
-          <h1 class="text-4xl md:text-6xl font-bold mb-6 font-poppins">Crafting Digital Excellence</h1>
+          <h1 class="text-4xl md:text-6xl font-bold mb-6 font-poppins">Architecting Mobile Excellence</h1>
           <p class="text-xl md:text-2xl opacity-90 font-raleway">
-            Software System Engineer | Full-Stack Developer | Mobile App Developer
+            Software Systems Engineer | Mobile Application Developer | Cross-Platform Specialist
           </p>
+          <div class="mt-8 flex flex-wrap justify-center gap-3">
+            <span class="tech-badge ios">
+              <i class="bi bi-phone mr-1"></i> iOS Development
+            </span>
+            <span class="tech-badge android">
+              <i class="bi bi-phone-fill mr-1"></i> Android Development
+            </span>
+            <span class="tech-badge flutter">
+              <i class="bi bi-app-indicator mr-1"></i> Flutter
+            </span>
+            <span class="tech-badge react">
+              <i class="bi bi-braces mr-1"></i> React Native
+            </span>
+          </div>
         </div>
       </div>
     </section>
@@ -355,7 +423,7 @@
                 <img src="assets/img/rsmm.jpeg" alt="Rabiu S.M." class="w-full h-full object-cover">
               </div>
               <div class="absolute bottom-2 right-2 md:bottom-4 md:right-4 w-10 h-10 md:w-12 md:h-12 bg-success text-white rounded-full flex items-center justify-center border-4 border-white shadow-lg">
-                <i class="bi bi-award text-lg"></i>
+                <i class="bi bi-phone text-lg"></i>
               </div>
             </div>
             
@@ -363,10 +431,10 @@
             <p class="text-lg text-gray-600 mb-6">Bachelor of Information Technology (Software Engineering)</p>
             
             <div class="flex flex-wrap justify-center gap-3 mb-8">
-              <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-medium">Full-Stack Developer</span>
-              <span class="px-4 py-2 bg-success/10 text-success rounded-full font-medium">Mobile Apps Dev Specialist</span>
-              <span class="px-4 py-2 bg-accent/10 text-accent rounded-full font-medium">Problem Solver</span>
-              <span class="px-4 py-2 bg-secondary/10 text-secondary rounded-full font-medium">Lifelong Learner</span>
+              <span class="px-4 py-2 bg-primary/10 text-primary rounded-full font-medium">Mobile Systems Engineer</span>
+              <span class="px-4 py-2 bg-success/10 text-success rounded-full font-medium">Cross-Platform Developer</span>
+              <span class="px-4 py-2 bg-mobile-ios/10 text-mobile-ios rounded-full font-medium">iOS & Android</span>
+              <span class="px-4 py-2 bg-secondary/10 text-secondary rounded-full font-medium">Cloud Mobile Architect</span>
             </div>
           </div>
           
@@ -374,17 +442,30 @@
             <h3 class="text-2xl font-bold text-secondary mb-6 relative section-title font-poppins">Professional Summary</h3>
             <div class="space-y-4 text-gray-700">
               <p class="text-lg leading-relaxed">
-                I am a dedicated Software Engineer with a passion for creating innovative digital solutions that bridge technology and human needs. My journey in software development is driven by a relentless curiosity and commitment to excellence.  With a solid foundation in computer science principles and hands-on experience across multiple technology stacks, I specialized in developing responsive web and Mobile applications, scalable backend systems, and user-centric digital experiences. My approach combines technical expertise with creative problem-solving to deliver solutions that exceed expectations.
+                I am a dedicated <strong class="text-primary">Software Systems Engineer</strong> specializing in <strong class="text-success">Mobile Application Development</strong>, with expertise in architecting and building scalable, high-performance mobile solutions across iOS, Android, and cross-platform frameworks. My focus is on creating robust mobile architectures that balance user experience with system performance, security, and maintainability.
               </p>
               <p class="leading-relaxed">
-               
+                With extensive experience in <span class="tech-badge flutter inline-flex">Flutter</span>, <span class="tech-badge react inline-flex">React Native</span>, native iOS (Swift) and Android (Kotlin) development, I design mobile systems that serve millions of users while maintaining exceptional performance. My approach combines systems thinking with mobile-first design principles to deliver solutions that are both technically sophisticated and user-centric.
               </p>
               <p class="leading-relaxed">
-                Currently advancing my academic journey in Software Engineering, I actively engage in projects that challenge conventional thinking and push the boundaries of what is possible with technology. I believe in continuous learning and staying at the forefront of industry developments.
+                I specialize in:
+                <ul class="list-disc pl-5 mt-2 space-y-2">
+                  <li><strong>Mobile System Architecture:</strong> Designing scalable mobile architectures with clean separation of concerns</li>
+                  <li><strong>Cross-Platform Development:</strong> Building unified codebases that deploy natively to multiple platforms</li>
+                  <li><strong>Mobile DevOps:</strong> Implementing CI/CD pipelines for mobile applications</li>
+                  <li><strong>Performance Optimization:</strong> Ensuring smooth 60fps performance and efficient resource usage</li>
+                  <li><strong>Mobile Security:</strong> Implementing secure authentication, data encryption, and API protection</li>
+                </ul>
               </p>
-              <p class="italic text-gray-600 mt-6 border-l-4 border-primary pl-4 py-2">
-                I help companies design and maintain scalable digital systems that reduce operational risks and support long-term growth.
+              <p class="leading-relaxed">
+                Currently advancing my expertise in mobile systems engineering while contributing to innovative mobile projects that push the boundaries of what's possible on mobile devices. I believe in continuous learning and staying at the forefront of mobile technology trends.
               </p>
+              <div class="mt-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-500">
+                <p class="italic text-gray-700">
+                  <i class="bi bi-lightbulb text-blue-500 mr-2"></i>
+                  <strong>My Mission:</strong> To architect mobile systems that don't just function flawlessly but delight users, scale effortlessly, and stand the test of time in an ever-evolving digital landscape.
+                </p>
+              </div>
             </div>
           </div>
 
@@ -397,10 +478,10 @@
                 I am Rabiu Sani Muhammad also known as Aljauromanee, from Jauro-manu the Capital city of Shira-ward, Gassol local government area of Taraba state, Nigeria.
               </p>
               <p class="leading-relaxed">
-               I was born on Thursday 19th June, 1997 BC equivilent with 13th Safar, 1418 AH in Jauro-manu, nd Hausa/Fulani is my tribe.
+               I was born on Thursday 19th June, 1997 BC equivalent with 13th Safar, 1418 AH in Jauro-manu, and Hausa/Fulani is my tribe.
               </p>
               <p class="leading-relaxed">
-                Currently advancing my academic journey in Software Engineering, I actively engage in projects that challenge conventional thinking and push the boundaries of what's possible with technology. I believe in continuous learning and staying at the forefront of industry developments.
+                My journey into mobile development began with a fascination for how software systems could empower people through their handheld devices. This passion led me to pursue Software Engineering with a focus on mobile systems architecture and cross-platform development.
               </p>
             </div>
           </div>
@@ -412,42 +493,42 @@
       
     </section>
 
-    <!-- Core Values -->
+    <!-- Core Values - UPDATED FOR MOBILE DEVELOPMENT -->
     <section class="py-16 bg-gray-50">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center text-secondary mb-12 relative section-title center font-poppins">My Professional Values</h2>
+        <h2 class="text-3xl font-bold text-center text-secondary mb-12 relative section-title center font-poppins">My Mobile Development Principles</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <!-- Innovation Card -->
-          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all-400 hover:-translate-y-2 border-2 border-transparent hover:border-primary">
-            <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6 shadow-lg">
-              <i class="bi bi-lightbulb-fill"></i>
+          <!-- Performance First -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all-400 hover:-translate-y-2 border-2 border-transparent hover:border-mobile-ios">
+            <div class="w-20 h-20 bg-gradient-to-r from-mobile-ios to-mobile-android rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6 shadow-lg">
+              <i class="bi bi-speedometer2"></i>
             </div>
-            <h4 class="text-xl font-bold text-secondary text-center mb-4">Innovation</h4>
+            <h4 class="text-xl font-bold text-secondary text-center mb-4">Performance First</h4>
             <p class="text-gray-600 text-center">
-              Constantly exploring new technologies and methodologies to create cutting-edge solutions that solve real-world problems effectively.
+              Building mobile applications that achieve consistent 60fps performance, minimal battery consumption, and optimal memory usage across all target devices.
             </p>
           </div>
           
-          <!-- Quality Card -->
-          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all-400 hover:-translate-y-2 border-2 border-transparent hover:border-primary delay-100">
-            <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6 shadow-lg">
-              <i class="bi bi-shield-check"></i>
+          <!-- Cross-Platform Excellence -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all-400 hover:-translate-y-2 border-2 border-transparent hover:border-mobile-flutter delay-100">
+            <div class="w-20 h-20 bg-gradient-to-r from-mobile-flutter to-mobile-react rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6 shadow-lg">
+              <i class="bi bi-layers"></i>
             </div>
-            <h4 class="text-xl font-bold text-secondary text-center mb-4">Quality</h4>
+            <h4 class="text-xl font-bold text-secondary text-center mb-4">Cross-Platform Excellence</h4>
             <p class="text-gray-600 text-center">
-              Committed to delivering high-quality code with attention to detail, thorough testing, and adherence to industry best practices.
+              Delivering native-like experiences across iOS and Android from unified codebases while maintaining platform-specific optimizations and conventions.
             </p>
           </div>
           
-          <!-- Collaboration Card -->
-          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all-400 hover:-translate-y-2 border-2 border-transparent hover:border-primary delay-200">
-            <div class="w-20 h-20 bg-gradient-to-r from-primary to-secondary rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6 shadow-lg">
-              <i class="bi bi-people-fill"></i>
+          <!-- User-Centric Design -->
+          <div class="bg-white rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all-400 hover:-translate-y-2 border-2 border-transparent hover:border-success delay-200">
+            <div class="w-20 h-20 bg-gradient-to-r from-success to-primary rounded-full flex items-center justify-center text-white text-3xl mx-auto mb-6 shadow-lg">
+              <i class="bi bi-person-heart"></i>
             </div>
-            <h4 class="text-xl font-bold text-secondary text-center mb-4">Collaboration</h4>
+            <h4 class="text-xl font-bold text-secondary text-center mb-4">User-Centric Design</h4>
             <p class="text-gray-600 text-center">
-              Believing in the power of teamwork and effective communication to achieve exceptional results through shared knowledge and expertise.
+              Creating intuitive mobile experiences that respect platform conventions, accessibility standards, and user expectations while solving real problems.
             </p>
           </div>
         </div>
@@ -471,6 +552,7 @@
             <span class="inline-block bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-3 border border-white/20">2024 - 2027</span>
             <h4 class="text-xl font-bold text-white mb-2">Lincoln University, Malaysia</h4>
             <p class="text-white/80 text-sm mb-3">Bachelor of Information Technology (Hons) Software Engineering</p>
+            <p class="text-white/60 text-xs"><i class="bi bi-phone mr-1"></i> Specialization: Mobile Systems & Application Development</p>
           </div>
         </div>
 
@@ -481,6 +563,7 @@
             <span class="inline-block bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-3 border border-white/20">2022</span>
             <h4 class="text-xl font-bold text-white mb-2">HiiT Abuja, Nigeria</h4>
             <p class="text-white/80 text-sm mb-3">Certificate in Web Design and development</p>
+            <p class="text-white/60 text-xs"><i class="bi bi-code-slash mr-1"></i> Foundation for mobile-responsive design</p>
           </div>
         </div>
         
@@ -491,6 +574,7 @@
             <span class="inline-block bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-3 border border-white/20">2021</span>
             <h4 class="text-xl font-bold text-white mb-2">Gradenet, Nigeria</h4>
             <p class="text-white/80 text-sm mb-3">Certificate in Graphics Design</p>
+            <p class="text-white/60 text-xs"><i class="bi bi-palette mr-1"></i> UI/UX fundamentals for mobile interfaces</p>
           </div>
         </div>
         
@@ -501,6 +585,7 @@
             <span class="inline-block bg-gradient-to-r from-white/20 to-white/10 backdrop-blur-sm text-white px-4 py-2 rounded-full text-sm font-semibold mb-3 border border-white/20">2018 - 2020</span>
             <h4 class="text-xl font-bold text-white mb-2">Taraba State Polytechnic, Suntai, Nigeria</h4>
             <p class="text-white/80 text-sm mb-3">National Diploma in Computer Science</p>
+            <p class="text-white/60 text-xs"><i class="bi bi-cpu mr-1"></i> Core programming & systems fundamentals</p>
           </div>
         </div>
         
@@ -549,101 +634,147 @@
   </div>
 </section>
 
-    <!-- Technical Expertise -->
+    <!-- Technical Expertise - UPDATED FOR MOBILE DEVELOPMENT -->
     <section class="py-16 bg-gray-50">
       <div class="container mx-auto px-4">
-        <h2 class="text-3xl font-bold text-center text-secondary mb-12 relative section-title center font-poppins">Technical Expertise</h2>
+        <h2 class="text-3xl font-bold text-center text-secondary mb-12 relative section-title center font-poppins">Mobile Development Expertise</h2>
         
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
           <!-- Left Column -->
           <div class="space-y-6 animate-slide-up">
-            <!-- Frontend Development -->
+            <!-- Cross-Platform Development -->
             <div>
               <div class="flex justify-between mb-2">
-                <span class="font-semibold text-secondary">Fulstack Development</span>
+                <span class="font-semibold text-secondary flex items-center">
+                  <i class="bi bi-phone mr-2 text-mobile-flutter"></i>
+                  Cross-Platform Development
+                </span>
+                <span class="font-semibold text-primary">88%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-mobile-flutter to-mobile-react rounded-full progress-bar" style="--target-width: 88%; width: 88%"></div>
+              </div>
+            </div>
+            
+            <!-- Native Development -->
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-secondary flex items-center">
+                  <i class="bi bi-apple mr-2 text-mobile-ios"></i>
+                  iOS & Android Native
+                </span>
+                <span class="font-semibold text-primary">82%</span>
+              </div>
+              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
+                <div class="h-full bg-gradient-to-r from-mobile-ios to-mobile-android rounded-full progress-bar" style="--target-width: 82%; width: 82%"></div>
+              </div>
+            </div>
+            
+            <!-- Mobile Architecture -->
+            <div>
+              <div class="flex justify-between mb-2">
+                <span class="font-semibold text-secondary flex items-center">
+                  <i class="bi bi-diagram-3 mr-2 text-primary"></i>
+                  Mobile System Architecture
+                </span>
                 <span class="font-semibold text-primary">85%</span>
               </div>
               <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
                 <div class="h-full bg-gradient-to-r from-primary to-accent rounded-full progress-bar" style="--target-width: 85%; width: 85%"></div>
               </div>
             </div>
-            
-            <!-- Backend Development -->
-            <div>
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold text-secondary">Islamic Oreintation</span>
-                <span class="font-semibold text-primary">95%</span>
-              </div>
-              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-primary to-accent rounded-full progress-bar" style="--target-width: 75%; width: 75%"></div>
-              </div>
-            </div>
-            
-            <!-- Database Management -->
-            <div>
-              <div class="flex justify-between mb-2">
-                <span class="font-semibold text-secondary">Database Management</span>
-                <span class="font-semibold text-primary">70%</span>
-              </div>
-              <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-primary to-accent rounded-full progress-bar" style="--target-width: 70%; width: 70%"></div>
-              </div>
-            </div>
           </div>
           
           <!-- Right Column -->
           <div class="space-y-6 animate-slide-up delay-100">
-            <!-- Problem Solving -->
+            <!-- Performance Optimization -->
             <div>
               <div class="flex justify-between mb-2">
-                <span class="font-semibold text-secondary">Problem Solving</span>
+                <span class="font-semibold text-secondary flex items-center">
+                  <i class="bi bi-speedometer2 mr-2 text-success"></i>
+                  Performance Optimization
+                </span>
                 <span class="font-semibold text-primary">90%</span>
               </div>
               <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-primary to-accent rounded-full progress-bar" style="--target-width: 90%; width: 90%"></div>
+                <div class="h-full bg-gradient-to-r from-success to-green-400 rounded-full progress-bar" style="--target-width: 90%; width: 90%"></div>
               </div>
             </div>
             
-            <!-- Project Management -->
+            <!-- Mobile DevOps -->
             <div>
               <div class="flex justify-between mb-2">
-                <span class="font-semibold text-secondary">Project Management</span>
-                <span class="font-semibold text-primary">80%</span>
+                <span class="font-semibold text-secondary flex items-center">
+                  <i class="bi bi-cloud-arrow-up mr-2 text-mobile-aws"></i>
+                  Mobile DevOps
+                </span>
+                <span class="font-semibold text-primary">78%</span>
               </div>
               <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-primary to-accent rounded-full progress-bar" style="--target-width: 80%; width: 80%"></div>
+                <div class="h-full bg-gradient-to-r from-mobile-aws to-orange-400 rounded-full progress-bar" style="--target-width: 78%; width: 78%"></div>
               </div>
             </div>
             
-            <!-- Continuous Learning -->
+            <!-- UI/UX Implementation -->
             <div>
               <div class="flex justify-between mb-2">
-                <span class="font-semibold text-secondary">Continuous Learning</span>
-                <span class="font-semibold text-primary">95%</span>
+                <span class="font-semibold text-secondary flex items-center">
+                  <i class="bi bi-palette2 mr-2 text-purple-500"></i>
+                  Mobile UI/UX Implementation
+                </span>
+                <span class="font-semibold text-primary">87%</span>
               </div>
               <div class="h-3 bg-gray-200 rounded-full overflow-hidden">
-                <div class="h-full bg-gradient-to-r from-primary to-accent rounded-full progress-bar" style="--target-width: 95%; width: 95%"></div>
+                <div class="h-full bg-gradient-to-r from-purple-500 to-pink-500 rounded-full progress-bar" style="--target-width: 87%; width: 87%"></div>
               </div>
             </div>
+          </div>
+        </div>
+
+        <!-- Mobile Tech Stack -->
+        <div class="mt-12 max-w-4xl mx-auto">
+          <h3 class="text-xl font-bold text-center text-secondary mb-6">Mobile Technology Stack</h3>
+          <div class="flex flex-wrap justify-center gap-3">
+            <span class="tech-badge ios">
+              <i class="bi bi-apple mr-1"></i> Swift & iOS SDK
+            </span>
+            <span class="tech-badge android">
+              <i class="bi bi-android2 mr-1"></i> Kotlin & Android SDK
+            </span>
+            <span class="tech-badge flutter">
+              <i class="bi bi-dot mr-1"></i> Flutter & Dart
+            </span>
+            <span class="tech-badge react">
+              <i class="bi bi-atom mr-1"></i> React Native
+            </span>
+            <span class="tech-badge firebase">
+              <i class="bi bi-fire mr-1"></i> Firebase Mobile
+            </span>
+            <span class="tech-badge aws">
+              <i class="bi bi-cloud mr-1"></i> AWS Amplify
+            </span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Professional Philosophy - MAINTAINED AS REQUESTED -->
+    <!-- Professional Philosophy - UPDATED FOR MOBILE DEVELOPMENT -->
     <section class="py-16 philosophy-bg">
       <div class="container mx-auto px-4 relative z-10">
         <div class="max-w-4xl mx-auto">
           <div class="glass-effect rounded-3xl p-8 md:p-12 shadow-2xl relative overflow-hidden">
             <div class="absolute -top-10 -left-10 text-9xl text-white/20 font-serif">"</div>
             <div class="relative z-10">
-              <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 font-poppins text-white">My Professional Philosophy</h3>
+              <div class="flex justify-center mb-4">
+                <i class="bi bi-phone text-4xl text-white/40"></i>
+              </div>
+              <h3 class="text-2xl md:text-3xl font-bold text-center mb-8 font-poppins text-white">My Mobile Development Philosophy</h3>
               <blockquote class="text-lg md:text-xl italic text-center mb-8 leading-relaxed text-white">
-                "Technology should not just solve problems—it should create opportunities, enhance experiences, and empower people. Great software is built at the intersection of technical excellence and human understanding."
+                "Great mobile applications are more than just software—they're companions in users' daily lives. I believe in building mobile experiences that are not only technically excellent but also emotionally resonant, intuitively helpful, and seamlessly integrated into the human experience."
               </blockquote>
               <div class="text-center">
                 <p class="font-semibold text-lg text-white">— Rabiu S.M.</p>
-                <p class="text-white/90 text-sm">Software Engineering Student & Developer</p>
+                <p class="text-white/90 text-sm">Software Systems Engineer & Mobile Application Developer</p>
               </div>
             </div>
           </div>
@@ -655,18 +786,22 @@
     <section class="py-16 bg-gradient-to-r from-primary to-secondary text-white">
       <div class="container mx-auto px-4">
         <div class="max-w-3xl mx-auto text-center">
-          <h3 class="text-3xl font-bold mb-6 font-poppins">Let's Build Something Extraordinary Together</h3>
-          <p class="text-xl mb-8 opacity-90">Interested in collaborating or learning more about my work?</p>
+          <div class="mb-8">
+            <i class="bi bi-phone text-5xl opacity-50 animate-bounce-slow"></i>
+          </div>
+          <h3 class="text-3xl font-bold mb-6 font-poppins">Let's Build Exceptional Mobile Experiences</h3>
+          <p class="text-xl mb-8 opacity-90">Ready to transform your mobile app idea into a scalable, high-performance reality?</p>
           <div class="flex flex-col sm:flex-row gap-4 justify-center">
             <a href="contact.html" class="px-8 py-4 bg-white text-primary rounded-full font-semibold hover:bg-gray-100 hover:shadow-xl transition-all inline-flex items-center justify-center space-x-2">
-              <i class="bi bi-envelope"></i>
-              <span>Get In Touch</span>
+              <i class="bi bi-chat-dots"></i>
+              <span>Discuss Mobile Project</span>
             </a>
             <a href="projects.html" class="px-8 py-4 border-2 border-white text-white rounded-full font-semibold hover:bg-white hover:text-primary transition-all inline-flex items-center justify-center space-x-2">
-              <i class="bi bi-folder2-open"></i>
-              <span>View My Work</span>
+              <i class="bi bi-phone"></i>
+              <span>View Mobile Projects</span>
             </a>
           </div>
+          <p class="text-white/70 text-sm mt-6">Specializing in iOS, Android, and Cross-Platform Mobile Solutions</p>
         </div>
       </div>
     </section>
@@ -676,8 +811,13 @@
   <footer class="md:ml-64 bg-white py-8 border-t border-gray-200">
     <div class="container mx-auto px-4">
       <div class="text-center">
+        <div class="flex justify-center space-x-4 mb-4">
+          <span class="tech-badge ios text-sm">iOS Development</span>
+          <span class="tech-badge android text-sm">Android Development</span>
+          <span class="tech-badge flutter text-sm">Flutter</span>
+        </div>
         <p class="text-gray-600">
-          © Copyright <strong class="text-primary">Rabiu S.M. Portfolio</strong> All Rights Reserved
+          © Copyright <strong class="text-primary">Rabiu S.M. - Mobile Systems Engineer</strong> All Rights Reserved
         </p>
       </div>
     </div>
@@ -774,6 +914,20 @@
     if (skillsSection) {
       observer.observe(skillsSection);
     }
+
+    // Mobile tech badges interaction
+    const techBadges = document.querySelectorAll('.tech-badge');
+    techBadges.forEach(badge => {
+      badge.addEventListener('mouseenter', () => {
+        badge.style.transform = 'translateY(-2px)';
+        badge.style.boxShadow = '0 4px 12px rgba(0,0,0,0.1)';
+      });
+      
+      badge.addEventListener('mouseleave', () => {
+        badge.style.transform = 'translateY(0)';
+        badge.style.boxShadow = 'none';
+      });
+    });
   </script>
 </body>
 </html>
