@@ -1,0 +1,1556 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <!-- Enhanced Viewport for Cross-Device Responsiveness -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
+
+    <!-- Enhanced Meta Tags for International Standards -->
+    <meta name="description" content="Softie Hub Limited - Software Innovative Efficiency Hub for Optimized Digital Transformation">
+    <meta name="keywords" content="software development, digital transformation, technology solutions, Abuja Nigeria, responsive design">
+    <meta name="author" content="Softie Hub Limited">
+    <meta property="og:title" content="Welcome | Softie Hub Limited">
+    <meta property="og:description" content="Software Innovative Efficiency Hub for Optimized Digital Transformation">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="{{ asset('asset/img/Softie-hub-office.jpg') }}">
+    <meta property="og:url" content="{{ url('/') }}">
+    <meta name="twitter:card" content="summary_large_image">
+
+    <!-- Additional Responsive Meta Tags -->
+    <meta name="theme-color" content="#1a472a">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap" as="style">
+    <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style">
+
+    <title>Welcome | Softie Hub Limited - Digital Transformation Solutions</title>
+
+    <!-- CSS with fallback loading -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+          integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+          crossorigin="anonymous"
+          referrerpolicy="no-referrer">
+
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Open+Sans:wght@300;400;600;700&display=swap"
+          rel="stylesheet">
+
+    <style>
+        /* ==========================================================================
+           CSS Reset and Base Styles (International Standard)
+           ========================================================================== */
+
+        /* Modern CSS Reset */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            /* CSS Custom Properties for Responsive Design */
+            --primary-color: #1a472a;
+            --secondary-color: #2e8b57;
+            --accent-color: #099fc5;
+            --text-color: #333333;
+            --white: #ffffff;
+            --light-bg: #f8f5ee;
+            --dark-bg: #0d2818;
+            --footer-bg: rgb(3, 66, 107);
+
+            /* White transparent variations */
+            --white-transparent-90: rgba(255, 255, 255, 0.9);
+            --white-transparent-80: rgba(255, 255, 255, 0.8);
+            --white-transparent-70: rgba(255, 255, 255, 0.7);
+            --white-transparent-60: rgba(255, 255, 255, 0.6);
+            --white-transparent-50: rgba(255, 255, 255, 0.5);
+            --white-transparent-40: rgba(255, 255, 255, 0.4);
+            --white-transparent-30: rgba(255, 255, 255, 0.3);
+            --white-transparent-20: rgba(255, 255, 255, 0.2);
+            --white-transparent-10: rgba(255, 255, 255, 0.1);
+
+            /* Responsive Spacing Scale */
+            --space-xs: 0.5rem;   /* 8px */
+            --space-sm: 1rem;     /* 16px */
+            --space-md: 1.5rem;   /* 24px */
+            --space-lg: 2rem;     /* 32px */
+            --space-xl: 3rem;     /* 48px */
+            --space-xxl: 4rem;    /* 64px */
+
+            /* Responsive Typography Scale */
+            --text-xs: 0.75rem;   /* 12px */
+            --text-sm: 0.875rem;  /* 14px */
+            --text-base: 1rem;    /* 16px */
+            --text-lg: 1.125rem;  /* 18px */
+            --text-xl: 1.25rem;   /* 20px */
+            --text-2xl: 1.5rem;   /* 24px */
+            --text-3xl: 1.875rem; /* 30px */
+            --text-4xl: 2.25rem;  /* 36px */
+            --text-5xl: 3rem;     /* 48px */
+
+            /* Breakpoints */
+            --breakpoint-mobile: 320px;
+            --breakpoint-phablet: 480px;
+            --breakpoint-tablet: 768px;
+            --breakpoint-desktop: 1024px;
+            --breakpoint-wide: 1200px;
+            --breakpoint-ultra: 1440px;
+
+            /* Container Widths */
+            --container-xs: 100%;
+            --container-sm: 540px;
+            --container-md: 720px;
+            --container-lg: 960px;
+            --container-xl: 1140px;
+            --container-xxl: 1320px;
+        }
+
+        /* Base HTML */
+        html {
+            font-size: 16px; /* Base font size */
+            scroll-behavior: smooth;
+            -webkit-text-size-adjust: 100%; /* Prevent font scaling in landscape */
+            text-size-adjust: 100%;
+        }
+
+        /* Base Body - WHITE TRANSPARENT BACKGROUND */
+        body {
+            font-family: 'Open Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: rgba(255, 255, 255, 0.15); /* White transparent background */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Add a subtle white gradient overlay to enhance transparency effect */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.2) 0%,
+                rgba(255, 255, 255, 0.1) 50%,
+                rgba(255, 255, 255, 0.05) 100%
+            );
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        /* ==========================================================================
+           ENHANCED SKIP SECTION - CENTRALIZED STICKY CARD WITH TIMER
+           ========================================================================== */
+
+        .skip-section {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 9999;
+            width: 90%;
+            max-width: 500px;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 0.75rem 1.5rem;
+            background: rgba(3, 66, 107, 0.95);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            border-radius: 16px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2),
+                        0 0 0 1px rgba(255, 255, 255, 0.1) inset;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .skip-section:hover {
+            transform: translateX(-50%) translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3),
+                        0 0 0 1px rgba(255, 255, 255, 0.2) inset;
+            background: rgba(3, 66, 107, 0.98);
+        }
+
+        .skip-section.hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateX(-50%) translateY(-20px);
+        }
+
+        .skip-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            gap: 1rem;
+        }
+
+        .greeting-container {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .greeting-main {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--white);
+            margin-bottom: 0.25rem;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .greeting-sub {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.8);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .timer-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-width: 80px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 0.5rem;
+            backdrop-filter: blur(5px);
+        }
+
+        .timer-label {
+            font-size: 0.75rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 0.25rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .timer-display {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--white);
+            font-family: 'Courier New', monospace;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .skip-arrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            flex-shrink: 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .skip-arrow:hover,
+        .skip-arrow:focus {
+            background: var(--accent-color);
+            transform: translateY(-2px) scale(1.1);
+            box-shadow: 0 5px 15px rgba(9, 159, 197, 0.4);
+        }
+
+        .skip-arrow i {
+            font-size: 1.1rem;
+        }
+
+        /* Skip section animations */
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(9, 159, 197, 0.4); }
+            70% { box-shadow: 0 0 0 10px rgba(9, 159, 197, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(9, 159, 197, 0); }
+        }
+
+        .skip-section.pulse {
+            animation: pulse 2s infinite;
+        }
+
+        /* Responsive adjustments for skip section */
+        @media (max-width: 768px) {
+            .skip-section {
+                top: 15px;
+                width: 95%;
+                padding: 0.6rem 1rem;
+                min-height: 65px;
+            }
+
+            .greeting-main {
+                font-size: 1rem;
+            }
+
+            .greeting-sub {
+                font-size: 0.8rem;
+            }
+
+            .timer-container {
+                min-width: 70px;
+                padding: 0.4rem;
+            }
+
+            .timer-display {
+                font-size: 1.1rem;
+            }
+
+            .skip-arrow {
+                width: 32px;
+                height: 32px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .skip-section {
+                top: 10px;
+                padding: 0.5rem 0.8rem;
+                min-height: 60px;
+            }
+
+            .greeting-main {
+                font-size: 0.9rem;
+            }
+
+            .greeting-sub {
+                font-size: 0.75rem;
+            }
+
+            .timer-container {
+                min-width: 60px;
+                padding: 0.3rem;
+            }
+
+            .timer-display {
+                font-size: 1rem;
+            }
+
+            .skip-arrow {
+                width: 28px;
+                height: 28px;
+            }
+
+            .skip-arrow i {
+                font-size: 0.9rem;
+            }
+        }
+
+        @media (max-width: 360px) {
+            .skip-content {
+                gap: 0.5rem;
+            }
+
+            .timer-label {
+                font-size: 0.7rem;
+            }
+
+            .timer-display {
+                font-size: 0.9rem;
+            }
+        }
+
+        /* Touch device optimizations for skip section */
+        @media (hover: none) and (pointer: coarse) {
+            .skip-section:hover {
+                transform: translateX(-50%);
+            }
+
+            .skip-arrow:active {
+                background: var(--accent-color);
+                transform: scale(0.95);
+            }
+        }
+
+        /* ==========================================================================
+           Container System (Responsive Grid)
+           ========================================================================== */
+
+        .container {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 var(--space-sm);
+        }
+
+        /* Mobile First Approach */
+        @media (min-width: 576px) {
+            .container {
+                max-width: var(--container-sm);
+                padding: 0 var(--space-md);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .container {
+                max-width: var(--container-md);
+                padding: 0 var(--space-lg);
+            }
+        }
+
+        @media (min-width: 992px) {
+            .container {
+                max-width: var(--container-lg);
+                padding: 0 var(--space-xl);
+            }
+        }
+
+        @media (min-width: 1200px) {
+            .container {
+                max-width: var(--container-xl);
+            }
+        }
+
+        @media (min-width: 1400px) {
+            .container {
+                max-width: var(--container-xxl);
+            }
+        }
+
+        /* ==========================================================================
+           Accessibility (WCAG Compliant)
+           ========================================================================== */
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
+
+        /* Focus styles for accessibility */
+        :focus {
+            outline: 3px solid var(--accent-color);
+            outline-offset: 3px;
+        }
+
+        :focus:not(:focus-visible) {
+            outline: none;
+        }
+
+        /* ==========================================================================
+           Typography System (Fluid Typography)
+           ========================================================================== */
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Amiri', serif;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: var(--space-sm);
+        }
+
+        /* Fluid Typography using clamp() */
+        h1 {
+            font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+        }
+
+        h2 {
+            font-size: clamp(var(--text-2xl), 4vw, var(--text-4xl));
+        }
+
+        h3 {
+            font-size: clamp(var(--text-xl), 3vw, var(--text-3xl));
+        }
+
+        p {
+            font-size: clamp(var(--text-base), 2vw, var(--text-lg));
+            margin-bottom: var(--space-md);
+        }
+
+        /* ==========================================================================
+           Action Card (Responsive Component)
+           ========================================================================== */
+
+        .action-card {
+            background: rgba(2, 57, 93, 0.764);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            border: 3px solid rgba(255, 255, 255, 0.051);
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgb(238, 241, 238)
+            color: var(--white);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            width: 100%;
+            max-width: min(800px, 90vw);
+            margin: 0 auto;
+        }
+
+        .action-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(32, 123, 135, 0.5);
+        }
+
+        /* ==========================================================================
+           Button System (Responsive Buttons)
+           ========================================================================== */
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: min(200px, 80vw);
+            padding: clamp(0.75rem, 2vw, 1rem) clamp(1.5rem, 4vw, 2rem);
+            border: 2px solid var(--white);
+            border-radius: 8px;
+            background-color: transparent;
+            color: var(--white);
+            font-weight: 600;
+            text-align: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            font-size: clamp(var(--text-sm), 2vw, var(--text-base));
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .btn:hover,
+        .btn:focus {
+            background-color: #2980b9;
+            color: var(--white);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(41, 128, 185, 0.4);
+        }
+
+        /* ==========================================================================
+           Logo (Responsive Image)
+           ========================================================================== */
+
+        .logo {
+            max-width: min(150px, 25vw);
+            height: auto;
+            transition: transform 0.1s ease;
+            filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.2));
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
+
+        /* ==========================================================================
+           Hero Section (Full Responsive)
+           ========================================================================== */
+
+        .hero-background {
+            position: relative;
+            min-height: 100vh;
+            min-height: 100dvh; /* Dynamic viewport height for mobile browsers */
+            background-color: transparent;
+            background-image:
+                linear-gradient(rgba(240, 243, 244, 0.7), rgba(117, 184, 235, 0.319)),
+                url('{{ asset("asset/img/Softie-hub-office.jpg") }}');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: var(--space-sm);
+            backdrop-filter: blur(2px); /* Adds subtle blur to background */
+        }
+
+        /* Enhanced overlay for better contrast with transparent body */
+        .hero-background::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                135deg,
+                rgba(255, 255, 255, 0.3) 0%,
+                rgba(255, 255, 255, 0.2) 50%,
+                rgba(255, 255, 255, 0.1) 100%
+            );
+            z-index: 1;
+        }
+
+        /* Optimize background attachment for mobile */
+        @media (max-width: 768px) and (orientation: portrait) {
+            .hero-background {
+                background-attachment: scroll;
+                background-position: center center;
+                backdrop-filter: blur(1px);
+            }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            text-align: center;
+            width: 100%;
+            max-width: 64rem;
+            padding: var(--space-sm);
+        }
+
+        /* ==========================================================================
+           Content Padding System
+           ========================================================================== */
+
+        .content-padding {
+            padding: var(--space-md);
+        }
+
+        @media (min-width: 480px) {
+            .content-padding {
+                padding: var(--space-lg);
+            }
+        }
+
+        @media (min-width: 768px) {
+            .content-padding {
+                padding: var(--space-xl);
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .content-padding {
+                padding: var(--space-xxl);
+            }
+        }
+
+        /* ==========================================================================
+           Footer System (Responsive Footer)
+           ========================================================================== */
+
+        footer {
+            background-color: rgba(3, 66, 107, 0.95); /* Semi-transparent footer */
+            color: var(--white);
+            border-top: 4px solid rgba(255, 255, 255, 0.2);
+            padding: var(--space-lg) 0;
+            margin-top: auto;
+            border-radius: 8px 8px 12px 12px;
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+        }
+
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-lg);
+            align-items: center;
+        }
+
+        .footer-line-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: var(--space-md);
+            width: 100%;
+        }
+
+        @media (min-width: 768px) {
+            .footer-line-1 {
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+        }
+
+        /* ==========================================================================
+           Social Icons (Responsive)
+           ========================================================================== */
+
+        .social-icons {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            justify-content: center;
+            align-items: center;
+        }
+
+        .social-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: clamp(32px, 8vw, 40px);
+            height: clamp(32px, 8vw, 40px);
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.15);
+            transition: all 0.3s ease;
+            color: var(--white);
+            text-decoration: none;
+            font-size: clamp(var(--text-sm), 3vw, var(--text-base));
+            backdrop-filter: blur(5px);
+        }
+
+        .social-link:hover,
+        .social-link:focus {
+            background-color: var(--accent-color);
+            transform: translateY(-3px);
+        }
+
+        /* ==========================================================================
+           Contact Info (Responsive)
+           ========================================================================== */
+
+        .contact-info {
+            font-style: normal;
+            text-align: center;
+            font-size: clamp(var(--text-xs), 2vw, var(--text-sm));
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .contact-link {
+            color: rgba(255, 255, 255, 0.9);
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            white-space: nowrap;
+            font-size: inherit;
+        }
+
+        /* ==========================================================================
+           Utility Classes (Responsive)
+           ========================================================================== */
+
+        /* Spacing Utilities */
+        .mb-4 { margin-bottom: var(--space-sm); }
+        .mb-6 { margin-bottom: var(--space-md); }
+        .mb-8 { margin-bottom: var(--space-lg); }
+        .mt-4 { margin-top: var(--space-sm); }
+        .mt-8 { margin-top: var(--space-lg); }
+
+        /* Text Utilities */
+        .text-center { text-align: center; }
+        .text-white { color: var(--white); }
+        .opacity-90 { opacity: 0.9; }
+
+        /* Flex Utilities */
+        .flex { display: flex; }
+        .flex-col { flex-direction: column; }
+        .items-center { align-items: center; }
+        .justify-center { justify-content: center; }
+        .justify-between { justify-content: space-between; }
+
+        /* ==========================================================================
+           Button Container (Responsive Layout)
+           ========================================================================== */
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            gap: var(--space-md);
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        @media (min-width: 480px) {
+            .button-container {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+        }
+
+        @media (min-width: 768px) {
+            .button-container {
+                flex-direction: row;
+                flex-wrap: nowrap;
+            }
+        }
+
+        /* ==========================================================================
+           Divider (Responsive)
+           ========================================================================== */
+
+        .divider {
+            width: clamp(80px, 20vw, 100px);
+            height: 3px;
+            background-color: var(--white);
+            margin: var(--space-sm) auto;
+        }
+
+        /* ==========================================================================
+           Copyright (Responsive)
+           ========================================================================== */
+
+        .copyright {
+            font-size: clamp(var(--text-xs), 2vw, var(--text-sm));
+            color: rgba(255, 255, 255, 0.9);
+            text-align: center;
+        }
+
+        @media (min-width: 768px) {
+            .copyright {
+                text-align: right;
+            }
+        }
+
+        /* ==========================================================================
+           Enhanced Responsive Design Features
+           ========================================================================== */
+
+        /* Touch Device Optimizations */
+        @media (hover: none) and (pointer: coarse) {
+            .btn, .social-link {
+                min-height: 44px; /* Minimum touch target size */
+                min-width: 44px;
+            }
+
+            .action-card:hover {
+                transform: none; /* Disable hover effects on touch devices */
+            }
+            
+            .hero-background {
+                backdrop-filter: none; /* Reduce blur on touch devices for performance */
+            }
+        }
+
+        /* Orientation Specific Styles */
+        @media (orientation: landscape) and (max-height: 500px) {
+            .hero-background {
+                min-height: 100vh;
+                padding: var(--space-sm);
+            }
+
+            .action-card {
+                max-width: 90vw;
+                padding: var(--space-md);
+            }
+            
+            .skip-section {
+                top: 10px;
+                min-height: 60px;
+            }
+        }
+
+        /* High Pixel Density Screens */
+        @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+            .logo {
+                image-rendering: -webkit-optimize-contrast;
+                image-rendering: crisp-edges;
+            }
+        }
+
+        /* ==========================================================================
+           Reduced Motion Support (WCAG)
+           ========================================================================== */
+
+        @media (prefers-reduced-motion: reduce) {
+            html {
+                scroll-behavior: auto;
+            }
+
+            .btn,
+            .action-card,
+            .logo,
+            .social-link,
+            .skip-section {
+                transition: none;
+            }
+
+            .btn:hover,
+            .action-card:hover,
+            .logo:hover,
+            .social-link:hover,
+            .skip-section:hover {
+                transform: none;
+            }
+
+            .hero-background {
+                background-attachment: scroll;
+                backdrop-filter: none;
+            }
+            
+            .skip-section.pulse {
+                animation: none;
+            }
+        }
+
+        /* ==========================================================================
+           High Contrast Mode (WCAG)
+           ========================================================================== */
+
+        @media (prefers-contrast: high) {
+            .action-card {
+                border: 3px solid var(--white);
+                background: rgba(19, 86, 131, 0.9);
+            }
+
+            .btn {
+                border: 3px solid var(--white);
+            }
+            
+            body {
+                background-color: rgba(255, 255, 255, 0.3); /* More opaque for high contrast */
+            }
+            
+            .skip-section {
+                border: 3px solid var(--white);
+                background: rgba(3, 66, 107, 1);
+            }
+        }
+
+        /* ==========================================================================
+           Dark Mode Support
+           ========================================================================== */
+
+        @media (prefers-color-scheme: dark) {
+            body {
+                background-color: rgba(255, 255, 255, 0.1); /* Less opaque in dark mode */
+                color: #e0e0e0;
+            }
+            
+            body::before {
+                background: linear-gradient(
+                    135deg,
+                    rgba(255, 255, 255, 0.1) 0%,
+                    rgba(255, 255, 255, 0.05) 50%,
+                    rgba(255, 255, 255, 0.02) 100%
+                );
+            }
+
+            .hero-background {
+                background-blend-mode: overlay;
+                filter: brightness(0.9);
+            }
+            
+            .skip-section {
+                background: rgba(3, 66, 107, 0.98);
+            }
+        }
+
+        /* ==========================================================================
+           Print Styles
+           ========================================================================== */
+
+        @media print {
+            .hero-background {
+                background: none !important;
+                min-height: auto;
+            }
+
+            .action-card {
+                border: 2px solid #000;
+                background: none;
+                color: #000;
+                box-shadow: none;
+            }
+
+            .btn, .social-icons, footer, .skip-section {
+                display: none !important;
+            }
+
+            a {
+                text-decoration: underline;
+                color: #000;
+            }
+
+            @page {
+                margin: 2cm;
+            }
+            
+            body {
+                background-color: white !important;
+            }
+        }
+
+        /* ==========================================================================
+           No JavaScript Styles
+           ========================================================================== */
+
+        .no-js-alert {
+            display: block;
+            padding: var(--space-sm);
+            background: #f0f0f0;
+            text-align: center;
+            border-bottom: 2px solid #ccc;
+        }
+
+        /* ==========================================================================
+           Ultra-Wide Screen Support
+           ========================================================================== */
+
+        @media (min-width: 2000px) {
+            .container {
+                max-width: 1600px;
+            }
+
+            .action-card {
+                max-width: 1000px;
+            }
+            
+            .skip-section {
+                max-width: 600px;
+            }
+        }
+
+        /* ==========================================================================
+           Very Small Mobile Devices
+           ========================================================================== */
+
+        @media (max-width: 320px) {
+            .hero-content {
+                padding: var(--space-xs);
+            }
+
+            .content-padding {
+                padding: var(--space-sm);
+            }
+
+            .btn {
+                min-width: 90vw;
+                padding: var(--space-sm);
+            }
+        }
+
+        /* Device-specific classes */
+        .has-tablet-layout .action-card {
+            max-width: 600px;
+        }
+
+        .has-foldable-layout .hero-background {
+            background-attachment: scroll;
+        }
+
+        .has-landscape-tablet .button-container {
+            flex-direction: row;
+        }
+
+        .is-ipad .btn {
+            min-height: 44px;
+            padding: 0.875rem 1.75rem;
+        }
+
+        .touch-device .btn:active,
+        .touch-device .social-link:active {
+            transform: scale(0.98);
+        }
+
+        /* Responsive state classes */
+        .is-mobile .action-card {
+            border-width: 2px;
+        }
+
+        .is-tablet .hero-background {
+            background-attachment: scroll;
+        }
+
+        .is-desktop .action-card {
+            max-width: 800px;
+        }
+
+        .is-wide .container {
+            max-width: 1600px;
+        }
+
+        /* WebKit-specific optimizations */
+        .is-webkit-tablet .action-card {
+            -webkit-backdrop-filter: blur(20px);
+        }
+
+        /* Loading animation for buttons */
+        .btn-loading {
+            position: relative;
+            color: transparent !important;
+        }
+
+        .btn-loading::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            border-top-color: var(--white);
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- No JavaScript alert -->
+    <noscript>
+        <div class="no-js-alert" role="alert">
+            <p>JavaScript is disabled. Some features may not work properly.</p>
+        </div>
+    </noscript>
+
+    <!-- ENHANCED SKIP SECTION - Centered Sticky Card with Timer -->
+    <div class="skip-section pulse" role="navigation" aria-label="Quick navigation">
+        <div class="skip-content">
+            <div class="greeting-container">
+                <div class="greeting-main" id="dynamic-greeting">Welcome! Good Day...</div>
+                <div class="greeting-sub">View & Navigate to Menu or Projects</div>
+            </div>
+            
+            <div class="timer-container">
+                <div class="timer-label">Time</div>
+                <div class="timer-display" id="live-timer">00:00:00</div>
+            </div>
+            
+            <a href="#main-content" class="skip-arrow" aria-label="Skip to main content">
+                <i class="fas fa-arrow-down"></i>
+            </a>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <main id="main-content" role="main">
+        <section class="hero-background" aria-label="Welcome to Softie Hub">
+            <div class="hero-content">
+                <div class="mb-8">
+                    <!-- Action Card -->
+                    <article class="action-card content-padding"
+                             role="region"
+                             aria-label="Company introduction">
+
+                        <!-- Logo -->
+                       <!-- Logo -->
+<div class="flex justify-center mb-6">
+    <img
+        src="{{ asset('asset/img/Softie-hub-favicon/android-icon-192x192.png') }}"
+        alt="Softie Hub Limited Logo"
+        class="logo"
+        width="120"
+        height="120"
+        loading="eager">
+</div>
+
+                        <header class="mb-6">
+                            <h2 class="mb-4 text-white">
+                                I AM RABIU SANI MUHAMMAD
+                            </h2>
+                            <div class="divider" role="presentation"></div>
+                            <h3 class="mb-6 text-white opacity-90">
+                               A Software Engineer with passion in design and development. 
+                            </h3>
+                        </header>
+
+                        <div class="mb-8">
+                            <p class="mb-8 leading-relaxed text-white">
+                                I build what you want!
+                            </p>
+
+                            <div class="button-container" role="navigation" aria-label="Primary navigation">
+                                <a href="{{ route('home.menu') }}"
+                                   class="btn"
+                                   aria-label="Open the main menu">
+                                    OPEN THE MENU
+                                </a>
+                                <a href="{{ route('home.services') }}"
+                                   class="btn"
+                                   aria-label="View our products and services">
+                                    VIEW MY PROJECTS
+                                </a>
+                            </div>
+                        </div>
+                        <!-- Footer - 2 Lines Only -->
+    <footer role="contentinfo">
+        <div class="container">
+            <div class="footer-content">
+                <!-- Line 1: Social Icons and Copyright -->
+                <div class="footer-line-1">
+                    <div class="social-icons" aria-label="Social media links">
+                        <a href="https://facebook.com/softiehub"
+                           class="social-link"
+                           aria-label="Follow us on Facebook"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <span class="fab fa-facebook" aria-hidden="true"></span>
+                        </a>
+                        <a href="https://twitter.com/softiehub"
+                           class="social-link"
+                           aria-label="Follow us on Twitter"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <span class="fab fa-twitter" aria-hidden="true"></span>
+                        </a>
+                        <a href="https://instagram.com/softiehub"
+                           class="social-link"
+                           aria-label="Follow us on Instagram"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <span class="fab fa-instagram" aria-hidden="true"></span>
+                        </a>
+                        <a href="https://youtube.com/softiehub"
+                           class="social-link"
+                           aria-label="Subscribe to our YouTube channel"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            <span class="fab fa-youtube" aria-hidden="true"></span>
+                        </a>
+                        <div class="contact-info">
+                            <span class="contact-link">
+                                <span class="fas fa-map-marker-alt" aria-hidden="true"></span>
+                                Abuja, Nigeria
+                            </span>
+                        </div>
+                    </div>
+
+                    <div class="copyright">
+                        &copy; <span id="current-year">2025</span> Rabiu S. M. All Rights Reserved.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    
+
+    <!-- Scripts -->
+    <script>
+        // ==========================================================================
+        // ENHANCED SKIP SECTION FUNCTIONALITY
+        // ==========================================================================
+
+        // Dynamic greeting based on time of day
+        function updateGreeting() {
+            const now = new Date();
+            const hour = now.getHours();
+            const greetingEl = document.getElementById('dynamic-greeting');
+            
+            let greeting = '';
+            if (hour >= 5 && hour < 12) {
+                greeting = 'Good Morning! ☀️';
+            } else if (hour >= 12 && hour < 17) {
+                greeting = 'Good Afternoon! 🌤️';
+            } else if (hour >= 17 && hour < 21) {
+                greeting = 'Good Evening! 🌙';
+            } else {
+                greeting = 'Good Night! 🌟';
+            }
+            
+            greetingEl.textContent = `Welcome! ${greeting}`;
+        }
+
+        // Live timer functionality
+        function updateLiveTimer() {
+            const now = new Date();
+            const hours = String(now.getHours()).padStart(2, '0');
+            const minutes = String(now.getMinutes()).padStart(2, '0');
+            const seconds = String(now.getSeconds()).padStart(2, '0');
+            
+            document.getElementById('live-timer').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        // Auto-hide skip section when user scrolls down
+        function handleSkipSectionVisibility() {
+            const skipSection = document.querySelector('.skip-section');
+            const mainContent = document.getElementById('main-content');
+            
+            if (!skipSection || !mainContent) return;
+            
+            let lastScrollTop = 0;
+            let scrollTimeout;
+            
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+                
+                // Clear any existing timeout
+                clearTimeout(scrollTimeout);
+                
+                // Hide skip section when user starts scrolling down
+                if (scrollTop > lastScrollTop && scrollTop > 100) {
+                    skipSection.classList.add('hidden');
+                } else {
+                    skipSection.classList.remove('hidden');
+                }
+                
+                lastScrollTop = scrollTop;
+                
+                // Auto-show when at top
+                if (scrollTop <= 50) {
+                    skipSection.classList.remove('hidden');
+                }
+                
+                // Hide when user reaches main content
+                const mainContentTop = mainContent.offsetTop;
+                if (scrollTop >= mainContentTop - 100) {
+                    skipSection.classList.add('hidden');
+                }
+                
+                // Auto-hide after 5 seconds of inactivity
+                scrollTimeout = setTimeout(() => {
+                    if (scrollTop > 200) {
+                        skipSection.classList.add('hidden');
+                    }
+                }, 5000);
+            });
+            
+            // Show skip section on mouse move near top
+            document.addEventListener('mousemove', function(e) {
+                if (e.clientY < 150) {
+                    skipSection.classList.remove('hidden');
+                }
+            });
+            
+            // Skip arrow click handler
+            const skipArrow = document.querySelector('.skip-arrow');
+            if (skipArrow) {
+                skipArrow.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    
+                    // Smooth scroll to main content
+                    mainContent.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                    
+                    // Hide skip section after click
+                    setTimeout(() => {
+                        skipSection.classList.add('hidden');
+                    }, 300);
+                });
+            }
+        }
+
+        // ==========================================================================
+        // EXISTING FUNCTIONALITY
+        // ==========================================================================
+
+        // Device-specific detection for iPad and Foldable devices
+        function detectSpecificDevices() {
+            const userAgent = navigator.userAgent.toLowerCase();
+            const width = window.innerWidth;
+            const height = window.innerHeight;
+            const html = document.documentElement;
+            const isIOS = /ipad|iphone|ipod/.test(userAgent) && !window.MSStream;
+            const isMac = /macintosh/.test(userAgent) && !window.MSStream;
+            const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
+            // Remove existing device classes
+            html.classList.remove(
+                'has-tablet-layout',
+                'has-foldable-layout',
+                'has-landscape-tablet',
+                'has-portrait-tablet',
+                'is-ipad',
+                'is-foldable'
+            );
+
+            // iPad Detection
+            if ((isIOS && width >= 768 && width <= 1366) ||
+                (isMac && isSafari && width >= 768 && width <= 1366 && height >= 1024)) {
+                html.classList.add('is-ipad', 'has-tablet-layout');
+
+                // Detect orientation
+                if (width > height) {
+                    html.classList.add('has-landscape-tablet');
+                } else {
+                    html.classList.add('has-portrait-tablet');
+                }
+            }
+
+            // Foldable Device Detection
+            if (width >= 853 && width <= 1280 &&
+                (width/height >= 1.33 && width/height <= 1.5)) {
+                html.classList.add('is-foldable', 'has-foldable-layout');
+            }
+
+            // Generic Tablet Detection
+            if (width >= 768 && width <= 1366 &&
+                height >= 1024 && height <= 1366 &&
+                ('ontouchstart' in window ||
+                 navigator.maxTouchPoints > 0 ||
+                 navigator.msMaxTouchPoints > 0)) {
+                html.classList.add('has-tablet-layout');
+            }
+        }
+
+        // Enhanced Responsive Features
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set current year in copyright
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Initialize skip section functionality
+            updateGreeting();
+            updateLiveTimer();
+            handleSkipSectionVisibility();
+            
+            // Update greeting every minute
+            setInterval(updateGreeting, 60000);
+            
+            // Update timer every second
+            setInterval(updateLiveTimer, 1000);
+
+            // Device detection
+            detectSpecificDevices();
+
+            // Update on resize and orientation change
+            window.addEventListener('resize', function() {
+                detectSpecificDevices();
+                updateResponsiveClass();
+            });
+
+            window.addEventListener('orientationchange', function() {
+                setTimeout(function() {
+                    detectSpecificDevices();
+                    updateResponsiveClass();
+                }, 100);
+            });
+
+            // Detect WebKit-based browsers (Safari on iPad)
+            const isWebKit = 'webkitBackdropFilter' in document.documentElement.style;
+            if (isWebKit && window.innerWidth >= 768 && window.innerWidth <= 1366) {
+                document.documentElement.classList.add('is-webkit-tablet');
+            }
+
+            // Add responsive class based on screen size
+            function updateResponsiveClass() {
+                const width = window.innerWidth;
+                const html = document.documentElement;
+
+                // Remove all responsive classes
+                html.classList.remove('is-mobile', 'is-tablet', 'is-desktop', 'is-wide');
+
+                // Add appropriate class
+                if (width < 768) {
+                    html.classList.add('is-mobile');
+                } else if (width < 1024) {
+                    html.classList.add('is-tablet');
+                } else if (width < 1440) {
+                    html.classList.add('is-desktop');
+                } else {
+                    html.classList.add('is-wide');
+                }
+            }
+
+            // Initial call
+            updateResponsiveClass();
+
+            // Lazy loading for non-critical images
+            if ('IntersectionObserver' in window) {
+                const lazyImages = document.querySelectorAll('img[data-src]');
+                const imageObserver = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            const img = entry.target;
+                            img.src = img.dataset.src;
+                            img.removeAttribute('data-src');
+                            imageObserver.unobserve(img);
+                        }
+                    });
+                });
+
+                lazyImages.forEach(img => imageObserver.observe(img));
+            }
+
+            // Enhanced button loading states
+            document.querySelectorAll('.btn').forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href && href !== '#' && href !== 'javascript:void(0)') {
+                        e.preventDefault();
+
+                        const originalText = this.innerHTML;
+                        const originalClass = this.className;
+
+                        // Add loading state
+                        this.classList.add('btn-loading');
+                        this.setAttribute('aria-busy', 'true');
+
+                        // Simulate loading with timeout for demo
+                        setTimeout(() => {
+                            this.classList.remove('btn-loading');
+                            this.removeAttribute('aria-busy');
+                            this.innerHTML = originalText;
+                            window.location.href = href;
+                        }, 800);
+                    }
+                });
+            });
+
+            // Touch device detection
+            function isTouchDevice() {
+                return (('ontouchstart' in window) ||
+                       (navigator.maxTouchPoints > 0) ||
+                       (navigator.msMaxTouchPoints > 0));
+            }
+
+            if (isTouchDevice()) {
+                document.documentElement.classList.add('touch-device');
+            }
+
+            // Prevent zoom on double-tap (mobile optimization)
+            let lastTouchEnd = 0;
+            document.addEventListener('touchend', function(event) {
+                const now = (new Date()).getTime();
+                if (now - lastTouchEnd <= 300) {
+                    event.preventDefault();
+                }
+                lastTouchEnd = now;
+            }, false);
+
+            // Performance monitoring
+            if ('performance' in window) {
+                window.addEventListener('load', function() {
+                    setTimeout(function() {
+                        const timing = performance.timing;
+                        const loadTime = timing.loadEventEnd - timing.navigationStart;
+
+                        if (loadTime > 3000) {
+                            console.warn('Load time:', loadTime, 'ms - Consider optimizing assets');
+                        }
+                    }, 0);
+                });
+            }
+
+            // Add viewport meta tag for better mobile experience
+            function updateViewportForIOS() {
+                if (navigator.platform.indexOf('iPhone') !== -1 ||
+                    navigator.platform.indexOf('iPad') !== -1 ||
+                    navigator.platform.indexOf('iPod') !== -1) {
+                    const viewport = document.querySelector('meta[name="viewport"]');
+                    viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover, shrink-to-fit=no');
+                }
+            }
+
+            updateViewportForIOS();
+        });
+
+        // Performance observer for Core Web Vitals
+        if ('PerformanceObserver' in window) {
+            try {
+                const observer = new PerformanceObserver((list) => {
+                    for (const entry of list.getEntries()) {
+                        if (entry.name === 'first-contentful-paint') {
+                            console.log('FCP:', entry.startTime);
+                        }
+                    }
+                });
+                observer.observe({entryTypes: ['paint']});
+            } catch (e) {
+                console.log('PerformanceObserver not supported');
+            }
+        }
+    </script>
+</body>
+</html>

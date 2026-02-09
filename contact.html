@@ -1,0 +1,1211 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Rabiu S.M - Software Systems Engineer</title>
+  <meta name="description" content="Get in touch with Rabiu S.M for project inquiries, collaborations, or consultation">
+  <meta name="keywords" content="Contact, Hire, Project Inquiry, Consultation, Collaboration">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Contact | Rabiu S.M - Software Systems Engineer">
+  <meta property="og:description" content="Get in touch for project inquiries, collaborations, or consultation">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicons -->
+  <link href="assets/img/favicon_io/favicon.ico" rel="icon">
+  <link href="assets/img/favicon_io/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              DEFAULT: '#0440708e',
+              dark: '#02274e'
+            },
+            secondary: {
+              light: '#2c3e50',
+              DEFAULT: '#02274e'
+            },
+            contact: {
+              email: '#3B82F6',
+              phone: '#10B981',
+              location: '#8B5CF6',
+              time: '#EC4899'
+            },
+            whatsapp: {
+              green: '#25D366',
+              dark: '#128C7E',
+              light: '#DCF8C6'
+            }
+          },
+          backgroundImage: {
+            'primary-gradient': 'linear-gradient(135deg, #036ee1 0%, #02274e 100%)',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+            'slide-up': 'slideUp 0.3s ease-out',
+            'pulse-slow': 'pulse 2s ease-in-out infinite',
+            'bounce-slow': 'bounce 2s infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(10px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Contact card styling */
+    .contact-card {
+      transition: all 0.3s ease;
+      border: 1px solid #e5e7eb;
+      background: white;
+    }
+    
+    .contact-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border-color: #036ee1;
+    }
+    
+    /* Hero background */
+    .contact-hero-bg {
+      background-image: url('assets/img/hero-bg-img.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .contact-hero-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.85) 0%, rgba(2, 57, 101, 0.873) 100%);
+      z-index: 1;
+    }
+
+    /* CTA section background */
+    .contact-cta-bg {
+      background-image: url('assets/img/CTA.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .contact-cta-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.9) 0%, rgba(4, 64, 112, 0.9) 100%);
+      z-index: 1;
+    }
+
+    /* Sidebar solid background */
+    .sidebar-solid-bg {
+      background: #01233a !important;
+    }
+    
+    /* Mobile menu button */
+    .mobile-menu-btn {
+      background: #022b46 !important;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #222b46;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #222b46;
+    }
+    
+    /* Sidebar scrollbar */
+    .sidebar-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+    }
+
+    /* Main content spacing */
+    .main-content {
+      margin-top: 80px;
+    }
+
+    @media (min-width: 1024px) {
+      .main-content {
+        margin-top: 0;
+      }
+    }
+
+    /* Form styling */
+    .form-input {
+      border: 1px solid #d1d5db;
+      border-radius: 0.5rem;
+      padding: 0.75rem 1rem;
+      width: 100%;
+      transition: all 0.3s ease;
+    }
+    
+    .form-input:focus {
+      outline: none;
+      border-color: #036ee1;
+      box-shadow: 0 0 0 3px rgba(3, 110, 225, 0.1);
+    }
+    
+    .form-label {
+      display: block;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #374151;
+      margin-bottom: 0.5rem;
+    }
+    
+    /* Submit button */
+    .submit-btn {
+      background: linear-gradient(135deg, #036ee1 0%, #02274e 100%);
+      color: white;
+      font-weight: 600;
+      padding: 0.875rem 2rem;
+      border-radius: 0.5rem;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+    
+    .submit-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px -5px rgba(3, 110, 225, 0.3);
+    }
+    
+    /* Map container */
+    .map-container {
+      border-radius: 0.75rem;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+    }
+    
+    /* Contact info cards */
+    .contact-info-card {
+      padding: 1.5rem;
+      border-radius: 0.75rem;
+      transition: all 0.3s ease;
+    }
+    
+    .contact-info-card:hover {
+      background: #f8fafc;
+    }
+    
+    /* Ensure content stays above background */
+    .section-content {
+      position: relative;
+      z-index: 20;
+    }
+
+    /* WhatsApp Chat Widget Styles */
+    .whatsapp-widget {
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+    }
+
+    .whatsapp-messages {
+      scrollbar-width: thin;
+      scrollbar-color: #25D366 transparent;
+    }
+
+    .whatsapp-messages::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .whatsapp-messages::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+
+    .whatsapp-messages::-webkit-scrollbar-thumb {
+      background: #25D366;
+      border-radius: 10px;
+    }
+
+    .whatsapp-message {
+      animation: slideUp 0.3s ease-out;
+    }
+
+    @keyframes pulse-ring {
+      0% {
+        transform: scale(0.8);
+        opacity: 0.8;
+      }
+      80%, 100% {
+        transform: scale(1.5);
+        opacity: 0;
+      }
+    }
+
+    .pulse-ring {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background-color: #25D366;
+      animation: pulse-ring 2s cubic-bezier(0.455, 0.03, 0.515, 0.955) infinite;
+    }
+
+    /* FAQ Accordion Styles */
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s ease-out, opacity 0.3s ease-out;
+      opacity: 0;
+    }
+    
+    .faq-answer.open {
+      max-height: 500px;
+      opacity: 1;
+    }
+    
+    .faq-toggle {
+      transition: transform 0.3s ease;
+    }
+    
+    .faq-toggle.open {
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-inter">
+    
+  <!-- Mobile Menu Button -->
+  <button id="mobileMenuButton" class="mobile-menu-btn md:hidden fixed top-4 left-4 z-50 w-10 h-10 text-white rounded-full shadow-lg flex items-center justify-center">
+    <i class="bi bi-list text-xl"></i>
+  </button>
+
+  <!-- Left Sidebar -->
+  <aside id="sidebar" class="sidebar-solid-bg text-white fixed left-0 top-0 h-screen w-64 z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 shadow-2xl">
+    <div class="flex flex-col h-full">
+      <!-- Profile Section -->
+      <div class="p-6 border-b border-white/10">
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-white/20 mb-4">
+            <img src="assets/img/rsm-pic.jpg" 
+                 alt="Rabiu S.M." 
+                 class="w-full h-full object-cover">
+          </div>
+          <h2 class="text-lg font-bold">Rabiu S.M.</h2>
+          <p class="text-white/70 text-sm mt-1">Software Engineer</p>
+        </div>
+      </div>
+      
+      <!-- Navigation Links -->
+      <nav class="flex-1 overflow-y-auto sidebar-scrollbar p-4 space-y-2">
+        <a href="index.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-house-door text-lg"></i>
+          <span>Home</span>
+        </a>
+        
+        <a href="about.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-person text-lg"></i>
+          <span>About Me</span>
+        </a>
+        
+        <a href="skills.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-tools text-lg"></i>
+          <span>Skills</span>
+        </a>
+        
+        <a href="projects.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-briefcase text-lg"></i>
+          <span>Projects</span>
+        </a>
+        
+        <a href="system-design.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-diagram-3 text-lg"></i>
+          <span>System Design</span>
+        </a>
+        
+        <a href="experience.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-clock-history text-lg"></i>
+          <span>Experience</span>
+        </a>
+        
+        <!-- More Dropdown -->
+        <div class="relative">
+          <button id="sidebarMoreButton" class="flex items-center justify-between w-full px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+            <div class="flex items-center space-x-3">
+              <i class="bi bi-three-dots text-lg"></i>
+              <span>More</span>
+            </div>
+            <i id="sidebarMoreIcon" class="bi bi-chevron-down text-sm transition-transform duration-300"></i>
+          </button>
+          
+          <div id="sidebarMoreContent" class="hidden pl-6 space-y-2 mt-2">
+            <a href="blogs.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-pencil-square text-sm"></i>
+              <span class="text-sm">Blogs</span>
+            </a>
+            <a href="certification.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-award text-sm"></i>
+              <span class="text-sm">Certification</span>
+            </a>
+            <a href="open-source.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-github text-sm"></i>
+              <span class="text-sm">Open Source</span>
+            </a>
+            <a href="testimonials.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-chat-quote text-sm"></i>
+              <span class="text-sm">Testimonials</span>
+            </a>
+            <a href="talks-media.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-mic text-sm"></i>
+              <span class="text-sm">Talks & Media</span>
+            </a>
+          </div>
+        </div>
+        
+        <a href="contact.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-gradient-to-r from-primary to-primary/80 text-white mt-4 hover:opacity-90 transition-all">
+          <i class="bi bi-chat-dots text-lg"></i>
+          <span>Contact Me</span>
+        </a>
+      </nav>
+      
+      <!-- Social Links & Copyright -->
+      <div class="p-4 border-t border-white/10">
+        <div class="flex justify-center space-x-4 mb-4">
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+        <p class="text-white/50 text-xs text-center">
+          © 2026 Rabiu S.M.
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay for mobile -->
+  <div id="overlay" class="fixed inset-0 bg-black/50 z-30 md:hidden hidden"></div>
+
+  <!-- Main Content -->
+  <main class="main-content lg:ml-64 min-h-screen">
+    <!-- Hero Section -->
+    <section class="contact-hero-bg text-white py-16 md:py-24 relative">
+      <div class="container mx-auto px-4 section-content">
+        <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Let's Build Something Amazing
+          </h1>
+          <p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+            Ready to transform your ideas into reality? Get in touch for project inquiries, collaborations, or technical consultation
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-briefcase mr-2"></i>Project Inquiries
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-people mr-2"></i>Collaborations
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-chat-left-text mr-2"></i>Consultation
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-lightbulb mr-2"></i>Technical Advice
+            </span>
+          </div>
+          <a href="#contactForm" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-dark rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all hover:-translate-y-1 animate-bounce">
+            <i class="bi bi-chat-dots mr-2"></i>
+            Send a Message
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Overview -->
+    <section class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-xl p-6 text-center contact-card" data-aos="fade-up">
+            <div class="text-3xl font-bold text-contact-email mb-2">24h</div>
+            <p class="text-gray-600">Response Time</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center contact-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-3xl font-bold text-contact-phone mb-2">50+</div>
+            <p class="text-gray-600">Projects Completed</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center contact-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-3xl font-bold text-contact-location mb-2">Global</div>
+            <p class="text-gray-600">Remote Collaboration</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center contact-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-3xl font-bold text-contact-time mb-2">100%</div>
+            <p class="text-gray-600">Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+          <!-- Contact Information -->
+          <div class="lg:col-span-1" data-aos="fade-up">
+            <h2 class="text-3xl font-bold text-gray-900 mb-8">Get in Touch</h2>
+            
+            <div class="space-y-6">
+              <!-- Location -->
+              <div class="contact-info-card contact-card">
+                <div class="flex items-start mb-4">
+                  <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mr-4">
+                    <i class="bi bi-geo-alt text-2xl text-contact-location"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1">Location</h3>
+                    <p class="text-gray-600">Murtala Muhammad way, Maitama Junction FCT-Abuja, Nigeria</p>
+                    <p class="text-gray-500 text-sm">Available for remote work worldwide</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Email -->
+              <div class="contact-info-card contact-card">
+                <div class="flex items-start mb-4">
+                  <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mr-4">
+                    <i class="bi bi-envelope text-2xl text-contact-email"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1">Email</h3>
+                    <p class="text-gray-600">contact@rabiu.com</p>
+                    <p class="text-gray-500 text-sm">Primary contact method</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Phone -->
+              <div class="contact-info-card contact-card">
+                <div class="flex items-start mb-4">
+                  <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mr-4">
+                    <i class="bi bi-phone text-2xl text-contact-phone"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1">Phone</h3>
+                    <p class="text-gray-600">+234-9123-234-431</p>
+                    <p class="text-gray-500 text-sm">Available for calls and messages</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Availability -->
+              <div class="contact-info-card contact-card">
+                <div class="flex items-start mb-4">
+                  <div class="w-12 h-12 rounded-lg bg-pink-50 flex items-center justify-center mr-4">
+                    <i class="bi bi-clock text-2xl text-contact-time"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1">Availability</h3>
+                    <p class="text-gray-600">Monday - Friday</p>
+                    <p class="text-gray-500 text-sm">9:00 AM - 6:00 PM (WAT)</p>
+                    <p class="text-gray-500 text-sm">Flexible hours for urgent projects</p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- WhatsApp Contact Card -->
+              <div class="contact-info-card contact-card border-2 border-whatsapp-green/20">
+                <div class="flex items-start mb-4">
+                  <div class="w-12 h-12 rounded-lg bg-gradient-to-br from-whatsapp-green to-whatsapp-dark flex items-center justify-center mr-4">
+                    <i class="fab fa-whatsapp text-2xl text-white"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-1">WhatsApp Chat</h3>
+                    <p class="text-gray-600">Instant messaging available</p>
+                    <p class="text-gray-500 text-sm">Quick responses for urgent inquiries</p>
+                    <button id="openWhatsAppChat" class="mt-3 px-4 py-2 bg-gradient-to-r from-whatsapp-green to-whatsapp-dark text-white rounded-lg text-sm font-medium hover:shadow-lg transition-all">
+                      <i class="fab fa-whatsapp mr-2"></i>Open Chat
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Social Links -->
+              <div class="contact-info-card contact-card">
+                <div class="flex items-start mb-4">
+                  <div class="w-12 h-12 rounded-lg bg-gray-50 flex items-center justify-center mr-4">
+                    <i class="bi bi-share text-2xl text-gray-600"></i>
+                  </div>
+                  <div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">Connect Socially</h3>
+                    <div class="flex space-x-4">
+                      <a href="#" class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center hover:bg-blue-100 transition-colors">
+                        <i class="bi bi-linkedin text-blue-600"></i>
+                      </a>
+                      <a href="#" class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center hover:bg-gray-200 transition-colors">
+                        <i class="bi bi-github text-gray-700"></i>
+                      </a>
+                      <a href="#" class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center hover:bg-blue-200 transition-colors">
+                        <i class="bi bi-twitter-x text-gray-700"></i>
+                      </a>
+                      <a href="#" class="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center hover:bg-orange-100 transition-colors">
+                        <i class="bi bi-instagram text-orange-600"></i>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form & Map -->
+          <div class="lg:col-span-2" data-aos="fade-up" data-aos-delay="100">
+            <!-- Contact Form -->
+            <div id="contactForm" class="bg-white rounded-xl p-8 contact-card mb-8">
+              <h2 class="text-2xl font-bold text-gray-900 mb-6">Send a Message</h2>
+              <p class="text-gray-600 mb-8">Fill out the form below and I'll get back to you within 24 hours.</p>
+              
+              <form class="space-y-6">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div>
+                    <label for="name" class="form-label">Your Name *</label>
+                    <input type="text" id="name" class="form-input" placeholder="John Doe" required>
+                  </div>
+                  <div>
+                    <label for="email" class="form-label">Your Email *</label>
+                    <input type="email" id="email" class="form-input" placeholder="john@example.com" required>
+                  </div>
+                </div>
+                
+                <div>
+                  <label for="subject" class="form-label">Subject *</label>
+                  <input type="text" id="subject" class="form-input" placeholder="Project Inquiry" required>
+                </div>
+                
+                <div>
+                  <label for="message" class="form-label">Message *</label>
+                  <textarea id="message" rows="6" class="form-input" placeholder="Tell me about your project, timeline, and budget..." required></textarea>
+                </div>
+                
+                <div>
+                  <label for="projectType" class="form-label">Project Type</label>
+                  <select id="projectType" class="form-input">
+                    <option value="">Select project type</option>
+                    <option value="web-dev">Web Development</option>
+                    <option value="mobile-app">Mobile App Development</option>
+                    <option value="system-design">System Design & Architecture</option>
+                    <option value="consultation">Technical Consultation</option>
+                    <option value="full-time">Full-time Position</option>
+                    <option value="other">Other</option>
+                  </select>
+                </div>
+                
+                <div class="flex items-center">
+                  <input type="checkbox" id="newsletter" class="w-4 h-4 text-primary border-gray-300 rounded focus:ring-primary">
+                  <label for="newsletter" class="ml-2 text-sm text-gray-600">
+                    Subscribe to occasional updates about new projects and insights
+                  </label>
+                </div>
+                
+                <button type="submit" class="submit-btn w-full md:w-auto">
+                  <i class="bi bi-send mr-2"></i>Send Message
+                </button>
+              </form>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container">
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126845.19301171082!2d3.3210380999999997!3d6.5243793!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8b2ae68280c1%3A0xdc9e87a367c3d9cb!2sLagos!5e0!3m2!1sen!2sng!4v1700000000000!5m2!1sen!2sng" 
+                width="100%" 
+                height="300" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy" 
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQs -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Common questions about working with me and my services
+          </p>
+        </div>
+
+        <div class="max-w-3xl mx-auto">
+          <!-- FAQ 1 -->
+          <div class="bg-white rounded-xl mb-4 contact-card overflow-hidden" data-aos="fade-up">
+            <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:bg-gray-50 transition-colors">
+              <div class="flex items-start flex-1">
+                <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mr-4 flex-shrink-0">
+                  <span class="text-lg font-bold text-blue-600">Q1</span>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">What types of projects do you work on?</h3>
+                </div>
+              </div>
+              <div class="faq-toggle ml-4 text-gray-500">
+                <i class="bi bi-chevron-down text-xl"></i>
+              </div>
+            </button>
+            <div class="faq-answer px-6">
+              <div class="pb-6">
+                <p class="text-gray-600">
+                  I specialize in full-stack web development, mobile applications, system architecture design, and technical consulting. My expertise includes React, Node.js, Laravel, database design, and cloud infrastructure.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 2 -->
+          <div class="bg-white rounded-xl mb-4 contact-card overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:bg-gray-50 transition-colors">
+              <div class="flex items-start flex-1">
+                <div class="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center mr-4 flex-shrink-0">
+                  <span class="text-lg font-bold text-green-600">Q2</span>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">What is your typical response time?</h3>
+                </div>
+              </div>
+              <div class="faq-toggle ml-4 text-gray-500">
+                <i class="bi bi-chevron-down text-xl"></i>
+              </div>
+            </button>
+            <div class="faq-answer px-6">
+              <div class="pb-6">
+                <p class="text-gray-600">
+                  I strive to respond to all inquiries within 24 hours. For urgent matters, please indicate "URGENT" in your subject line. Initial consultations are usually scheduled within 2-3 business days.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 3 -->
+          <div class="bg-white rounded-xl mb-4 contact-card overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+            <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:bg-gray-50 transition-colors">
+              <div class="flex items-start flex-1">
+                <div class="w-10 h-10 rounded-lg bg-purple-50 flex items-center justify-center mr-4 flex-shrink-0">
+                  <span class="text-lg font-bold text-purple-600">Q3</span>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">Do you work with international clients?</h3>
+                </div>
+              </div>
+              <div class="faq-toggle ml-4 text-gray-500">
+                <i class="bi bi-chevron-down text-xl"></i>
+              </div>
+            </button>
+            <div class="faq-answer px-6">
+              <div class="pb-6">
+                <p class="text-gray-600">
+                  Yes, I work with clients worldwide. All my work is done remotely, and I'm experienced in collaborating across different time zones using tools like Slack, Zoom, and project management platforms.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- FAQ 4 -->
+          <div class="bg-white rounded-xl contact-card overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+            <button class="faq-question w-full text-left p-6 flex items-center justify-between hover:bg-gray-50 transition-colors">
+              <div class="flex items-start flex-1">
+                <div class="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center mr-4 flex-shrink-0">
+                  <span class="text-lg font-bold text-amber-600">Q4</span>
+                </div>
+                <div class="flex-1">
+                  <h3 class="text-lg font-bold text-gray-900 mb-2">What is your process for starting a new project?</h3>
+                </div>
+              </div>
+              <div class="faq-toggle ml-4 text-gray-500">
+                <i class="bi bi-chevron-down text-xl"></i>
+              </div>
+            </button>
+            <div class="faq-answer px-6">
+              <div class="pb-6">
+                <p class="text-gray-600">
+                  My process typically includes: 1) Initial consultation to understand your needs, 2) Proposal and timeline estimation, 3) Regular progress updates, 4) Development and testing phases, 5) Deployment and post-launch support. I'm flexible and adapt to your specific requirements.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-20 contact-cta-bg relative">
+      <div class="container mx-auto px-4 section-content text-center">
+        <div data-aos="fade-up">
+          <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Start Your Project?</h3>
+          <p class="text-gray-100 mb-10 max-w-2xl mx-auto text-lg md:text-xl">
+            Let's discuss how we can work together to bring your ideas to life with cutting-edge technology.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="#contactForm" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-dark rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gap-3">
+              <i class="bi bi-chat-dots text-xl"></i>
+              Start a Conversation
+            </a>
+            <a href="projects.html" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white/30 text-white rounded-lg font-bold hover:bg-white/10 transition-all gap-3">
+              <i class="bi bi-briefcase text-xl"></i>
+              View My Work
+            </a>
+            <button id="whatsappCTA" class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-whatsapp-green to-whatsapp-dark text-white rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gap-3">
+              <i class="fab fa-whatsapp text-xl"></i>
+              Chat on WhatsApp
+            </button>
+          </div>
+          <p class="text-gray-300 mt-6 text-sm">Free initial consultation • Flexible engagement models • Transparent pricing</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- WhatsApp Chat Widget -->
+  <div id="whatsappWidget" class="fixed bottom-24 right-6 z-50 whatsapp-widget hidden animate-fade-in">
+    <div class="w-80 bg-white rounded-2xl shadow-2xl overflow-hidden">
+      <!-- Header -->
+      <div class="bg-gradient-to-r from-whatsapp-green to-whatsapp-dark p-4 flex items-center justify-between">
+        <div class="flex items-center space-x-3">
+          <div class="relative">
+            <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+              <i class="fab fa-whatsapp text-2xl text-whatsapp-green"></i>
+            </div>
+            <div class="absolute -top-1 -right-1 w-4 h-4 bg-green-400 rounded-full border-2 border-white"></div>
+          </div>
+          <div>
+            <h3 class="font-bold text-white">Rabiu S.M.</h3>
+            <p class="text-whatsapp-light text-xs">Typically replies in minutes</p>
+          </div>
+        </div>
+        <button id="closeWhatsAppWidget" class="text-white hover:text-gray-200">
+          <i class="fas fa-times"></i>
+        </button>
+      </div>
+
+      <!-- Chat Messages -->
+      <div class="h-80 overflow-y-auto whatsapp-messages p-4 bg-gray-50">
+        <div class="space-y-4">
+          <!-- Initial message -->
+          <div class="whatsapp-message">
+            <div class="bg-whatsapp-light rounded-2xl rounded-tl-none p-3 max-w-[80%]">
+              <p class="text-sm text-gray-800">Hi there! 👋</p>
+              <p class="text-sm text-gray-800 mt-1">I'm Rabiu, your Software Engineering partner. How can I help you today?</p>
+              <p class="text-xs text-gray-500 mt-2">Just now</p>
+            </div>
+          </div>
+
+          <!-- Quick options -->
+          <div class="whatsapp-message">
+            <div class="bg-white border border-gray-200 rounded-2xl p-3">
+              <p class="text-sm text-gray-600 mb-2">Quick options:</p>
+              <div class="space-y-2">
+                <button class="quick-option w-full text-left px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm transition-colors" data-message="I need a website">
+                  <span>🌐 I need a website</span>
+                </button>
+                <button class="quick-option w-full text-left px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm transition-colors" data-message="Mobile app development">
+                  <span>📱 Mobile app development</span>
+                </button>
+                <button class="quick-option w-full text-left px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm transition-colors" data-message="System design consultation">
+                  <span>⚙️ System design consultation</span>
+                </button>
+                <button class="quick-option w-full text-left px-3 py-2 bg-gray-100 hover:bg-gray-200 rounded-lg text-sm transition-colors" data-message="What are your rates?">
+                  <span>💰 What are your rates?</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Chat Input -->
+      <div class="p-4 border-t border-gray-200">
+        <div class="flex space-x-2">
+          <input 
+            type="text" 
+            id="whatsappMessageInput" 
+            placeholder="Type your message..." 
+            class="flex-1 border border-gray-300 rounded-full px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-whatsapp-green focus:border-transparent"
+          >
+          <button id="sendWhatsAppMessage" class="bg-whatsapp-green text-white w-10 h-10 rounded-full flex items-center justify-center hover:bg-whatsapp-dark transition-colors">
+            <i class="fas fa-paper-plane"></i>
+          </button>
+        </div>
+        <p class="text-xs text-gray-500 mt-2 text-center">
+          You'll be redirected to WhatsApp to continue the conversation
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- WhatsApp Floating Button -->
+  <div class="fixed bottom-6 right-6 z-40">
+    <div class="relative">
+      <!-- Pulsing ring effect -->
+      <div class="absolute inset-0 pulse-ring"></div>
+      
+      <!-- Main button -->
+      <button id="whatsappFloatingButton" class="relative w-14 h-14 bg-gradient-to-br from-whatsapp-green to-whatsapp-dark text-white rounded-full flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-300 transform hover:scale-110 animate-bounce-slow">
+        <i class="fab fa-whatsapp text-2xl"></i>
+      </button>
+      
+      <!-- Notification badge -->
+      <div class="absolute -top-1 -right-1 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center text-xs text-white font-bold animate-pulse">
+        1
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-6">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-col justify-center items-center text-center lg:space-y-4">
+        <div class="mb-4 lg:mb-0 lg:w-full">
+          <p class="text-gray-600 text-sm md:text-base">
+            © <span id="currentYear"></span> <strong class="text-gray-900">Rabiu S.M.</strong> All Rights Reserved.
+          </p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-linkedin text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <i class="bi bi-github text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <i class="bi bi-twitter-x text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-envelope text-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <button id="scrollTop" class="fixed bottom-32 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all opacity-0 invisible hover:opacity-100 z-40">
+    <i class="bi bi-arrow-up text-lg"></i>
+  </button>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <script>
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+      });
+
+      // Set current year in footer
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById('mobileMenuButton');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+
+      mobileMenuButton.addEventListener('click', () => {
+        sidebar.classList.toggle('-translate-x-full');
+        overlay.classList.toggle('hidden');
+      });
+
+      overlay.addEventListener('click', () => {
+        sidebar.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+      });
+
+      // Sidebar More Dropdown
+      const sidebarMoreButton = document.getElementById('sidebarMoreButton');
+      const sidebarMoreIcon = document.getElementById('sidebarMoreIcon');
+      const sidebarMoreContent = document.getElementById('sidebarMoreContent');
+
+      sidebarMoreButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sidebarMoreContent.classList.toggle('hidden');
+        sidebarMoreIcon.classList.toggle('rotate-180');
+      });
+
+      // WhatsApp Functionality
+      const whatsappFloatingButton = document.getElementById('whatsappFloatingButton');
+      const whatsappWidget = document.getElementById('whatsappWidget');
+      const closeWhatsAppWidget = document.getElementById('closeWhatsAppWidget');
+      const openWhatsAppChat = document.getElementById('openWhatsAppChat');
+      const whatsappCTA = document.getElementById('whatsappCTA');
+      const whatsappMessageInput = document.getElementById('whatsappMessageInput');
+      const sendWhatsAppMessage = document.getElementById('sendWhatsAppMessage');
+      const quickOptions = document.querySelectorAll('.quick-option');
+
+      // Open WhatsApp widget
+      function openWhatsAppWidget() {
+        whatsappWidget.classList.remove('hidden');
+        whatsappWidget.classList.add('animate-fade-in');
+        setTimeout(() => whatsappMessageInput.focus(), 300);
+      }
+
+      // Close WhatsApp widget
+      function closeWhatsAppWidgetFunc() {
+        whatsappWidget.classList.add('hidden');
+      }
+
+      // Send WhatsApp message
+      function sendWhatsAppMessageFunc(message) {
+        const phoneNumber = '2349123234431';
+        const encodedMessage = encodeURIComponent(message || whatsappMessageInput.value);
+        
+        if (!encodedMessage.trim()) {
+          whatsappMessageInput.focus();
+          return;
+        }
+
+        // Redirect to WhatsApp
+        window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+        
+        // Close widget and clear input
+        closeWhatsAppWidgetFunc();
+        whatsappMessageInput.value = '';
+      }
+
+      // Event Listeners for WhatsApp
+      whatsappFloatingButton.addEventListener('click', openWhatsAppWidget);
+      closeWhatsAppWidget.addEventListener('click', closeWhatsAppWidgetFunc);
+      openWhatsAppChat.addEventListener('click', openWhatsAppWidget);
+      whatsappCTA.addEventListener('click', openWhatsAppWidget);
+
+      // Send message on button click
+      sendWhatsAppMessage.addEventListener('click', () => sendWhatsAppMessageFunc());
+
+      // Send message on Enter key
+      whatsappMessageInput.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+          sendWhatsAppMessageFunc();
+        }
+      });
+
+      // Quick option buttons
+      quickOptions.forEach(option => {
+        option.addEventListener('click', () => {
+          const message = option.getAttribute('data-message');
+          sendWhatsAppMessageFunc(message);
+        });
+      });
+
+      // FAQ Accordion Functionality
+      const faqQuestions = document.querySelectorAll('.faq-question');
+      
+      // Initialize first FAQ as open
+      if (faqQuestions.length > 0) {
+        const firstFaq = faqQuestions[0];
+        const firstAnswer = firstFaq.nextElementSibling;
+        const firstToggle = firstFaq.querySelector('.faq-toggle');
+        
+        firstAnswer.classList.add('open');
+        firstToggle.classList.add('open');
+      }
+
+      faqQuestions.forEach(question => {
+        question.addEventListener('click', () => {
+          const answer = question.nextElementSibling;
+          const toggle = question.querySelector('.faq-toggle');
+          
+          // Close all other FAQs
+          faqQuestions.forEach(otherQuestion => {
+            if (otherQuestion !== question) {
+              const otherAnswer = otherQuestion.nextElementSibling;
+              const otherToggle = otherQuestion.querySelector('.faq-toggle');
+              otherAnswer.classList.remove('open');
+              otherToggle.classList.remove('open');
+            }
+          });
+
+          // Toggle current FAQ
+          answer.classList.toggle('open');
+          toggle.classList.toggle('open');
+        });
+      });
+
+      // Form submission
+      const contactForm = document.querySelector('form');
+      if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+          e.preventDefault();
+          
+          // Simple form validation
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const subject = document.getElementById('subject').value;
+          const message = document.getElementById('message').value;
+          
+          if (!name || !email || !subject || !message) {
+            alert('Please fill in all required fields marked with *');
+            return;
+          }
+          
+          // Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            alert('Please enter a valid email address');
+            return;
+          }
+          
+          // Simulate form submission
+          const submitBtn = contactForm.querySelector('.submit-btn');
+          const originalText = submitBtn.innerHTML;
+          
+          submitBtn.innerHTML = '<i class="bi bi-hourglass-split mr-2"></i>Sending...';
+          submitBtn.disabled = true;
+          
+          // Simulate API call
+          setTimeout(() => {
+            alert('Thank you for your message! I will get back to you within 24 hours.');
+            contactForm.reset();
+            submitBtn.innerHTML = originalText;
+            submitBtn.disabled = false;
+            
+            // Scroll to top of form
+            document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' });
+          }, 1500);
+        });
+      }
+
+      // Scroll to top functionality
+      const scrollTop = document.getElementById('scrollTop');
+      
+      function toggleScrollTop() {
+        if (window.pageYOffset > 300) {
+          scrollTop.classList.remove('opacity-0', 'invisible');
+          scrollTop.classList.add('opacity-100', 'visible');
+        } else {
+          scrollTop.classList.remove('opacity-100', 'visible');
+          scrollTop.classList.add('opacity-0', 'invisible');
+        }
+      }
+      
+      scrollTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      window.addEventListener('scroll', toggleScrollTop);
+      toggleScrollTop(); // Initial check
+
+      // Auto-open WhatsApp widget on page load (after 3 seconds)
+      setTimeout(() => {
+        // Show notification pulse on floating button
+        whatsappFloatingButton.classList.add('animate-pulse-slow');
+        
+        // Auto-open after 10 seconds if user hasn't interacted
+        setTimeout(() => {
+          if (!whatsappWidget.classList.contains('hidden')) return;
+          const hasInteracted = sessionStorage.getItem('whatsappInteracted');
+          if (!hasInteracted) {
+            openWhatsAppWidget();
+            sessionStorage.setItem('whatsappInteracted', 'true');
+          }
+        }, 10000);
+      }, 3000);
+    });
+
+    // Keyboard shortcuts for better UX
+    document.addEventListener('keydown', (e) => {
+      // Close sidebar with Escape key on mobile
+      if (e.key === 'Escape' && window.innerWidth < 768) {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        if (!sidebar.classList.contains('-translate-x-full')) {
+          sidebar.classList.add('-translate-x-full');
+          overlay.classList.add('hidden');
+        }
+      }
+      
+      // Close WhatsApp widget with Escape key
+      if (e.key === 'Escape') {
+        const whatsappWidget = document.getElementById('whatsappWidget');
+        if (!whatsappWidget.classList.contains('hidden')) {
+          whatsappWidget.classList.add('hidden');
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>

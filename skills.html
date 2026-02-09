@@ -1,0 +1,1360 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Skills | Rabiu S.M - Software Systems Engineer</title>
+  <meta name="description" content="Comprehensive technical skills and technology stack including frontend, backend, database, and development tools expertise">
+  <meta name="keywords" content="Skills, Technology Stack, Frontend Development, Backend Development, Full-Stack, Software Engineering">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Skills | Rabiu S.M - Software Systems Engineer">
+  <meta property="og:description" content="Professional software development skills and technology expertise">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicons -->
+  <link href="assets/img/favicon_io/favicon.ico" rel="icon">
+  <link href="assets/img/favicon_io/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Add Font Awesome for Canva, CorelDraw, and other icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+  
+  <!-- Cursor AI icon -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              DEFAULT: '#0440708e',
+              dark: '#02274e'
+            },
+            secondary: {
+              light: '#2c3e50',
+              DEFAULT: '#02274e'
+            },
+            skill: {
+              frontend: '#3B82F6',
+              backend: '#10B981',
+              database: '#8B5CF6',
+              mobile: '#EC4899',
+              tools: '#F59E0B',
+              design: '#EF4444',
+              css: '#1572B6',
+              bootstrap: '#7952B3',
+              tailwind: '#06b6d4'
+            }
+          },
+          backgroundImage: {
+            'primary-gradient': 'linear-gradient(135deg, #036ee1 0%, #02274e 100%)',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+            'slide-up': 'slideUp 0.3s ease-out',
+            'pulse-slow': 'pulse 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(10px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Skill card styling - Matching project portfolio */
+    .skill-card {
+      transition: all 0.3s ease;
+      border: 1px solid #e5e7eb;
+      background: white;
+    }
+    
+    .skill-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border-color: #036ee1;
+    }
+    
+    /* Skill badges */
+    .skill-badge {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border: 1px solid #bae6fd;
+      color: #0369a1;
+      font-weight: 500;
+    }
+    
+    .skill-badge.frontend {
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+      border-color: #93c5fd;
+      color: #1d4ed8;
+    }
+    
+    .skill-badge.backend {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border-color: #86efac;
+      color: #15803d;
+    }
+    
+    .skill-badge.database {
+      background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+      border-color: #d8b4fe;
+      color: #7c3aed;
+    }
+    
+    .skill-badge.tools {
+      background: linear-gradient(135deg, #fffbeb 0%, #fef3c7 100%);
+      border-color: #fcd34d;
+      color: #d97706;
+    }
+    
+    /* Skill level bars */
+    .skill-level {
+      height: 8px;
+      border-radius: 4px;
+      background: #e5e7eb;
+      overflow: hidden;
+    }
+    
+    .skill-level-fill {
+      height: 100%;
+      border-radius: 4px;
+      transition: width 1s ease-in-out;
+    }
+    
+    .level-advanced { background: linear-gradient(90deg, #10B981, #059669); }
+    .level-intermediate { background: linear-gradient(90deg, #3B82F6, #1d4ed8); }
+    .level-basic { background: linear-gradient(90deg, #8B5CF6, #7c3aed); }
+    
+    /* Filter buttons matching project portfolio */
+    .filter-btn.active {
+      background: linear-gradient(135deg, #036ee1 0%, #02274e 100%);
+      color: white;
+      border-color: #036ee1;
+    }
+    
+    /* Custom scrollbar */
+    .skill-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .skill-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    
+    .skill-scrollbar::-webkit-scrollbar-thumb {
+      background: #036ee1;
+      border-radius: 10px;
+    }
+    
+    /* Hero background matching project portfolio */
+    .skills-hero-bg {
+      background-image: url('assets/img/hero-bg-img.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .skills-hero-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.85) 0%, rgba(2, 57, 101, 0.873) 100%);
+      z-index: 1;
+    }
+
+    /* CTA section background matching project portfolio */
+    .skills-cta-bg {
+      background-image: url('assets/img/CTA.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .skills-cta-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.9) 0%, rgba(4, 64, 112, 0.9) 100%);
+      z-index: 1;
+    }
+
+    /* Ensure content stays above background */
+    .section-content {
+      position: relative;
+      z-index: 20;
+    }
+
+    /* Skill category backgrounds */
+    .frontend-bg {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    }
+    
+    .backend-bg {
+      background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+    }
+    
+    .database-bg {
+      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    }
+    
+    .tools-bg {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    }
+    
+    .mobile-bg {
+      background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+    }
+    
+    .design-bg {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    }
+
+    /* Technology icons */
+    .tech-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .tech-icon.html5 { color: #e34f26; }
+    .tech-icon.css3 { color: #1572b6; }
+    .tech-icon.js { color: #f7df1e; background: #323330; padding: 5px; border-radius: 5px; }
+    .tech-icon.react { color: #61dafb; }
+    .tech-icon.tailwind { color: #06b6d4; }
+    .tech-icon.bootstrap { color: #7952b3; }
+    .tech-icon.node { color: #339933; }
+    .tech-icon.php { color: #777bb4; }
+    .tech-icon.laravel { color: #ff2d20; }
+    .tech-icon.nextjs { color: #000000; }
+    .tech-icon.react-native { color: #61dafb; }
+    .tech-icon.mysql { color: #4479a1; }
+    .tech-icon.postgres { color: #336791; }
+    .tech-icon.mongodb { color: #47a248; }
+    .tech-icon.git { color: #f05032; }
+    .tech-icon.github { color: #181717; }
+    .tech-icon.vscode { color: #007acc; }
+    .tech-icon.figma { color: #f24e1e; }
+    .tech-icon.canva { color: #00C4CC; }
+    .tech-icon.coreldraw { color: #CC6600; }
+    .tech-icon.photoshop { color: #31A8FF; }
+    .tech-icon.cursor { color: #000000; }
+    
+    /* Custom Canva and CorelDraw Icons */
+    .fa-canva {
+      background: linear-gradient(135deg, #00C4CC 0%, #00B4B4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .fa-coreldraw {
+      background: linear-gradient(135deg, #CC6600 0%, #FF9900 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    
+    .fa-photoshop {
+      background: linear-gradient(135deg, #31A8FF 0%, #1473E6 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    /* Fixed: Sidebar solid background - Matching project portfolio */
+    .sidebar-solid-bg {
+      background: #01233a !important;
+    }
+    
+    /* Fixed: Mobile menu button with solid background - Matching project portfolio */
+    .mobile-menu-btn {
+      background: #022b46 !important;
+    }
+    
+    /* Custom scrollbar - Matching project portfolio */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #222b46;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #222b46;
+    }
+    
+    /* Sidebar scrollbar - Matching project portfolio */
+    .sidebar-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+    }
+
+    /* Fixed: Ensure content is visible - Matching project portfolio */
+    .main-content {
+      margin-top: 80px;
+    }
+
+    @media (min-width: 1024px) {
+      .main-content {
+        margin-top: 0;
+      }
+    }
+    
+    /* Bootstrap icon */
+    .bi-bootstrap-fill {
+      color: #7952b3;
+    }
+    
+    /* Tailwind icon */
+    .devicon-tailwindcss-plain {
+      color: #06b6d4;
+    }
+    
+    /* Cursor AI icon */
+    .ti-brand-cursor {
+      background: linear-gradient(135deg, #000000 0%, #333333 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-inter">
+    
+  <!-- Mobile Menu Button - Matching project portfolio -->
+  <button id="mobileMenuButton" class="mobile-menu-btn md:hidden fixed top-4 left-4 z-50 w-10 h-10 text-white rounded-full shadow-lg flex items-center justify-center">
+    <i class="bi bi-list text-xl"></i>
+  </button>
+
+  <!-- Left Sidebar - EXACT MATCH to project portfolio -->
+  <aside id="sidebar" class="sidebar-solid-bg text-white fixed left-0 top-0 h-screen w-64 z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 shadow-2xl">
+    <div class="flex flex-col h-full">
+      <!-- Profile Section -->
+      <div class="p-6 border-b border-white/10">
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-white/20 mb-4">
+            <img src="assets/img/rsm-pic.jpg" 
+                 alt="Rabiu S.M." 
+                 class="w-full h-full object-cover">
+          </div>
+          <h2 class="text-lg font-bold">Rabiu S.M.</h2>
+          <p class="text-white/70 text-sm mt-1">Software Engineer</p>
+        </div>
+      </div>
+      
+      <!-- Navigation Links -->
+      <nav class="flex-1 overflow-y-auto sidebar-scrollbar p-4 space-y-2">
+        <a href="index.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-house-door text-lg"></i>
+          <span>Home</span>
+        </a>
+        
+        <a href="about.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-person text-lg"></i>
+          <span>About Me</span>
+        </a>
+        
+        <a href="skills.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-primary text-white transition-all">
+          <i class="bi bi-tools text-lg"></i>
+          <span>Skills</span>
+        </a>
+        
+        <a href="projects.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-briefcase text-lg"></i>
+          <span>Projects</span>
+        </a>
+        
+        <a href="system-design.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-diagram-3 text-lg"></i>
+          <span>System Design</span>
+        </a>
+        
+        <a href="experience.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-clock-history text-lg"></i>
+          <span>Experience</span>
+        </a>
+        
+        <!-- More Dropdown -->
+        <div class="relative">
+          <button id="sidebarMoreButton" class="flex items-center justify-between w-full px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+            <div class="flex items-center space-x-3">
+              <i class="bi bi-three-dots text-lg"></i>
+              <span>More</span>
+            </div>
+            <i id="sidebarMoreIcon" class="bi bi-chevron-down text-sm transition-transform duration-300"></i>
+          </button>
+          
+          <div id="sidebarMoreContent" class="hidden pl-6 space-y-2 mt-2">
+            <a href="blogs.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-pencil-square text-sm"></i>
+              <span class="text-sm">Blogs</span>
+            </a>
+            <a href="certification.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-award text-sm"></i>
+              <span class="text-sm">Certification</span>
+            </a>
+            <a href="open-source.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-github text-sm"></i>
+              <span class="text-sm">Open Source</span>
+            </a>
+            <a href="testimonials.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-chat-quote text-sm"></i>
+              <span class="text-sm">Testimonials</span>
+            </a>
+            <a href="talks-media.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-mic text-sm"></i>
+              <span class="text-sm">Talks & Media</span>
+            </a>
+          </div>
+        </div>
+        
+        <a href="contact.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-gradient-to-r from-primary to-primary/80 text-white mt-4 hover:opacity-90 transition-all">
+          <i class="bi bi-chat-dots text-lg"></i>
+          <span>Contact Me</span>
+        </a>
+      </nav>
+      
+      <!-- Social Links & Copyright -->
+      <div class="p-4 border-t border-white/10">
+        <div class="flex justify-center space-x-4 mb-4">
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+        <p class="text-white/50 text-xs text-center">
+          © 2024 Rabiu S.M.
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay for mobile - Matching project portfolio -->
+  <div id="overlay" class="fixed inset-0 bg-black/50 z-30 md:hidden hidden"></div>
+
+  <!-- Main Content -->
+  <main class="main-content lg:ml-64 min-h-screen">
+    <!-- Hero Section -->
+    <section class="skills-hero-bg text-white py-16 md:py-24 relative">
+      <div class="container mx-auto px-4 section-content">
+        <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Technical Skills & Expertise
+          </h1>
+          <p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+            Comprehensive technology stack and professional skills for building scalable, modern software solutions
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-code-slash mr-2"></i>Full-Stack Development
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-phone mr-2"></i>Mobile Solutions
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-database mr-2"></i>Database Architecture
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-tools mr-2"></i>Development Tools
+            </span>
+          </div>
+          <a href="#technologyStack" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-dark rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all hover:-translate-y-1 animate-bounce">
+            <i class="bi bi-arrow-down-circle mr-2"></i>
+            Explore My Skills
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Overview -->
+    <section class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-xl p-6 text-center skill-card" data-aos="fade-up">
+            <div class="text-3xl font-bold text-skill-frontend mb-2">10+</div>
+            <p class="text-gray-600">Frontend Technologies</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center skill-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-3xl font-bold text-skill-backend mb-2">6+</div>
+            <p class="text-gray-600">Backend Frameworks</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center skill-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-3xl font-bold text-skill-database mb-2">5+</div>
+            <p class="text-gray-600">Database Systems</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center skill-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-3xl font-bold text-skill-tools mb-2">15+</div>
+            <p class="text-gray-600">Development Tools</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Filter -->
+    <section class="py-8 bg-white border-b border-gray-200 sticky top-0 z-30 shadow-sm">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center gap-3" data-aos="fade-up">
+          <button class="filter-btn active px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base">
+            All Skills
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="frontend">
+            <i class="bi bi-window mr-2"></i>Frontend
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="backend">
+            <i class="bi bi-server mr-2"></i>Backend
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="database">
+            <i class="bi bi-database mr-2"></i>Database
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="mobile">
+            <i class="bi bi-phone mr-2"></i>Mobile
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="tools">
+            <i class="bi bi-tools mr-2"></i>Tools
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="design">
+            <i class="bi bi-palette mr-2"></i>Design
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section id="technologyStack" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technology Stack</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Modern technology stack for building scalable, high-performance applications
+          </p>
+        </div>
+
+        <!-- Frontend Technologies -->
+        <div class="mb-16" data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mr-4">
+              <i class="bi bi-window text-2xl text-skill-frontend"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900">Frontend Development</h3>
+              <p class="text-gray-600">Building responsive, interactive user interfaces</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- HTML5 -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="frontend">
+              <div class="relative h-32 frontend-bg overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <i class="bi bi-filetype-html text-6xl text-white/40"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-gray-900 mb-2">HTML5</h4>
+                <p class="text-gray-600 text-sm mb-4">Semantic markup and modern HTML features</p>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-advanced" style="width: 95%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Advanced</span>
+                  <span>95%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- CSS3 -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="frontend">
+              <div class="relative h-32 frontend-bg overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <i class="bi bi-filetype-css text-6xl text-white/40"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-gray-900 mb-2">CSS3</h4>
+                <p class="text-gray-600 text-sm mb-4">Advanced styling, animations, and layouts</p>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-advanced" style="width: 90%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Advanced</span>
+                  <span>90%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- JavaScript -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="frontend">
+              <div class="relative h-32 frontend-bg overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <i class="bi bi-filetype-js text-6xl text-white/40"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-gray-900 mb-2">JavaScript</h4>
+                <p class="text-gray-600 text-sm mb-4">ES6+, modern JavaScript features</p>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-advanced" style="width: 85%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Advanced</span>
+                  <span>85%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- React -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="frontend">
+              <div class="relative h-32 frontend-bg overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <i class="devicon-react-original text-6xl text-white/40"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-gray-900 mb-2">React.js</h4>
+                <p class="text-gray-600 text-sm mb-4">Component-based UI development</p>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-intermediate" style="width: 75%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Intermediate</span>
+                  <span>75%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Bootstrap - ADDED -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="frontend">
+              <div class="relative h-32 frontend-bg overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <i class="bi bi-bootstrap-fill text-6xl text-white/40"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-gray-900 mb-2">Bootstrap</h4>
+                <p class="text-gray-600 text-sm mb-4">Responsive frontend framework</p>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-advanced" style="width: 85%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Advanced</span>
+                  <span>85%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tailwind CSS - ADDED -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="frontend">
+              <div class="relative h-32 frontend-bg overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <i class="devicon-tailwindcss-plain text-6xl text-white/40"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-gray-900 mb-2">Tailwind CSS</h4>
+                <p class="text-gray-600 text-sm mb-4">Utility-first CSS framework</p>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-advanced" style="width: 90%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Advanced</span>
+                  <span>90%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend Technologies -->
+        <div class="mb-16" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center mb-8">
+            <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mr-4">
+              <i class="bi bi-server text-2xl text-skill-backend"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900">Backend Development</h3>
+              <p class="text-gray-600">Server-side logic, APIs, and business logic</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Node.js -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="backend">
+              <div class="relative h-32 backend-bg overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-green-600/30 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <i class="bi bi-node-plus text-6xl text-white/40"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-gray-900 mb-2">Node.js</h4>
+                <p class="text-gray-600 text-sm mb-4">JavaScript runtime for server-side</p>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-intermediate" style="width: 70%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Intermediate</span>
+                  <span>70%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- PHP -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="backend">
+              <div class="relative h-32 backend-bg overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-green-600/30 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <i class="bi bi-filetype-php text-6xl text-white/40"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-gray-900 mb-2">PHP</h4>
+                <p class="text-gray-600 text-sm mb-4">Server-side scripting language</p>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-intermediate" style="width: 65%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Intermediate</span>
+                  <span>65%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Laravel -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="backend">
+              <div class="relative h-32 backend-bg overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-green-600/30 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <i class="devicon-laravel-plain text-6xl text-white/40"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-gray-900 mb-2">Laravel</h4>
+                <p class="text-gray-600 text-sm mb-4">PHP web application framework</p>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-intermediate" style="width: 70%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Intermediate</span>
+                  <span>70%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Next.js -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="backend frontend">
+              <div class="relative h-32 backend-bg overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-green-600/30 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <i class="devicon-nextjs-original text-6xl text-white/40"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-gray-900 mb-2">Next.js</h4>
+                <p class="text-gray-600 text-sm mb-4">React framework for production</p>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-intermediate" style="width: 75%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Intermediate</span>
+                  <span>75%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Database & Mobile -->
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-16">
+          <!-- Database Systems -->
+          <div data-aos="fade-up">
+            <div class="flex items-center mb-8">
+              <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mr-4">
+                <i class="bi bi-database text-2xl text-skill-database"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900">Database Systems</h3>
+                <p class="text-gray-600">Data storage, management, and optimization</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- MySQL -->
+              <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="database">
+                <div class="p-6">
+                  <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mr-4">
+                      <i class="bi bi-database text-2xl text-skill-database"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-lg font-bold text-gray-900">MySQL</h4>
+                      <span class="skill-badge database text-xs px-2 py-1">Relational</span>
+                    </div>
+                  </div>
+                  <div class="skill-level mb-2">
+                    <div class="skill-level-fill level-intermediate" style="width: 70%"></div>
+                  </div>
+                  <div class="flex justify-between text-sm text-gray-500">
+                    <span>Intermediate</span>
+                    <span>70%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- MongoDB -->
+              <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="database">
+                <div class="p-6">
+                  <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mr-4">
+                      <i class="bi bi-database text-2xl text-green-600"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-lg font-bold text-gray-900">MongoDB</h4>
+                      <span class="skill-badge text-xs px-2 py-1" style="background: #f0fdf4; border-color: #86efac; color: #15803d">NoSQL</span>
+                    </div>
+                  </div>
+                  <div class="skill-level mb-2">
+                    <div class="skill-level-fill level-basic" style="width: 50%"></div>
+                  </div>
+                  <div class="flex justify-between text-sm text-gray-500">
+                    <span>Basic</span>
+                    <span>50%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Mobile Development -->
+          <div data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center mb-8">
+              <div class="w-12 h-12 rounded-lg bg-pink-50 flex items-center justify-center mr-4">
+                <i class="bi bi-phone text-2xl text-skill-mobile"></i>
+              </div>
+              <div>
+                <h3 class="text-2xl font-bold text-gray-900">Mobile Development</h3>
+                <p class="text-gray-600">Cross-platform mobile applications</p>
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <!-- React Native -->
+              <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="mobile">
+                <div class="p-6">
+                  <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mr-4">
+                      <i class="bi bi-phone text-2xl text-skill-frontend"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-lg font-bold text-gray-900">React Native</h4>
+                      <span class="skill-badge frontend text-xs px-2 py-1">Cross-platform</span>
+                    </div>
+                  </div>
+                  <div class="skill-level mb-2">
+                    <div class="skill-level-fill level-intermediate" style="width: 65%"></div>
+                  </div>
+                  <div class="flex justify-between text-sm text-gray-500">
+                    <span>Intermediate</span>
+                    <span>65%</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Next.js (Mobile) -->
+              <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="mobile frontend">
+                <div class="p-6">
+                  <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 rounded-lg bg-black/5 flex items-center justify-center mr-4">
+                      <i class="devicon-nextjs-original text-2xl"></i>
+                    </div>
+                    <div>
+                      <h4 class="text-lg font-bold text-gray-900">Next.js</h4>
+                      <span class="skill-badge frontend text-xs px-2 py-1">Full-stack</span>
+                    </div>
+                  </div>
+                  <div class="skill-level mb-2">
+                    <div class="skill-level-fill level-intermediate" style="width: 75%"></div>
+                  </div>
+                  <div class="flex justify-between text-sm text-gray-500">
+                    <span>Intermediate</span>
+                    <span>75%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Development Tools & Design -->
+        <div data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="w-12 h-12 rounded-lg bg-amber-50 flex items-center justify-center mr-4">
+              <i class="bi bi-tools text-2xl text-skill-tools"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900">Development Tools & Design</h3>
+              <p class="text-gray-600">Essential tools for modern software development and design</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <!-- Git -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="tools">
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 rounded-lg bg-red-50 flex items-center justify-center mr-3">
+                    <i class="bi bi-git text-xl text-red-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-900">Git</h4>
+                    <p class="text-gray-600 text-sm">Version control system</p>
+                  </div>
+                </div>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-advanced" style="width: 90%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Advanced</span>
+                  <span>90%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- VS Code -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="tools">
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mr-3">
+                    <i class="bi bi-code-square text-xl text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-900">VS Code</h4>
+                    <p class="text-gray-600 text-sm">Code editor</p>
+                  </div>
+                </div>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-advanced" style="width: 95%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Advanced</span>
+                  <span>95%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cursor AI - ADDED -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="tools">
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 rounded-lg bg-gray-100 flex items-center justify-center mr-3">
+                    <i class="ti ti-brand-cursor text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-900">Cursor AI</h4>
+                    <p class="text-gray-600 text-sm">AI-powered code editor</p>
+                  </div>
+                </div>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-intermediate" style="width: 80%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Intermediate</span>
+                  <span>80%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Figma -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="tools design">
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center mr-3">
+                    <i class="bi bi-palette text-xl text-orange-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-900">Figma</h4>
+                    <p class="text-gray-600 text-sm">Design & prototyping tool</p>
+                  </div>
+                </div>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-intermediate" style="width: 70%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Intermediate</span>
+                  <span>70%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Canva - ADDED -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="tools design">
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 rounded-lg bg-cyan-50 flex items-center justify-center mr-3">
+                    <i class="fab fa-canva text-xl"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-900">Canva</h4>
+                    <p class="text-gray-600 text-sm">Graphic design platform</p>
+                  </div>
+                </div>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-intermediate" style="width: 85%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Intermediate</span>
+                  <span>85%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- CorelDraw - ADDED -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="tools design">
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center mr-3">
+                    <i class="fas fa-pen-nib text-xl" style="color: #CC6600"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-900">CorelDraw</h4>
+                    <p class="text-gray-600 text-sm">Vector graphics editor</p>
+                  </div>
+                </div>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-intermediate" style="width: 75%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Intermediate</span>
+                  <span>75%</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Photoshop -->
+            <div class="skill-card rounded-xl overflow-hidden skill-item" data-category="tools design">
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mr-3">
+                    <i class="fab fa-adobe text-xl" style="color: #31A8FF"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-900">Photoshop</h4>
+                    <p class="text-gray-600 text-sm">Image editing software</p>
+                  </div>
+                </div>
+                <div class="skill-level mb-2">
+                  <div class="skill-level-fill level-intermediate" style="width: 65%"></div>
+                </div>
+                <div class="flex justify-between text-sm text-gray-500">
+                  <span>Intermediate</span>
+                  <span>65%</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Development Process -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Development Methodology</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Structured approach to software development ensuring quality and efficiency
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl p-6 skill-card" data-aos="fade-up">
+            <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
+              <span class="text-2xl font-bold text-primary">1</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Discovery & Planning</h3>
+            <p class="text-gray-600">
+              Comprehensive requirement analysis, technology stack selection, and project architecture design.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 skill-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+              <span class="text-2xl font-bold text-green-600">2</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Development</h3>
+            <p class="text-gray-600">
+              Agile development process with iterative sprints, code reviews, and continuous integration.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 skill-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mb-4">
+              <span class="text-2xl font-bold text-purple-600">3</span>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Testing & Deployment</h3>
+            <p class="text-gray-600">
+              Comprehensive testing, performance optimization, and production deployment with monitoring.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-20 skills-cta-bg relative">
+      <div class="container mx-auto px-4 section-content text-center">
+        <div data-aos="fade-up">
+          <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Build Together?</h3>
+          <p class="text-gray-100 mb-10 max-w-2xl mx-auto text-lg md:text-xl">
+            Let's combine your vision with my technical expertise to create exceptional software solutions.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-dark rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gap-3">
+              <i class="bi bi-chat-dots text-xl"></i>
+              Start a Project
+            </a>
+            <a href="projects.html" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white/30 text-white rounded-lg font-bold hover:bg-white/10 transition-all gap-3">
+              <i class="bi bi-briefcase text-xl"></i>
+              View Projects
+            </a>
+          </div>
+          <p class="text-gray-300 mt-6 text-sm">Get a free technical consultation and project estimate</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer - Matching project portfolio -->
+  <footer class="bg-white border-t border-gray-200 py-6">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-col justify-center items-center text-center lg:space-y-4">
+        <div class="mb-4 lg:mb-0 lg:w-full">
+          <p class="text-gray-600 text-sm md:text-base">
+            © <span id="currentYear"></span> <strong class="text-gray-900">Rabiu S.M.</strong> All Rights Reserved.
+          </p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-linkedin text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <i class="bi bi-github text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <i class="bi bi-twitter-x text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-envelope text-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <button id="scrollTop" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all opacity-0 invisible hover:opacity-100 z-40">
+    <i class="bi bi-arrow-up text-lg"></i>
+  </button>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+      });
+
+      // Set current year in footer
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById('mobileMenuButton');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+
+      mobileMenuButton.addEventListener('click', () => {
+        sidebar.classList.toggle('-translate-x-full');
+        overlay.classList.toggle('hidden');
+      });
+
+      overlay.addEventListener('click', () => {
+        sidebar.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+      });
+
+      // Sidebar More Dropdown
+      const sidebarMoreButton = document.getElementById('sidebarMoreButton');
+      const sidebarMoreIcon = document.getElementById('sidebarMoreIcon');
+      const sidebarMoreContent = document.getElementById('sidebarMoreContent');
+
+      sidebarMoreButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sidebarMoreContent.classList.toggle('hidden');
+        sidebarMoreIcon.classList.toggle('rotate-180');
+      });
+
+      // Skills Filter Functionality
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const skillItems = document.querySelectorAll('.skill-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          button.classList.add('active');
+          
+          const filterValue = button.getAttribute('data-filter');
+          
+          skillItems.forEach(item => {
+            if (filterValue === 'all' || !filterValue || item.getAttribute('data-category').includes(filterValue)) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+              }, 10);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+
+      // Animate skill level bars when they come into view
+      const skillLevels = document.querySelectorAll('.skill-level-fill');
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const skillBar = entry.target;
+            const width = skillBar.style.width;
+            skillBar.style.width = '0%';
+            setTimeout(() => {
+              skillBar.style.width = width;
+            }, 100);
+            observer.unobserve(skillBar);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      skillLevels.forEach(level => observer.observe(level));
+
+      // Scroll to top functionality
+      const scrollTop = document.getElementById('scrollTop');
+      
+      function toggleScrollTop() {
+        if (window.pageYOffset > 300) {
+          scrollTop.classList.remove('opacity-0', 'invisible');
+          scrollTop.classList.add('opacity-100', 'visible');
+        } else {
+          scrollTop.classList.remove('opacity-100', 'visible');
+          scrollTop.classList.add('opacity-0', 'invisible');
+        }
+      }
+      
+      scrollTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      window.addEventListener('scroll', toggleScrollTop);
+      toggleScrollTop(); // Initial check
+    });
+
+    // Keyboard shortcuts for better UX
+    document.addEventListener('keydown', (e) => {
+      // Close sidebar with Escape key on mobile
+      if (e.key === 'Escape' && window.innerWidth < 768) {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        if (!sidebar.classList.contains('-translate-x-full')) {
+          sidebar.classList.add('-translate-x-full');
+          overlay.classList.add('hidden');
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>

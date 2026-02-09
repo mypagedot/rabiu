@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blogs & Articles | Rabiu S.M - Software Systems Engineer</title>
+  <meta name="description" content="Technical blog articles, tutorials, and insights on software engineering, system design, cloud computing, and emerging technologies">
+  <meta name="keywords" content="Technical Blog, Software Engineering Blog, Cloud Computing Articles, System Design Tutorials, Programming, DevOps, AI/ML">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Blogs & Articles | Rabiu S.M - Software Systems Engineer">
+  <meta property="og:description" content="Technical insights, tutorials, and articles on software engineering and emerging technologies">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicons -->
+  <link href="assets/img/favicon_io/favicon.ico" rel="icon">
+  <link href="assets/img/favicon_io/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Add Font Awesome for blog category icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              DEFAULT: '#0440708e',
+              dark: '#02274e'
+            },
+            secondary: {
+              light: '#2c3e50',
+              DEFAULT: '#02274e'
+            },
+            blog: {
+              technical: '#3B82F6',
+              tutorial: '#10B981',
+              architecture: '#8B5CF6',
+              devops: '#F59E0B',
+              ai: '#EF4444',
+              career: '#8B5CF6'
+            }
+          },
+          backgroundImage: {
+            'primary-gradient': 'linear-gradient(135deg, #036ee1 0%, #02274e 100%)',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+            'slide-up': 'slideUp 0.3s ease-out',
+            'pulse-slow': 'pulse 3s ease-in-out infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(10px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' }
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Blog card styling - Matching certification page */
+    .blog-card {
+      transition: all 0.3s ease;
+      border: 1px solid #e5e7eb;
+      background: white;
+    }
+    
+    .blog-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border-color: #036ee1;
+    }
+    
+    /* Blog category badges */
+    .blog-badge {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border: 1px solid #bae6fd;
+      color: #0369a1;
+      font-weight: 500;
+    }
+    
+    .blog-badge.technical {
+      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+      border-color: #93c5fd;
+      color: #1d4ed8;
+    }
+    
+    .blog-badge.tutorial {
+      background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+      border-color: #6ee7b7;
+      color: #059669;
+    }
+    
+    .blog-badge.architecture {
+      background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+      border-color: #d8b4fe;
+      color: #7c3aed;
+    }
+    
+    .blog-badge.devops {
+      background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+      border-color: #fcd34d;
+      color: #d97706;
+    }
+    
+    .blog-badge.ai {
+      background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+      border-color: #fca5a5;
+      color: #dc2626;
+    }
+    
+    /* Filter buttons matching certification page */
+    .filter-btn.active {
+      background: linear-gradient(135deg, #036ee1 0%, #02274e 100%);
+      color: white;
+      border-color: #036ee1;
+    }
+    
+    /* Custom scrollbar */
+    .blog-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .blog-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    
+    .blog-scrollbar::-webkit-scrollbar-thumb {
+      background: #036ee1;
+      border-radius: 10px;
+    }
+    
+    /* Hero background matching certification page */
+    .blog-hero-bg {
+      background-image: url('assets/img/hero-bg-img.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .blog-hero-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.85) 0%, rgba(2, 57, 101, 0.873) 100%);
+      z-index: 1;
+    }
+
+    /* CTA section background matching certification page */
+    .blog-cta-bg {
+      background-image: url('assets/img/CTA.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .blog-cta-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.9) 0%, rgba(4, 64, 112, 0.9) 100%);
+      z-index: 1;
+    }
+
+    /* Ensure content stays above background */
+    .section-content {
+      position: relative;
+      z-index: 20;
+    }
+
+    /* Blog category backgrounds */
+    .technical-bg {
+      background: linear-gradient(135deg, #3B82F6 0%, #1D4ED8 100%);
+    }
+    
+    .tutorial-bg {
+      background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+    }
+    
+    .architecture-bg {
+      background: linear-gradient(135deg, #8B5CF6 0%, #7C3AED 100%);
+    }
+    
+    .devops-bg {
+      background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    }
+    
+    .ai-bg {
+      background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+    }
+    
+    /* Featured post ribbon */
+    .featured-ribbon {
+      position: absolute;
+      top: 10px;
+      right: -10px;
+      padding: 0.25rem 1.5rem;
+      background: linear-gradient(135deg, #ef4444, #dc2626);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      transform: rotate(45deg);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      z-index: 10;
+    }
+
+    /* Read time badge */
+    .read-time-badge {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+    }
+    
+    /* Blog icon styling */
+    .blog-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      display: block;
+    }
+    
+    .blog-icon.technical { color: #3B82F6; }
+    .blog-icon.tutorial { color: #10B981; }
+    .blog-icon.architecture { color: #8B5CF6; }
+    .blog-icon.devops { color: #F59E0B; }
+    .blog-icon.ai { color: #EF4444; }
+
+    /* Fixed: Sidebar solid background - Matching certification page */
+    .sidebar-solid-bg {
+      background: #01233a !important;
+    }
+    
+    /* Fixed: Mobile menu button with solid background - Matching certification page */
+    .mobile-menu-btn {
+      background: #022b46 !important;
+    }
+    
+    /* Custom scrollbar - Matching certification page */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #222b46;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #222b46;
+    }
+    
+    /* Sidebar scrollbar - Matching certification page */
+    .sidebar-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+    }
+
+    /* Fixed: Ensure content is visible - Matching certification page */
+    .main-content {
+      margin-top: 80px;
+    }
+
+    /* Author avatar styling */
+    .author-avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+
+    /* Blog content truncation */
+    .blog-excerpt {
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* Pagination styling */
+    .pagination-btn.active {
+      background: linear-gradient(135deg, #036ee1 0%, #02274e 100%);
+      color: white;
+    }
+
+    @media (min-width: 1024px) {
+      .main-content {
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-inter">
+    
+  <!-- Mobile Menu Button - Matching certification page -->
+  <button id="mobileMenuButton" class="mobile-menu-btn md:hidden fixed top-4 left-4 z-50 w-10 h-10 text-white rounded-full shadow-lg flex items-center justify-center">
+    <i class="bi bi-list text-xl"></i>
+  </button>
+
+  <!-- Left Sidebar - EXACT MATCH to certification page -->
+  <aside id="sidebar" class="sidebar-solid-bg text-white fixed left-0 top-0 h-screen w-64 z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 shadow-2xl">
+    <div class="flex flex-col h-full">
+      <!-- Profile Section -->
+      <div class="p-6 border-b border-white/10">
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-white/20 mb-4">
+            <img src="assets/img/rsm-pic.jpg" 
+                 alt="Rabiu S.M." 
+                 class="w-full h-full object-cover">
+          </div>
+          <h2 class="text-lg font-bold">Rabiu S.M.</h2>
+          <p class="text-white/70 text-sm mt-1">Software Engineer</p>
+        </div>
+      </div>
+      
+      <!-- Navigation Links -->
+      <nav class="flex-1 overflow-y-auto sidebar-scrollbar p-4 space-y-2">
+        <a href="index.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-house-door text-lg"></i>
+          <span>Home</span>
+        </a>
+        
+        <a href="about.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-person text-lg"></i>
+          <span>About Me</span>
+        </a>
+        
+        <a href="skills.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-tools text-lg"></i>
+          <span>Skills</span>
+        </a>
+        
+        <a href="projects.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-briefcase text-lg"></i>
+          <span>Projects</span>
+        </a>
+        
+        <a href="system-design.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-diagram-3 text-lg"></i>
+          <span>System Design</span>
+        </a>
+        
+        <a href="experience.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-clock-history text-lg"></i>
+          <span>Experience</span>
+        </a>
+        
+        <!-- More Dropdown -->
+        <div class="relative">
+          <button id="sidebarMoreButton" class="flex items-center justify-between w-full px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+            <div class="flex items-center space-x-3">
+              <i class="bi bi-three-dots text-lg"></i>
+              <span>More</span>
+            </div>
+            <i id="sidebarMoreIcon" class="bi bi-chevron-down text-sm transition-transform duration-300"></i>
+          </button>
+          
+          <div id="sidebarMoreContent" class="hidden pl-6 space-y-2 mt-2">
+            <a href="blogs.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg bg-primary text-white transition-all">
+              <i class="bi bi-pencil-square text-sm"></i>
+              <span class="text-sm">Blogs</span>
+            </a>
+            <a href="certification.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-award text-sm"></i>
+              <span class="text-sm">Certification</span>
+            </a>
+            <a href="open-source.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-github text-sm"></i>
+              <span class="text-sm">Open Source</span>
+            </a>
+            <a href="testimonials.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-chat-quote text-sm"></i>
+              <span class="text-sm">Testimonials</span>
+            </a>
+            <a href="talks-media.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-mic text-sm"></i>
+              <span class="text-sm">Talks & Media</span>
+            </a>
+          </div>
+        </div>
+        
+        <a href="contact.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-gradient-to-r from-primary to-primary/80 text-white mt-4 hover:opacity-90 transition-all">
+          <i class="bi bi-chat-dots text-lg"></i>
+          <span>Contact Me</span>
+        </a>
+      </nav>
+      
+      <!-- Social Links & Copyright -->
+      <div class="p-4 border-t border-white/10">
+        <div class="flex justify-center space-x-4 mb-4">
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+        <p class="text-white/50 text-xs text-center">
+          © 2024 Rabiu S.M.
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay for mobile - Matching certification page -->
+  <div id="overlay" class="fixed inset-0 bg-black/50 z-30 md:hidden hidden"></div>
+
+  <!-- Main Content -->
+  <main class="main-content lg:ml-64 min-h-screen">
+    <!-- Hero Section -->
+    <section class="blog-hero-bg text-white py-16 md:py-24 relative">
+      <div class="container mx-auto px-4 section-content">
+        <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Technical Blogs & Articles
+          </h1>
+          <p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+            Insights, tutorials, and deep dives into software engineering, system architecture, and emerging technologies
+          </p>
+          
+          <!-- Search Bar -->
+          <div class="max-w-2xl mx-auto mb-8" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative">
+              <input type="text" 
+                     id="blogSearch" 
+                     placeholder="Search articles, tutorials, or technologies..."
+                     class="w-full px-6 py-4 rounded-lg bg-white/10 backdrop-blur-sm border border-white/20 text-white placeholder-white/60 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              <button class="absolute right-3 top-1/2 transform -translate-y-1/2 bg-blue-500 hover:bg-blue-600 text-white p-3 rounded-lg transition-colors">
+                <i class="bi bi-search"></i>
+              </button>
+            </div>
+          </div>
+          
+          <div class="flex flex-wrap justify-center gap-4">
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="fas fa-code mr-2"></i>Software Engineering
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="fas fa-cloud mr-2"></i>Cloud Computing
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="fas fa-server mr-2"></i>System Design
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="fas fa-robot mr-2"></i>AI/ML
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Stats Overview -->
+    <section class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-xl p-6 text-center blog-card" data-aos="fade-up">
+            <div class="text-3xl font-bold text-blog-technical mb-2">42</div>
+            <p class="text-gray-600">Technical Articles</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center blog-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-3xl font-bold text-blog-tutorial mb-2">28</div>
+            <p class="text-gray-600">Tutorials & Guides</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center blog-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-3xl font-bold text-blog-architecture mb-2">15</div>
+            <p class="text-gray-600">Architecture Deep Dives</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center blog-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-3xl font-bold text-blog-ai mb-2">9</div>
+            <p class="text-gray-600">AI/ML Articles</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Article -->
+<div class="blog-card rounded-xl overflow-hidden max-w-4xl mx-auto" data-aos="fade-up">
+  <div class="relative h-64 md:h-80 overflow-hidden">
+    <!-- Background Image for Featured Article -->
+    <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80"
+         alt="Scalable Microservices with Kubernetes and Service Mesh"
+         class="w-full h-full object-cover transition-transform duration-700 hover:scale-105">
+    <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-transparent"></div>
+    <div class="featured-ribbon">Featured</div>
+    <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent p-6">
+      <span class="blog-badge technical text-white border-white/30">Technical</span>
+      <h3 class="text-xl md:text-2xl font-bold text-white mt-2">Building Scalable Microservices with Kubernetes and Service Mesh</h3>
+      <div class="flex items-center text-white/80 mt-3 text-sm">
+        <span class="flex items-center mr-4">
+          <i class="bi bi-calendar mr-2"></i>
+          Nov 15, 2024
+        </span>
+        <span class="flex items-center">
+          <i class="bi bi-clock mr-2"></i>
+          12 min read
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="p-6">
+    <p class="text-gray-600 mb-4">
+      A comprehensive guide to designing and implementing scalable microservices architecture using Kubernetes, Istio service mesh, and modern DevOps practices. Learn about service discovery, load balancing, circuit breaking, and distributed tracing.
+    </p>
+    <div class="flex items-center justify-between">
+      <div class="flex items-center">
+        <img src="assets/img/rsm-pic.jpg" alt="Author" class="author-avatar mr-3">
+        <div>
+          <p class="font-medium text-gray-900">Rabiu S.M.</p>
+          <p class="text-sm text-gray-500">Software Engineer</p>
+        </div>
+      </div>
+      <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-800 font-medium">
+        Read Full Article
+        <i class="bi bi-arrow-right ml-2"></i>
+      </a>
+    </div>
+  </div>
+</div>
+    <!-- Blog Filter -->
+    <section class="py-8 bg-white border-b border-gray-200 sticky top-0 z-30 shadow-sm">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center gap-3" data-aos="fade-up">
+          <button class="filter-btn active px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base">
+            All Articles
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="technical">
+            <i class="fas fa-code mr-2"></i>Technical
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="tutorial">
+            <i class="fas fa-graduation-cap mr-2"></i>Tutorials
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="architecture">
+            <i class="fas fa-server mr-2"></i>Architecture
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="devops">
+            <i class="fas fa-cogs mr-2"></i>DevOps
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="ai">
+            <i class="fas fa-robot mr-2"></i>AI/ML
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Articles Grid -->
+<section id="blogs" class="py-16 bg-gray-50">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Latest Articles</h2>
+      <p class="text-gray-600 max-w-3xl mx-auto">
+        Technical insights and tutorials on modern software development practices
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <!-- Article 1 -->
+      <div class="blog-card rounded-xl overflow-hidden blog-item" data-category="technical" data-aos="fade-up">
+        <div class="relative h-48 overflow-hidden">
+          <!-- Background Image with fallback gradient -->
+          <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+               alt="CQRS and Event Sourcing Implementation"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-transparent"></div>
+          <div class="absolute top-4 left-4">
+            <span class="blog-badge technical text-xs px-3 py-1">Technical</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500 mb-3">
+            <i class="bi bi-calendar mr-2"></i>
+            <span>Oct 28, 2024</span>
+            <span class="mx-2">•</span>
+            <i class="bi bi-clock mr-2"></i>
+            <span>8 min read</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3">
+            Implementing CQRS and Event Sourcing in Modern Applications
+          </h3>
+          <p class="text-gray-600 mb-4 blog-excerpt">
+            Explore the benefits and implementation details of Command Query Responsibility Segregation (CQRS) and Event Sourcing patterns for building scalable and maintainable systems.
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <img src="assets/img/rsm-pic.jpg" alt="Author" class="author-avatar mr-3">
+              <span class="text-sm text-gray-600">Rabiu S.M.</span>
+            </div>
+            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 2 -->
+      <div class="blog-card rounded-xl overflow-hidden blog-item" data-category="tutorial" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80"
+               alt="AWS Lambda with TypeScript Tutorial"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-br from-green-600/30 to-transparent"></div>
+          <div class="absolute top-4 left-4">
+            <span class="blog-badge tutorial text-xs px-3 py-1">Tutorial</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500 mb-3">
+            <i class="bi bi-calendar mr-2"></i>
+            <span>Oct 21, 2024</span>
+            <span class="mx-2">•</span>
+            <i class="bi bi-clock mr-2"></i>
+            <span>15 min read</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3">
+            Complete Guide to AWS Lambda with TypeScript
+          </h3>
+          <p class="text-gray-600 mb-4 blog-excerpt">
+            Step-by-step tutorial on building serverless applications using AWS Lambda with TypeScript, including best practices, debugging techniques, and deployment strategies.
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <img src="assets/img/rsm-pic.jpg" alt="Author" class="author-avatar mr-3">
+              <span class="text-sm text-gray-600">Rabiu S.M.</span>
+            </div>
+            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 3 -->
+      <div class="blog-card rounded-xl overflow-hidden blog-item" data-category="architecture" data-aos="fade-up" data-aos-delay="200">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+               alt="Event-Driven Systems with Apache Kafka"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-br from-purple-600/30 to-transparent"></div>
+          <div class="absolute top-4 left-4">
+            <span class="blog-badge architecture text-xs px-3 py-1">Architecture</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500 mb-3">
+            <i class="bi bi-calendar mr-2"></i>
+            <span>Oct 14, 2024</span>
+            <span class="mx-2">•</span>
+            <i class="bi bi-clock mr-2"></i>
+            <span>10 min read</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3">
+            Designing Event-Driven Systems with Apache Kafka
+          </h3>
+          <p class="text-gray-600 mb-4 blog-excerpt">
+            Learn how to design and implement event-driven architectures using Apache Kafka, covering topics like event streaming, exactly-once processing, and schema evolution.
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <img src="assets/img/rsm-pic.jpg" alt="Author" class="author-avatar mr-3">
+              <span class="text-sm text-gray-600">Rabiu S.M.</span>
+            </div>
+            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 4 -->
+      <div class="blog-card rounded-xl overflow-hidden blog-item" data-category="devops" data-aos="fade-up">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1457305237443-44c3d5a30b89?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80"
+               alt="GitOps Kubernetes Deployment"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-br from-yellow-600/30 to-transparent"></div>
+          <div class="absolute top-4 left-4">
+            <span class="blog-badge devops text-xs px-3 py-1">DevOps</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500 mb-3">
+            <i class="bi bi-calendar mr-2"></i>
+            <span>Oct 7, 2024</span>
+            <span class="mx-2">•</span>
+            <i class="bi bi-clock mr-2"></i>
+            <span>12 min read</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3">
+            GitOps: Modern Approach to Kubernetes Deployment
+          </h3>
+          <p class="text-gray-600 mb-4 blog-excerpt">
+            Implementing GitOps practices with FluxCD and ArgoCD for automated Kubernetes deployments, with focus on security, rollback strategies, and multi-environment management.
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <img src="assets/img/rsm-pic.jpg" alt="Author" class="author-avatar mr-3">
+              <span class="text-sm text-gray-600">Rabiu S.M.</span>
+            </div>
+            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 5 -->
+      <div class="blog-card rounded-xl overflow-hidden blog-item" data-category="ai" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+               alt="ML Pipelines with TensorFlow Extended"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-br from-red-600/30 to-transparent"></div>
+          <div class="absolute top-4 left-4">
+            <span class="blog-badge ai text-xs px-3 py-1">AI/ML</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500 mb-3">
+            <i class="bi bi-calendar mr-2"></i>
+            <span>Sep 30, 2024</span>
+            <span class="mx-2">•</span>
+            <i class="bi bi-clock mr-2"></i>
+            <span>18 min read</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3">
+            Building ML Pipelines with TensorFlow Extended (TFX)
+          </h3>
+          <p class="text-gray-600 mb-4 blog-excerpt">
+            Comprehensive guide to building production-ready machine learning pipelines using TensorFlow Extended, covering data validation, transformation, training, and serving.
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <img src="assets/img/rsm-pic.jpg" alt="Author" class="author-avatar mr-3">
+              <span class="text-sm text-gray-600">Rabiu S.M.</span>
+            </div>
+            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Article 6 -->
+      <div class="blog-card rounded-xl overflow-hidden blog-item" data-category="technical" data-aos="fade-up" data-aos-delay="200">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1544383835-bda2bc66a55d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1176&q=80"
+               alt="Database Sharding Strategies"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-transparent"></div>
+          <div class="absolute top-4 left-4">
+            <span class="blog-badge technical text-xs px-3 py-1">Technical</span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-center text-sm text-gray-500 mb-3">
+            <i class="bi bi-calendar mr-2"></i>
+            <span>Sep 23, 2024</span>
+            <span class="mx-2">•</span>
+            <i class="bi bi-clock mr-2"></i>
+            <span>9 min read</span>
+          </div>
+          <h3 class="text-lg font-bold text-gray-900 mb-3">
+            Database Sharding Strategies for High-Traffic Applications
+          </h3>
+          <p class="text-gray-600 mb-4 blog-excerpt">
+            Practical approaches to database sharding, including key-based, range-based, and directory-based sharding with real-world examples and performance considerations.
+          </p>
+          <div class="flex items-center justify-between">
+            <div class="flex items-center">
+              <img src="assets/img/rsm-pic.jpg" alt="Author" class="author-avatar mr-3">
+              <span class="text-sm text-gray-600">Rabiu S.M.</span>
+            </div>
+            <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+              Read More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Load More Button -->
+    <div class="text-center mt-12" data-aos="fade-up">
+      <button id="loadMore" class="px-8 py-3 bg-white border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all font-medium">
+        Load More Articles
+      </button>
+    </div>
+  </div>
+</section>
+        <!-- Load More Button -->
+        <div class="text-center mt-12" data-aos="fade-up">
+          <button id="loadMore" class="px-8 py-3 bg-white border border-gray-300 rounded-lg text-gray-700 hover:bg-gray-50 hover:border-gray-400 transition-all font-medium">
+            Load More Articles
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Popular Categories -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Popular Categories</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Explore articles by technical category and expertise area
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="blog-card rounded-xl p-6" data-aos="fade-up">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mr-4">
+                <i class="fas fa-code text-xl text-blog-technical"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">Technical Deep Dives</h3>
+                <p class="text-gray-600 text-sm">Advanced technical concepts and implementations</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-500">42 articles</span>
+              <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                Explore
+              </a>
+            </div>
+          </div>
+
+          <div class="blog-card rounded-xl p-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mr-4">
+                <i class="fas fa-graduation-cap text-xl text-blog-tutorial"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">Tutorials & Guides</h3>
+                <p class="text-gray-600 text-sm">Step-by-step practical guides</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-500">28 tutorials</span>
+              <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                Explore
+              </a>
+            </div>
+          </div>
+
+          <div class="blog-card rounded-xl p-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mr-4">
+                <i class="fas fa-server text-xl text-blog-architecture"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">System Architecture</h3>
+                <p class="text-gray-600 text-sm">Design patterns and architecture decisions</p>
+              </div>
+            </div>
+            <div class="flex items-center justify-between">
+              <span class="text-sm text-gray-500">15 articles</span>
+              <a href="#" class="text-blue-600 hover:text-blue-800 text-sm font-medium">
+                Explore
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Subscription -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="max-w-2xl mx-auto text-center" data-aos="fade-up">
+          <div class="bg-white rounded-2xl p-8 shadow-lg">
+            <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-6">
+              <i class="bi bi-envelope text-2xl text-blue-600"></i>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Stay Updated</h3>
+            <p class="text-gray-600 mb-6">
+              Subscribe to receive the latest articles, tutorials, and technical insights directly in your inbox.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-3">
+              <input type="email" 
+                     placeholder="Enter your email address" 
+                     class="flex-1 px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+              <button class="px-6 py-3 bg-blue-600 text-white rounded-lg font-medium hover:bg-blue-700 transition-colors">
+                Subscribe
+              </button>
+            </div>
+            <p class="text-sm text-gray-500 mt-4">
+              No spam. Unsubscribe at any time.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-20 blog-cta-bg relative">
+      <div class="container mx-auto px-4 section-content text-center">
+        <div data-aos="fade-up">
+          <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">Have a Technical Topic in Mind?</h3>
+          <p class="text-gray-100 mb-10 max-w-2xl mx-auto text-lg md:text-xl">
+            Interested in discussing a specific technical topic or need guidance on a complex problem?
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-dark rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gap-3">
+              <i class="bi bi-chat-dots text-xl"></i>
+              Discuss Technical Topics
+            </a>
+            <a href="system-design.html" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white/30 text-white rounded-lg font-bold hover:bg-white/10 transition-all gap-3">
+              <i class="bi bi-diagram-3 text-xl"></i>
+              View System Design
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer - Matching certification page -->
+  <footer class="bg-white border-t border-gray-200 py-6">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-col justify-center items-center text-center lg:space-y-4">
+        <div class="mb-4 lg:mb-0 lg:w-full">
+          <p class="text-gray-600 text-sm md:text-base">
+            © <span id="currentYear"></span> <strong class="text-gray-900">Rabiu S.M.</strong> All Rights Reserved.
+          </p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-linkedin text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <i class="bi bi-github text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <i class="bi bi-twitter-x text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-envelope text-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <button id="scrollTop" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all opacity-0 invisible hover:opacity-100 z-40">
+    <i class="bi bi-arrow-up text-lg"></i>
+  </button>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+      });
+
+      // Set current year in footer
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById('mobileMenuButton');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+
+      mobileMenuButton.addEventListener('click', () => {
+        sidebar.classList.toggle('-translate-x-full');
+        overlay.classList.toggle('hidden');
+      });
+
+      overlay.addEventListener('click', () => {
+        sidebar.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+      });
+
+      // Sidebar More Dropdown
+      const sidebarMoreButton = document.getElementById('sidebarMoreButton');
+      const sidebarMoreIcon = document.getElementById('sidebarMoreIcon');
+      const sidebarMoreContent = document.getElementById('sidebarMoreContent');
+
+      sidebarMoreButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sidebarMoreContent.classList.toggle('hidden');
+        sidebarMoreIcon.classList.toggle('rotate-180');
+      });
+
+      // Blog Filter Functionality
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const blogItems = document.querySelectorAll('.blog-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          button.classList.add('active');
+          
+          const filterValue = button.getAttribute('data-filter');
+          
+          blogItems.forEach(item => {
+            if (filterValue === 'all' || !filterValue || item.getAttribute('data-category').includes(filterValue)) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+              }, 10);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+
+      // Blog Search Functionality
+      const blogSearch = document.getElementById('blogSearch');
+      if (blogSearch) {
+        blogSearch.addEventListener('input', function() {
+          const searchTerm = this.value.toLowerCase();
+          
+          blogItems.forEach(item => {
+            const title = item.querySelector('h3').textContent.toLowerCase();
+            const excerpt = item.querySelector('.blog-excerpt').textContent.toLowerCase();
+            const category = item.getAttribute('data-category');
+            
+            if (title.includes(searchTerm) || excerpt.includes(searchTerm) || category.includes(searchTerm)) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+              }, 10);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      }
+
+      // Load More Button
+      const loadMoreButton = document.getElementById('loadMore');
+      if (loadMoreButton) {
+        loadMoreButton.addEventListener('click', function() {
+          // Simulate loading more articles
+          this.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Loading...';
+          this.disabled = true;
+          
+          setTimeout(() => {
+            this.innerHTML = 'No More Articles';
+            this.classList.add('opacity-50', 'cursor-not-allowed');
+          }, 1500);
+        });
+      }
+
+      // Scroll to top functionality
+      const scrollTop = document.getElementById('scrollTop');
+      
+      function toggleScrollTop() {
+        if (window.pageYOffset > 300) {
+          scrollTop.classList.remove('opacity-0', 'invisible');
+          scrollTop.classList.add('opacity-100', 'visible');
+        } else {
+          scrollTop.classList.remove('opacity-100', 'visible');
+          scrollTop.classList.add('opacity-0', 'invisible');
+        }
+      }
+      
+      scrollTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      window.addEventListener('scroll', toggleScrollTop);
+      toggleScrollTop(); // Initial check
+    });
+
+    // Keyboard shortcuts for better UX
+    document.addEventListener('keydown', (e) => {
+      // Close sidebar with Escape key on mobile
+      if (e.key === 'Escape' && window.innerWidth < 768) {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        if (!sidebar.classList.contains('-translate-x-full')) {
+          sidebar.classList.add('-translate-x-full');
+          overlay.classList.add('hidden');
+        }
+      }
+      
+      // Focus search on Ctrl+K or Cmd+K
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        const searchInput = document.getElementById('blogSearch');
+        if (searchInput) {
+          searchInput.focus();
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>

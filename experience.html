@@ -1,0 +1,1209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience | Rabiu S.M - Software Systems Engineer</title>
+  <meta name="description" content="Professional work experience, career timeline, education background, and industry expertise">
+  <meta name="keywords" content="Work Experience, Career Timeline, Professional Background, Software Engineering Experience, Education">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Experience | Rabiu S.M - Software Systems Engineer">
+  <meta property="og:description" content="Professional work experience and career journey in software engineering">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicons -->
+  <link href="assets/img/favicon_io/favicon.ico" rel="icon">
+  <link href="assets/img/favicon_io/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Add Font Awesome for additional icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              DEFAULT: '#0440708e',
+              dark: '#02274e'
+            },
+            secondary: {
+              light: '#2c3e50',
+              DEFAULT: '#02274e'
+            },
+            experience: {
+              work: '#3B82F6',
+              education: '#10B981',
+              certification: '#8B5CF6',
+              freelance: '#EC4899',
+              internship: '#F59E0B',
+              volunteer: '#EF4444'
+            }
+          },
+          backgroundImage: {
+            'primary-gradient': 'linear-gradient(135deg, #036ee1 0%, #02274e 100%)',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+            'slide-up': 'slideUp 0.3s ease-out',
+            'pulse-slow': 'pulse 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(10px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Experience card styling - Matching skills page */
+    .experience-card {
+      transition: all 0.3s ease;
+      border: 1px solid #e5e7eb;
+      background: white;
+    }
+    
+    .experience-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border-color: #036ee1;
+    }
+    
+    /* Experience badges */
+    .experience-badge {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border: 1px solid #bae6fd;
+      color: #0369a1;
+      font-weight: 500;
+    }
+    
+    .experience-badge.work {
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+      border-color: #93c5fd;
+      color: #1d4ed8;
+    }
+    
+    .experience-badge.education {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border-color: #86efac;
+      color: #15803d;
+    }
+    
+    .experience-badge.certification {
+      background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+      border-color: #d8b4fe;
+      color: #7c3aed;
+    }
+    
+    .experience-badge.freelance {
+      background: linear-gradient(135deg, #fdf2f8 0%, #fce7f3 100%);
+      border-color: #f9a8d4;
+      color: #be185d;
+    }
+    
+    /* Timeline styling */
+    .timeline {
+      position: relative;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .timeline::after {
+      content: '';
+      position: absolute;
+      width: 3px;
+      background: linear-gradient(180deg, #036ee1 0%, #02274e 100%);
+      top: 0;
+      bottom: 0;
+      left: 50%;
+      margin-left: -1.5px;
+      border-radius: 10px;
+    }
+    
+    .timeline-item {
+      padding: 10px 40px;
+      position: relative;
+      width: 50%;
+      box-sizing: border-box;
+    }
+    
+    .timeline-item:nth-child(odd) {
+      left: 0;
+    }
+    
+    .timeline-item:nth-child(even) {
+      left: 50%;
+    }
+    
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: #036ee1;
+      border: 4px solid white;
+      border-radius: 50%;
+      top: 15px;
+      z-index: 1;
+      box-shadow: 0 0 0 4px #036ee1;
+    }
+    
+    .timeline-item:nth-child(odd)::after {
+      right: -10px;
+    }
+    
+    .timeline-item:nth-child(even)::after {
+      left: -10px;
+    }
+    
+    .timeline-content {
+      padding: 20px;
+      background: white;
+      border-radius: 12px;
+      border: 1px solid #e5e7eb;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Responsive timeline */
+    @media (max-width: 768px) {
+      .timeline::after {
+        left: 31px;
+      }
+      
+      .timeline-item {
+        width: 100%;
+        padding-left: 70px;
+        padding-right: 25px;
+      }
+      
+      .timeline-item:nth-child(even) {
+        left: 0;
+      }
+      
+      .timeline-item::after {
+        left: 21px;
+        right: auto;
+      }
+    }
+    
+    /* Filter buttons matching skills page */
+    .filter-btn.active {
+      background: linear-gradient(135deg, #036ee1 0%, #02274e 100%);
+      color: white;
+      border-color: #036ee1;
+    }
+    
+    /* Custom scrollbar */
+    .experience-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .experience-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    
+    .experience-scrollbar::-webkit-scrollbar-thumb {
+      background: #036ee1;
+      border-radius: 10px;
+    }
+    
+    /* Hero background matching skills page */
+    .experience-hero-bg {
+      background-image: url('assets/img/hero-bg-img.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .experience-hero-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.85) 0%, rgba(2, 57, 101, 0.873) 100%);
+      z-index: 1;
+    }
+
+    /* CTA section background matching skills page */
+    .experience-cta-bg {
+      background-image: url('assets/img/CTA.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .experience-cta-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.9) 0%, rgba(4, 64, 112, 0.9) 100%);
+      z-index: 1;
+    }
+
+    /* Ensure content stays above background */
+    .section-content {
+      position: relative;
+      z-index: 20;
+    }
+
+    /* Experience category backgrounds */
+    .work-bg {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    }
+    
+    .education-bg {
+      background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+    }
+    
+    .certification-bg {
+      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    }
+    
+    .freelance-bg {
+      background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+    }
+    
+    .internship-bg {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    }
+    
+    /* Fixed: Sidebar solid background - Matching skills page */
+    .sidebar-solid-bg {
+      background: #01233a !important;
+    }
+    
+    /* Fixed: Mobile menu button with solid background - Matching skills page */
+    .mobile-menu-btn {
+      background: #022b46 !important;
+    }
+    
+    /* Custom scrollbar - Matching skills page */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #222b46;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #222b46;
+    }
+    
+    /* Sidebar scrollbar - Matching skills page */
+    .sidebar-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+    }
+
+    /* Fixed: Ensure content is visible - Matching skills page */
+    .main-content {
+      margin-top: 80px;
+    }
+
+    @media (min-width: 1024px) {
+      .main-content {
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-inter">
+    
+  <!-- Mobile Menu Button - Matching skills page -->
+  <button id="mobileMenuButton" class="mobile-menu-btn md:hidden fixed top-4 left-4 z-50 w-10 h-10 text-white rounded-full shadow-lg flex items-center justify-center">
+    <i class="bi bi-list text-xl"></i>
+  </button>
+
+  <!-- Left Sidebar - EXACT MATCH to skills page -->
+  <aside id="sidebar" class="sidebar-solid-bg text-white fixed left-0 top-0 h-screen w-64 z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 shadow-2xl">
+    <div class="flex flex-col h-full">
+      <!-- Profile Section -->
+      <div class="p-6 border-b border-white/10">
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-white/20 mb-4">
+            <img src="assets/img/rsm-pic.jpg" 
+                 alt="Rabiu S.M." 
+                 class="w-full h-full object-cover">
+          </div>
+          <h2 class="text-lg font-bold">Rabiu S.M.</h2>
+          <p class="text-white/70 text-sm mt-1">Software Engineer</p>
+        </div>
+      </div>
+      
+      <!-- Navigation Links -->
+      <nav class="flex-1 overflow-y-auto sidebar-scrollbar p-4 space-y-2">
+        <a href="index.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-house-door text-lg"></i>
+          <span>Home</span>
+        </a>
+        
+        <a href="about.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-person text-lg"></i>
+          <span>About Me</span>
+        </a>
+        
+        <a href="skills.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-tools text-lg"></i>
+          <span>Skills</span>
+        </a>
+        
+        <a href="projects.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-briefcase text-lg"></i>
+          <span>Projects</span>
+        </a>
+        
+        <a href="system-design.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-diagram-3 text-lg"></i>
+          <span>System Design</span>
+        </a>
+        
+        <a href="experience.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-primary text-white transition-all">
+          <i class="bi bi-clock-history text-lg"></i>
+          <span>Experience</span>
+        </a>
+        
+        <!-- More Dropdown -->
+        <div class="relative">
+          <button id="sidebarMoreButton" class="flex items-center justify-between w-full px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+            <div class="flex items-center space-x-3">
+              <i class="bi bi-three-dots text-lg"></i>
+              <span>More</span>
+            </div>
+            <i id="sidebarMoreIcon" class="bi bi-chevron-down text-sm transition-transform duration-300"></i>
+          </button>
+          
+          <div id="sidebarMoreContent" class="hidden pl-6 space-y-2 mt-2">
+            <a href="blogs.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-pencil-square text-sm"></i>
+              <span class="text-sm">Blogs</span>
+            </a>
+            <a href="certification.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-award text-sm"></i>
+              <span class="text-sm">Certification</span>
+            </a>
+            <a href="open-source.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-github text-sm"></i>
+              <span class="text-sm">Open Source</span>
+            </a>
+            <a href="testimonials.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-chat-quote text-sm"></i>
+              <span class="text-sm">Testimonials</span>
+            </a>
+            <a href="talks-media.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-mic text-sm"></i>
+              <span class="text-sm">Talks & Media</span>
+            </a>
+          </div>
+        </div>
+        
+        <a href="contact.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-gradient-to-r from-primary to-primary/80 text-white mt-4 hover:opacity-90 transition-all">
+          <i class="bi bi-chat-dots text-lg"></i>
+          <span>Contact Me</span>
+        </a>
+      </nav>
+      
+      <!-- Social Links & Copyright -->
+      <div class="p-4 border-t border-white/10">
+        <div class="flex justify-center space-x-4 mb-4">
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+        <p class="text-white/50 text-xs text-center">
+          © 2026 Rabiu S.M.
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay for mobile - Matching skills page -->
+  <div id="overlay" class="fixed inset-0 bg-black/50 z-30 md:hidden hidden"></div>
+
+  <!-- Main Content -->
+  <main class="main-content lg:ml-64 min-h-screen">
+    <!-- Hero Section -->
+    <section class="experience-hero-bg text-white py-16 md:py-24 relative">
+      <div class="container mx-auto px-4 section-content">
+        <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Professional Experience & Journey
+          </h1>
+          <p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+            A timeline of my career journey, professional growth, and achievements in software engineering
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-briefcase mr-2"></i>3+ Years Experience
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-building mr-2"></i>8+ Companies
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-award mr-2"></i>12+ Certifications
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-mortarboard mr-2"></i>MSc. Computer Science
+            </span>
+          </div>
+          <a href="#careerTimeline" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-dark rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all hover:-translate-y-1 animate-bounce">
+            <i class="bi bi-arrow-down-circle mr-2"></i>
+            Explore My Journey
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Overview -->
+    <section class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-xl p-6 text-center experience-card" data-aos="fade-up">
+            <div class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center mx-auto mb-4">
+              <i class="bi bi-briefcase text-2xl text-experience-work"></i>
+            </div>
+            <div class="text-3xl font-bold text-gray-900 mb-2">5+</div>
+            <p class="text-gray-600">Years Experience</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center experience-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-16 h-16 rounded-full bg-green-50 flex items-center justify-center mx-auto mb-4">
+              <i class="bi bi-building text-2xl text-experience-education"></i>
+            </div>
+            <div class="text-3xl font-bold text-gray-900 mb-2">2+</div>
+            <p class="text-gray-600">Companies Worked</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center experience-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-16 h-16 rounded-full bg-purple-50 flex items-center justify-center mx-auto mb-4">
+              <i class="bi bi-award text-2xl text-experience-certification"></i>
+            </div>
+            <div class="text-3xl font-bold text-gray-900 mb-2">3+</div>
+            <p class="text-gray-600">Certifications</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center experience-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-16 h-16 rounded-full bg-pink-50 flex items-center justify-center mx-auto mb-4">
+              <i class="bi bi-code-slash text-2xl text-experience-freelance"></i>
+            </div>
+            <div class="text-3xl font-bold text-gray-900 mb-2">4+</div>
+            <p class="text-gray-600">Projects Completed</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience Filter -->
+    <section class="py-8 bg-white border-b border-gray-200 sticky top-0 z-30 shadow-sm">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center gap-3" data-aos="fade-up">
+          <button class="filter-btn active px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base">
+            All Experience
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="work">
+            <i class="bi bi-briefcase mr-2"></i>Work
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="education">
+            <i class="bi bi-mortarboard mr-2"></i>Education
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="certification">
+            <i class="bi bi-award mr-2"></i>Certifications
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="freelance">
+            <i class="bi bi-code-slash mr-2"></i>Freelance
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Timeline -->
+    <section id="careerTimeline" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Career Timeline</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            My professional journey from education to current role as a software engineer
+          </p>
+        </div>
+
+        <!-- Timeline -->
+        <div class="timeline">
+          <!-- 2024 - Current -->
+          <div class="timeline-item experience-item" data-aos="fade-up" data-category="work">
+            <div class="timeline-content">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900">Software Systems Engineer</h3>
+                  <p class="text-gray-700 font-medium">Softie hub</p>
+                </div>
+                <span class="experience-badge work mt-2 md:mt-0">Full-time</span>
+              </div>
+              <p class="text-gray-500 mb-4"><i class="bi bi-calendar mr-2"></i>Jan 2024 - Present</p>
+              <p class="text-gray-600 mb-4">
+                Leading the development of scalable microservices architecture for enterprise applications. 
+                Mentoring junior developers and implementing CI/CD pipelines.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm">Node.js</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm">React</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm">AWS</span>
+               
+              </div>
+            </div>
+          </div>
+
+          <!-- 2023 - 2024 --
+          <div-- class="timeline-item experience-item" data-aos="fade-up" data-category="work">
+            <div class="timeline-content">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900">Full Stack Developer</h3>
+                  <p class="text-gray-700 font-medium">Digital Solutions Ltd.</p>
+                </div>
+                <span class="experience-badge work mt-2 md:mt-0">Full-time</span>
+              </div>
+              <p class="text-gray-500 mb-4"><i class="bi bi-calendar mr-2"></i>Mar 2023 - Dec 2023</p>
+              <p class="text-gray-600 mb-4">
+                Developed and maintained multiple web applications using React, Node.js, and MongoDB. 
+                Implemented responsive designs and optimized application performance.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm">React.js</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm">Node.js</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm">MongoDB</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm">TypeScript</span>
+              </div>
+            </div>
+          </div-->
+
+          <!-- 2022 - 2023 -->
+          <div class="timeline-item experience-item" data-aos="fade-up" data-category="certification">
+            <div class="timeline-content">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900">Graphics Designer</h3>
+                  <p class="text-gray-700 font-medium">Stylinks Cyber Nigerian Limited</p>
+                </div>
+                <span class="experience-badge certification mt-2 md:mt-0">Full-Time</span>
+              </div>
+              <p class="text-gray-500 mb-4"><i class="bi bi-calendar mr-2"></i>2021-2022</p>
+              <p class="text-gray-600 mb-4">
+                Earned AWS Solutions Architect certification demonstrating expertise in designing distributed systems on AWS.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm">AWS</span>
+                <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm">Cloud Architecture</span>
+                <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-sm">Security</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2021 - 2022 -->
+          <div class="timeline-item experience-item" data-aos="fade-up" data-category="freelance">
+            <div class="timeline-content">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900">Freelance Web Developer</h3>
+                  <p class="text-gray-700 font-medium">Self-Employed</p>
+                </div>
+                <span class="experience-badge freelance mt-2 md:mt-0">Freelance</span>
+              </div>
+              <p class="text-gray-500 mb-4"><i class="bi bi-calendar mr-2"></i>Jun 2021 - Feb 2022</p>
+              <p class="text-gray-600 mb-4">
+                Worked with various clients to develop custom web solutions including e-commerce platforms, 
+                business websites, and web applications.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-pink-50 text-pink-700 rounded-full text-sm">WordPress</span>
+                <span class="px-3 py-1 bg-pink-50 text-pink-700 rounded-full text-sm">PHP</span>
+                <span class="px-3 py-1 bg-pink-50 text-pink-700 rounded-full text-sm">JavaScript</span>
+                <span class="px-3 py-1 bg-pink-50 text-pink-700 rounded-full text-sm">MySQL</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2020 - 2021 -->
+          <div class="timeline-item experience-item" data-aos="fade-up" data-category="work">
+            <div class="timeline-content">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900">Software Developer</h3>
+                  <p class="text-gray-700 font-medium">Softie hub limited</p>
+                </div>
+                <span class="experience-badge work mt-2 md:mt-0">Full-time</span>
+              </div>
+              <p class="text-gray-500 mb-4"><i class="bi bi-calendar mr-2"></i>Aug 2020 - May 2021</p>
+              <p class="text-gray-600 mb-4">
+                Developed frontend components and assisted in backend API development. 
+                Participated in agile development processes and code reviews.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm">JavaScript</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm">PHP</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm">Laravel</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-sm">Git</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- 2019 - 2020 -->
+          <div class="timeline-item experience-item" data-aos="fade-up" data-category="education">
+            <div class="timeline-content">
+              <div class="flex flex-col md:flex-row md:items-center justify-between mb-4">
+                <div>
+                  <h3 class="text-xl font-bold text-gray-900">Software Engineering</h3>
+                  <p class="text-gray-700 font-medium">Lincoln University College, Malaysia</p>
+                </div>
+                <span class="experience-badge education mt-2 md:mt-0">Education</span>
+              </div>
+              <p class="text-gray-500 mb-4"><i class="bi bi-calendar mr-2"></i>March,2024 - July,2027</p>
+              <p class="text-gray-600 mb-4">
+               Bachalor of Information Technology with specialization in Software Engineering.
+              </p>
+              <div class="flex flex-wrap gap-2">
+                <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm">Algorithms</span>
+                <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm">Distributed Systems</span>
+                <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-sm">Machine Learning</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Work Experience Details -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Work Experience</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Detailed overview of my professional roles, responsibilities, and achievements
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Current Role -->
+          <div class="bg-white rounded-xl p-6 experience-card experience-item" data-aos="fade-up" data-category="work">
+            <div class="flex items-center mb-6">
+              <div class="w-14 h-14 rounded-lg work-bg flex items-center justify-center mr-4">
+                <i class="bi bi-briefcase text-2xl text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">Software Engineer</h3>
+                <p class="text-gray-600">Softie hub limited</p>
+              </div>
+            </div>
+            <p class="text-gray-500 mb-4"><i class="bi bi-calendar mr-2"></i>2024 - 2027</p>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <i class="bi bi-check-circle-fill text-green-500 mt-1 mr-3"></i>
+                <span class="text-gray-600">Lead development of microservices architecture serving 50K+ users</span>
+              </li>
+              <li class="flex items-start">
+                <i class="bi bi-check-circle-fill text-green-500 mt-1 mr-3"></i>
+                <span class="text-gray-600">Mentored 4 junior developers, improving team productivity by 30%</span>
+              </li>
+              <li class="flex items-start">
+                <i class="bi bi-check-circle-fill text-green-500 mt-1 mr-3"></i>
+                <span class="text-gray-600">Implemented CI/CD pipeline reducing deployment time by 60%</span>
+              </li>
+            </ul>
+            <div class="pt-4 border-t border-gray-100">
+              <p class="text-sm text-gray-500">Technologies Used:</p>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs">Node.js</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs">React</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs">AWS</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs">Docker</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Previous Role -->
+          <div class="bg-white rounded-xl p-6 experience-card experience-item" data-aos="fade-up" data-aos-delay="100" data-category="work">
+            <div class="flex items-center mb-6">
+              <div class="w-14 h-14 rounded-lg work-bg flex items-center justify-center mr-4">
+                <i class="bi bi-laptop text-2xl text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">Full Stack Developer</h3>
+                <p class="text-gray-600">Softie hub limited</p>
+              </div>
+            </div>
+            <p class="text-gray-500 mb-4"><i class="bi bi-calendar mr-2"></i>2023 - 2024</p>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <i class="bi bi-check-circle-fill text-green-500 mt-1 mr-3"></i>
+                <span class="text-gray-600">Developed 5+ full-stack applications for enterprise clients</span>
+              </li>
+              <li class="flex items-start">
+                <i class="bi bi-check-circle-fill text-green-500 mt-1 mr-3"></i>
+                <span class="text-gray-600">Optimized application performance, reducing load times by 40%</span>
+              </li>
+              <li class="flex items-start">
+                <i class="bi bi-check-circle-fill text-green-500 mt-1 mr-3"></i>
+                <span class="text-gray-600">Collaborated with UX designers to implement responsive designs</span>
+              </li>
+            </ul>
+            <div class="pt-4 border-t border-gray-100">
+              <p class="text-sm text-gray-500">Technologies Used:</p>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs">React.js</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs">Node.js</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs">MongoDB</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs">TypeScript</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- First Role -->
+          <div class="bg-white rounded-xl p-6 experience-card experience-item" data-aos="fade-up" data-aos-delay="200" data-category="work">
+            <div class="flex items-center mb-6">
+              <div class="w-14 h-14 rounded-lg work-bg flex items-center justify-center mr-4">
+                <i class="bi bi-code-slash text-2xl text-white"></i>
+              </div>
+              <div>
+                <h3 class="text-lg font-bold text-gray-900">FrontEnd Developer</h3>
+                <p class="text-gray-600">Softie hub limited</p>
+              </div>
+            </div>
+            <p class="text-gray-500 mb-4"><i class="bi bi-calendar mr-2"></i>2022 - 2023</p>
+            <ul class="space-y-3 mb-6">
+              <li class="flex items-start">
+                <i class="bi bi-check-circle-fill text-green-500 mt-1 mr-3"></i>
+                <span class="text-gray-600">Developed frontend components for multiple web applications</span>
+              </li>
+              <li class="flex items-start">
+                <i class="bi bi-check-circle-fill text-green-500 mt-1 mr-3"></i>
+                <span class="text-gray-600">Assisted in backend API development and database design</span>
+              </li>
+              <li class="flex items-start">
+                <i class="bi bi-check-circle-fill text-green-500 mt-1 mr-3"></i>
+                <span class="text-gray-600">Participated in agile sprints and code review processes</span>
+              </li>
+            </ul>
+            <div class="pt-4 border-t border-gray-100">
+              <p class="text-sm text-gray-500">Technologies Used:</p>
+              <div class="flex flex-wrap gap-2 mt-2">
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs">JavaScript</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs">PHP</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs">Laravel</span>
+                <span class="px-3 py-1 bg-blue-50 text-blue-700 rounded-full text-xs">MySQL</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education & Certifications -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <!-- Education -->
+          <div data-aos="fade-up">
+            <div class="flex items-center mb-8">
+              <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mr-4">
+                <i class="bi bi-mortarboard text-2xl text-experience-education"></i>
+              </div>
+              <div>
+                <h2 class="text-2xl font-bold text-gray-900">Education</h2>
+                <p class="text-gray-600">Academic background and qualifications</p>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <!-- Masters -->
+              <div class="experience-card rounded-xl overflow-hidden experience-item" data-category="education">
+                <div class="p-6">
+                  <div class="flex items-start mb-4">
+                    <div class="w-14 h-14 rounded-lg education-bg flex items-center justify-center mr-4">
+                      <i class="bi bi-mortarboard text-2xl text-white"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-gray-900">Bachelor of Information Technology (Software Engineering)</h3>
+                      <p class="text-gray-700">Lincoln University College, Malaysia</p>
+                      <p class="text-gray-500 text-sm"><i class="bi bi-calendar mr-1"></i>2019 - 2020</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-600 mb-4">
+                    Specialized in Distributed Systems and Machine Learning. 
+                    Thesis focused on optimizing microservices communication in cloud environments.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs">GPA: 3.8/4.0</span>
+                    <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs">Distinction</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Bachelors -->
+              <div class="experience-card rounded-xl overflow-hidden experience-item" data-category="education">
+                <div class="p-6">
+                  <div class="flex items-start mb-4">
+                    <div class="w-14 h-14 rounded-lg education-bg flex items-center justify-center mr-4">
+                      <i class="bi bi-mortarboard text-2xl text-white"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-gray-900">National Diploma in Computer Science</h3>
+                      <p class="text-gray-700">Taraba State Polytechnic, Suntai</p>
+                      <p class="text-gray-500 text-sm"><i class="bi bi-calendar mr-1"></i>2018 - 2020</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-600 mb-4">
+                    Focused on software development methodologies, algorithms, and database systems. 
+                    Graduated with first class honors.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs">GPA: 3.7</span>
+                    <span class="px-3 py-1 bg-green-50 text-green-700 rounded-full text-xs">Second Class Upper Honors</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Certifications -->
+          <div data-aos="fade-up" data-aos-delay="100">
+            <div class="flex items-center mb-8">
+              <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mr-4">
+                <i class="bi bi-award text-2xl text-experience-certification"></i>
+              </div>
+              <div>
+                <h2 class="text-2xl font-bold text-gray-900">Certifications</h2>
+                <p class="text-gray-600">Professional certifications and achievements</p>
+              </div>
+            </div>
+
+            <div class="space-y-6">
+              <!-- AWS Certification -->
+              <div class="experience-card rounded-xl overflow-hidden experience-item" data-category="certification">
+                <div class="p-6">
+                  <div class="flex items-start mb-4">
+                    <div class="w-14 h-14 rounded-lg certification-bg flex items-center justify-center mr-4">
+                      <i class="bi bi-award text-2xl text-white"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-gray-900">AWS Certified Solutions Architect</h3>
+                      <p class="text-gray-700">Amazon Web Services</p>
+                      <p class="text-gray-500 text-sm"><i class="bi bi-calendar mr-1"></i>September 2022</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-600 mb-4">
+                    Demonstrates ability to design and deploy scalable systems on AWS. 
+                    Covers security, reliability, performance efficiency, and cost optimization.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs">Cloud Architecture</span>
+                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs">AWS Services</span>
+                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs">Security</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- React Certification -->
+              <div class="experience-card rounded-xl overflow-hidden experience-item" data-category="certification">
+                <div class="p-6">
+                  <div class="flex items-start mb-4">
+                    <div class="w-14 h-14 rounded-lg certification-bg flex items-center justify-center mr-4">
+                      <i class="bi bi-award text-2xl text-white"></i>
+                    </div>
+                    <div>
+                      <h3 class="text-lg font-bold text-gray-900">React Developer Certification</h3>
+                      <p class="text-gray-700">Meta (via Coursera)</p>
+                      <p class="text-gray-500 text-sm"><i class="bi bi-calendar mr-1"></i>March 2023</p>
+                    </div>
+                  </div>
+                  <p class="text-gray-600 mb-4">
+                    Covers advanced React concepts including hooks, context API, performance optimization, 
+                    and testing with React Testing Library.
+                  </p>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs">React.js</span>
+                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs">Hooks</span>
+                    <span class="px-3 py-1 bg-purple-50 text-purple-700 rounded-full text-xs">Performance</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Career Philosophy -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Career Philosophy</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            The principles and values that guide my professional journey and approach to software engineering
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="bg-white rounded-xl p-6 experience-card" data-aos="fade-up">
+            <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
+              <i class="bi bi-lightbulb text-2xl text-blue-600"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Continuous Learning</h3>
+            <p class="text-gray-600">
+              Technology evolves rapidly. I dedicate time weekly to learning new tools, frameworks, 
+              and best practices to stay at the forefront of software development.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 experience-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+              <i class="bi bi-people text-2xl text-green-600"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Collaboration & Mentorship</h3>
+            <p class="text-gray-600">
+              Great software is built by teams. I believe in sharing knowledge, mentoring junior developers, 
+              and fostering inclusive, collaborative environments.
+            </p>
+          </div>
+
+          <div class="bg-white rounded-xl p-6 experience-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mb-4">
+              <i class="bi bi-graph-up text-2xl text-purple-600"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Impact-Driven Development</h3>
+            <p class="text-gray-600">
+              I focus on building solutions that create real value for users and businesses, 
+              prioritizing impact over technology trends and personal preferences.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-20 experience-cta-bg relative">
+      <div class="container mx-auto px-4 section-content text-center">
+        <div data-aos="fade-up">
+          <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Work Together?</h3>
+          <p class="text-gray-100 mb-10 max-w-2xl mx-auto text-lg md:text-xl">
+            Let's combine your vision with my experience to build exceptional software solutions that drive business success.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-dark rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gap-3">
+              <i class="bi bi-chat-dots text-xl"></i>
+              Get In Touch
+            </a>
+            <a href="projects.html" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white/30 text-white rounded-lg font-bold hover:bg-white/10 transition-all gap-3">
+              <i class="bi bi-briefcase text-xl"></i>
+              View Projects
+            </a>
+          </div>
+          <p class="text-gray-300 mt-6 text-sm">Let's discuss how my experience can contribute to your next project</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer - Matching skills page -->
+  <footer class="bg-white border-t border-gray-200 py-6">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-col justify-center items-center text-center lg:space-y-4">
+        <div class="mb-4 lg:mb-0 lg:w-full">
+          <p class="text-gray-600 text-sm md:text-base">
+            © <span id="currentYear"></span> <strong class="text-gray-900">Rabiu S.M.</strong> All Rights Reserved.
+          </p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-linkedin text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <i class="bi bi-github text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <i class="bi bi-twitter-x text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-envelope text-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <button id="scrollTop" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all opacity-0 invisible hover:opacity-100 z-40">
+    <i class="bi bi-arrow-up text-lg"></i>
+  </button>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+      });
+
+      // Set current year in footer
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById('mobileMenuButton');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+
+      mobileMenuButton.addEventListener('click', () => {
+        sidebar.classList.toggle('-translate-x-full');
+        overlay.classList.toggle('hidden');
+      });
+
+      overlay.addEventListener('click', () => {
+        sidebar.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+      });
+
+      // Sidebar More Dropdown
+      const sidebarMoreButton = document.getElementById('sidebarMoreButton');
+      const sidebarMoreIcon = document.getElementById('sidebarMoreIcon');
+      const sidebarMoreContent = document.getElementById('sidebarMoreContent');
+
+      sidebarMoreButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sidebarMoreContent.classList.toggle('hidden');
+        sidebarMoreIcon.classList.toggle('rotate-180');
+      });
+
+      // Experience Filter Functionality
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const experienceItems = document.querySelectorAll('.experience-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          button.classList.add('active');
+          
+          const filterValue = button.getAttribute('data-filter');
+          
+          experienceItems.forEach(item => {
+            if (!filterValue || filterValue === 'all' || item.getAttribute('data-category').includes(filterValue)) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+              }, 10);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+
+      // Scroll to top functionality
+      const scrollTop = document.getElementById('scrollTop');
+      
+      function toggleScrollTop() {
+        if (window.pageYOffset > 300) {
+          scrollTop.classList.remove('opacity-0', 'invisible');
+          scrollTop.classList.add('opacity-100', 'visible');
+        } else {
+          scrollTop.classList.remove('opacity-100', 'visible');
+          scrollTop.classList.add('opacity-0', 'invisible');
+        }
+      }
+      
+      scrollTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      window.addEventListener('scroll', toggleScrollTop);
+      toggleScrollTop(); // Initial check
+    });
+
+    // Keyboard shortcuts for better UX
+    document.addEventListener('keydown', (e) => {
+      // Close sidebar with Escape key on mobile
+      if (e.key === 'Escape' && window.innerWidth < 768) {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        if (!sidebar.classList.contains('-translate-x-full')) {
+          sidebar.classList.add('-translate-x-full');
+          overlay.classList.add('hidden');
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Talks & Media | Rabiu S.M - Software Systems Engineer</title>
+  <meta name="description" content="Public speaking engagements, presentations, interviews, and media appearances by Rabiu S.M.">
+  <meta name="keywords" content="Talks, Presentations, Conferences, Public Speaking, Interviews, Media Appearances">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Talks & Media | Rabiu S.M - Software Systems Engineer">
+  <meta property="og:description" content="Public speaking engagements, presentations, and media appearances">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicons -->
+  <link href="assets/img/favicon_io/favicon.ico" rel="icon">
+  <link href="assets/img/favicon_io/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              DEFAULT: '#0440708e',
+              dark: '#02274e'
+            },
+            secondary: {
+              light: '#2c3e50',
+              DEFAULT: '#02274e'
+            },
+            talk: {
+              conference: '#3B82F6',
+              webinar: '#10B981',
+              podcast: '#8B5CF6',
+              workshop: '#EC4899',
+              interview: '#F59E0B',
+              article: '#EF4444'
+            }
+          },
+          backgroundImage: {
+            'primary-gradient': 'linear-gradient(135deg, #036ee1 0%, #02274e 100%)',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+            'slide-up': 'slideUp 0.3s ease-out',
+            'pulse-slow': 'pulse 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(10px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Talk card styling - Matching project portfolio */
+    .talk-card {
+      transition: all 0.3s ease;
+      border: 1px solid #e5e7eb;
+      background: white;
+    }
+    
+    .talk-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border-color: #036ee1;
+    }
+    
+    /* Talk badges */
+    .talk-badge {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border: 1px solid #bae6fd;
+      color: #0369a1;
+      font-weight: 500;
+    }
+    
+    .talk-badge.conference {
+      background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
+      border-color: #93c5fd;
+      color: #1d4ed8;
+    }
+    
+    .talk-badge.webinar {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border-color: #86efac;
+      color: #15803d;
+    }
+    
+    .talk-badge.podcast {
+      background: linear-gradient(135deg, #faf5ff 0%, #f3e8ff 100%);
+      border-color: #d8b4fe;
+      color: #7c3aed;
+    }
+    
+    .talk-badge.workshop {
+      background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+      border-color: #fca5a5;
+      color: #dc2626;
+    }
+    
+    /* Filter buttons matching project portfolio */
+    .filter-btn.active {
+      background: linear-gradient(135deg, #036ee1 0%, #02274e 100%);
+      color: white;
+      border-color: #036ee1;
+    }
+    
+    /* Custom scrollbar */
+    .talk-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .talk-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    
+    .talk-scrollbar::-webkit-scrollbar-thumb {
+      background: #036ee1;
+      border-radius: 10px;
+    }
+    
+    /* Hero background matching project portfolio */
+    .talks-hero-bg {
+      background-image: url('assets/img/hero-bg-img.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .talks-hero-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.85) 0%, rgba(2, 57, 101, 0.873) 100%);
+      z-index: 1;
+    }
+
+    /* CTA section background matching project portfolio */
+    .talks-cta-bg {
+      background-image: url('assets/img/CTA.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .talks-cta-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.9) 0%, rgba(4, 64, 112, 0.9) 100%);
+      z-index: 1;
+    }
+
+    /* Ensure content stays above background */
+    .section-content {
+      position: relative;
+      z-index: 20;
+    }
+
+    /* Talk category backgrounds */
+    .conference-bg {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    }
+    
+    .webinar-bg {
+      background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+    }
+    
+    .podcast-bg {
+      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    }
+    
+    .workshop-bg {
+      background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+    }
+    
+    .interview-bg {
+      background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+    }
+    
+    .article-bg {
+      background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+    }
+
+    /* Fixed: Sidebar solid background - Matching project portfolio */
+    .sidebar-solid-bg {
+      background: #01233a !important;
+    }
+    
+    /* Fixed: Mobile menu button with solid background - Matching project portfolio */
+    .mobile-menu-btn {
+      background: #022b46 !important;
+    }
+    
+    /* Custom scrollbar - Matching project portfolio */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #222b46;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #222b46;
+    }
+    
+    /* Sidebar scrollbar - Matching project portfolio */
+    .sidebar-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+    }
+
+    /* Fixed: Ensure content is visible - Matching project portfolio */
+    .main-content {
+      margin-top: 80px;
+    }
+
+    @media (min-width: 1024px) {
+      .main-content {
+        margin-top: 0;
+      }
+    }
+
+    /* Media item styling */
+    .media-item {
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .media-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+      color: white;
+      padding: 1.5rem;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
+    
+    .media-item:hover .media-overlay {
+      transform: translateY(0);
+    }
+    
+    /* Play button for videos */
+    .play-button {
+      width: 60px;
+      height: 60px;
+      background: rgba(3, 110, 225, 0.9);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+      z-index: 10;
+    }
+    
+    .media-item:hover .play-button {
+      opacity: 1;
+    }
+    
+    /* Timeline styling */
+    .timeline-item {
+      position: relative;
+      padding-left: 2rem;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: #036ee1;
+    }
+    
+    .timeline-item::after {
+      content: '';
+      position: absolute;
+      left: 5px;
+      top: 12px;
+      width: 2px;
+      height: calc(100% + 20px);
+      background: #036ee1;
+    }
+    
+    .timeline-item:last-child::after {
+      display: none;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-inter">
+    
+  <!-- Mobile Menu Button - Matching project portfolio -->
+  <button id="mobileMenuButton" class="mobile-menu-btn md:hidden fixed top-4 left-4 z-50 w-10 h-10 text-white rounded-full shadow-lg flex items-center justify-center">
+    <i class="bi bi-list text-xl"></i>
+  </button>
+
+  <!-- Left Sidebar - EXACT MATCH to project portfolio -->
+  <aside id="sidebar" class="sidebar-solid-bg text-white fixed left-0 top-0 h-screen w-64 z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 shadow-2xl">
+    <div class="flex flex-col h-full">
+      <!-- Profile Section -->
+      <div class="p-6 border-b border-white/10">
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-white/20 mb-4">
+            <img src="assets/img/rsm-pic.jpg" 
+                 alt="Rabiu S.M." 
+                 class="w-full h-full object-cover">
+          </div>
+          <h2 class="text-lg font-bold">Rabiu S.M.</h2>
+          <p class="text-white/70 text-sm mt-1">Software Engineer</p>
+        </div>
+      </div>
+      
+      <!-- Navigation Links -->
+      <nav class="flex-1 overflow-y-auto sidebar-scrollbar p-4 space-y-2">
+        <a href="index.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-house-door text-lg"></i>
+          <span>Home</span>
+        </a>
+        
+        <a href="about.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-person text-lg"></i>
+          <span>About Me</span>
+        </a>
+        
+        <a href="skills.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-tools text-lg"></i>
+          <span>Skills</span>
+        </a>
+        
+        <a href="projects.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-briefcase text-lg"></i>
+          <span>Projects</span>
+        </a>
+        
+        <a href="system-design.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-diagram-3 text-lg"></i>
+          <span>System Design</span>
+        </a>
+        
+        <a href="experience.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-clock-history text-lg"></i>
+          <span>Experience</span>
+        </a>
+        
+        <!-- More Dropdown -->
+        <div class="relative">
+          <button id="sidebarMoreButton" class="flex items-center justify-between w-full px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+            <div class="flex items-center space-x-3">
+              <i class="bi bi-three-dots text-lg"></i>
+              <span>More</span>
+            </div>
+            <i id="sidebarMoreIcon" class="bi bi-chevron-down text-sm transition-transform duration-300"></i>
+          </button>
+          
+          <div id="sidebarMoreContent" class="hidden pl-6 space-y-2 mt-2">
+            <a href="blogs.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-pencil-square text-sm"></i>
+              <span class="text-sm">Blogs</span>
+            </a>
+            <a href="certification.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-award text-sm"></i>
+              <span class="text-sm">Certification</span>
+            </a>
+            <a href="open-source.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-github text-sm"></i>
+              <span class="text-sm">Open Source</span>
+            </a>
+            <a href="testimonials.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-chat-quote text-sm"></i>
+              <span class="text-sm">Testimonials</span>
+            </a>
+            <a href="talks-media.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg bg-primary text-white transition-all">
+              <i class="bi bi-mic text-sm"></i>
+              <span class="text-sm">Talks & Media</span>
+            </a>
+          </div>
+        </div>
+        
+        <a href="contact.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-gradient-to-r from-primary to-primary/80 text-white mt-4 hover:opacity-90 transition-all">
+          <i class="bi bi-chat-dots text-lg"></i>
+          <span>Contact Me</span>
+        </a>
+      </nav>
+      
+      <!-- Social Links & Copyright -->
+      <div class="p-4 border-t border-white/10">
+        <div class="flex justify-center space-x-4 mb-4">
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+        <p class="text-white/50 text-xs text-center">
+          © 2026 Rabiu S.M.
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay for mobile - Matching project portfolio -->
+  <div id="overlay" class="fixed inset-0 bg-black/50 z-30 md:hidden hidden"></div>
+
+  <!-- Main Content -->
+  <main class="main-content lg:ml-64 min-h-screen">
+    <!-- Hero Section -->
+    <section class="talks-hero-bg text-white py-16 md:py-24 relative">
+      <div class="container mx-auto px-4 section-content">
+        <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Talks & Media
+          </h1>
+          <p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+            Sharing knowledge, insights, and experiences through public speaking, interviews, and media engagements
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-mic mr-2"></i>Conference Talks
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-camera-video mr-2"></i>Webinars & Workshops
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-headphones mr-2"></i>Podcast Interviews
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-newspaper mr-2"></i>Tech Articles
+            </span>
+          </div>
+          <a href="#featuredTalks" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-dark rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all hover:-translate-y-1 animate-bounce">
+            <i class="bi bi-arrow-down-circle mr-2"></i>
+            Explore Talks
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Talks Overview -->
+    <section class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-xl p-6 text-center talk-card" data-aos="fade-up">
+            <div class="text-3xl font-bold text-talk-conference mb-2">12+</div>
+            <p class="text-gray-600">Conference Talks</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center talk-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-3xl font-bold text-talk-webinar mb-2">8+</div>
+            <p class="text-gray-600">Webinars & Workshops</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center talk-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-3xl font-bold text-talk-podcast mb-2">15+</div>
+            <p class="text-gray-600">Podcast Appearances</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center talk-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-3xl font-bold text-talk-article mb-2">25+</div>
+            <p class="text-gray-600">Published Articles</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Talks Filter -->
+    <section class="py-8 bg-white border-b border-gray-200 sticky top-0 z-30 shadow-sm">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center gap-3" data-aos="fade-up">
+          <button class="filter-btn active px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base">
+            All Media
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="conference">
+            <i class="bi bi-mic mr-2"></i>Conferences
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="webinar">
+            <i class="bi bi-camera-video mr-2"></i>Webinars
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="podcast">
+            <i class="bi bi-headphones mr-2"></i>Podcasts
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="workshop">
+            <i class="bi bi-people mr-2"></i>Workshops
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="article">
+            <i class="bi bi-newspaper mr-2"></i>Articles
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Talks -->
+    <section id="featuredTalks" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Talks & Presentations</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Selected keynote presentations, conference talks, and workshops on modern software engineering
+          </p>
+        </div>
+
+        <!-- Featured Talks Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <!-- Talk 1 -->
+          <div class="talk-card rounded-xl overflow-hidden talk-item" data-category="conference" data-aos="fade-up">
+            <div class="relative h-48 conference-bg overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-transparent"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <i class="bi bi-mic text-7xl text-white/20"></i>
+              </div>
+              <div class="absolute top-4 left-4">
+                <span class="talk-badge conference text-xs px-3 py-1 rounded-full">Conference</span>
+              </div>
+              <div class="absolute bottom-4 right-4">
+                <span class="text-white/80 text-sm"><i class="bi bi-calendar mr-1"></i>Oct 2025</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">National (NItDA)</h4>
+              <p class="text-gray-600 mb-4">A deep dive into microservices architecture patterns, challenges, and best practices for enterprise-scale applications.</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center text-gray-500 text-sm">
+                  <i class="bi bi-geo-alt mr-1"></i>
+                  <span>DevCon Africa 2025</span>
+                </div>
+                <a href="#" class="text-primary hover:text-primary-dark font-medium text-sm flex items-center">
+                  View Slides <i class="bi bi-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Talk 2 -->
+          <div class="talk-card rounded-xl overflow-hidden talk-item" data-category="workshop" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative h-48 workshop-bg overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-br from-pink-600/30 to-transparent"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <i class="bi bi-code-slash text-7xl text-white/20"></i>
+              </div>
+              <div class="absolute top-4 left-4">
+                <span class="talk-badge workshop text-xs px-3 py-1 rounded-full">Workshop</span>
+              </div>
+              <div class="absolute bottom-4 right-4">
+                <span class="text-white/80 text-sm"><i class="bi bi-calendar mr-1"></i>Aug 2025</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">Full-Stack Development with Next.js & Node.js</h4>
+              <p class="text-gray-600 mb-4">Hands-on workshop covering modern full-stack development techniques, API design, and deployment strategies.</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center text-gray-500 text-sm">
+                  <i class="bi bi-geo-alt mr-1"></i>
+                  <span>TechSkills Academy</span>
+                </div>
+                <a href="#" class="text-primary hover:text-primary-dark font-medium text-sm flex items-center">
+                  View Materials <i class="bi bi-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Talk 3 -->
+          <div class="talk-card rounded-xl overflow-hidden talk-item" data-category="webinar" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative h-48 webinar-bg overflow-hidden">
+              <div class="absolute inset-0 bg-gradient-to-br from-green-600/30 to-transparent"></div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <i class="bi bi-laptop text-7xl text-white/20"></i>
+              </div>
+              <div class="absolute top-4 left-4">
+                <span class="talk-badge webinar text-xs px-3 py-1 rounded-full">Webinar</span>
+              </div>
+              <div class="absolute bottom-4 right-4">
+                <span class="text-white/80 text-sm"><i class="bi bi-calendar mr-1"></i>Jun 2025</span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h4 class="text-xl font-bold text-gray-900 mb-2">AI Integration in Modern Web Applications</h4>
+              <p class="text-gray-600 mb-4">Exploring practical approaches to integrating AI and machine learning capabilities into web applications.</p>
+              <div class="flex items-center justify-between">
+                <div class="flex items-center text-gray-500 text-sm">
+                  <i class="bi bi-globe mr-1"></i>
+                  <span>Online Webinar</span>
+                </div>
+                <a href="#" class="text-primary hover:text-primary-dark font-medium text-sm flex items-center">
+                  Watch Recording <i class="bi bi-arrow-right ml-1"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Media Appearances -->
+        <div class="mb-16" data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mr-4">
+              <i class="bi bi-headphones text-2xl text-talk-podcast"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900">Podcast & Media Appearances</h3>
+              <p class="text-gray-600">Interviews and discussions on software engineering trends and career development</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Podcast 1 -->
+            <div class="talk-card rounded-xl overflow-hidden talk-item" data-category="podcast">
+              <div class="relative h-40 podcast-bg overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-600/30 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <i class="bi bi-headphones text-6xl text-white/30"></i>
+                </div>
+                <div class="play-button">
+                  <i class="bi bi-play-fill text-2xl text-white"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-gray-900 mb-2">The Future of Web Development</h4>
+                <p class="text-gray-600 text-sm mb-4">Discussing emerging trends, tools, and frameworks in modern web development.</p>
+                <div class="flex items-center justify-between">
+                  <span class="text-gray-500 text-sm">TechTalk Podcast</span>
+                  <span class="text-gray-400 text-xs">45 min</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Podcast 2 -->
+            <div class="talk-card rounded-xl overflow-hidden talk-item" data-category="podcast">
+              <div class="relative h-40 podcast-bg overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-purple-600/30 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <i class="bi bi-mic text-6xl text-white/30"></i>
+                </div>
+                <div class="play-button">
+                  <i class="bi bi-play-fill text-2xl text-white"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-gray-900 mb-2">Building Developer Communities</h4>
+                <p class="text-gray-600 text-sm mb-4">The importance of community in software development and strategies for building inclusive tech communities.</p>
+                <div class="flex items-center justify-between">
+                  <span class="text-gray-500 text-sm">DevCommunity Radio</span>
+                  <span class="text-gray-400 text-xs">52 min</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interview -->
+            <div class="talk-card rounded-xl overflow-hidden talk-item" data-category="article">
+              <div class="relative h-40 article-bg overflow-hidden">
+                <div class="absolute inset-0 bg-gradient-to-br from-red-600/30 to-transparent"></div>
+                <div class="absolute inset-0 flex items-center justify-center">
+                  <i class="bi bi-newspaper text-6xl text-white/30"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <h4 class="text-lg font-bold text-gray-900 mb-2">The Full-Stack Developer's Journey</h4>
+                <p class="text-gray-600 text-sm mb-4">An interview about career progression, challenges, and advice for aspiring full-stack developers.</p>
+                <div class="flex items-center justify-between">
+                  <span class="text-gray-500 text-sm">TechInsider Magazine</span>
+                  <a href="#" class="text-primary hover:text-primary-dark text-sm font-medium">Read Article</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Recent Articles -->
+        <div data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="w-12 h-12 rounded-lg bg-red-50 flex items-center justify-center mr-4">
+              <i class="bi bi-newspaper text-2xl text-talk-article"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900">Recent Articles & Publications</h3>
+              <p class="text-gray-600">Technical articles, tutorials, and thought leadership pieces</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Article 1 -->
+            <div class="talk-card rounded-xl overflow-hidden talk-item" data-category="article">
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 rounded-lg bg-red-100 flex items-center justify-center mr-3">
+                    <i class="bi bi-pencil-square text-lg text-red-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-900">Optimizing React Performance</h4>
+                    <p class="text-gray-600 text-sm">Advanced techniques for improving React application performance</p>
+                  </div>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  A comprehensive guide to identifying and fixing performance bottlenecks in React applications, including memoization, code splitting, and virtualization.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-500 text-sm">Published: Sep 2025</span>
+                  <a href="#" class="text-primary hover:text-primary-dark font-medium text-sm">Read Full Article →</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Article 2 -->
+            <div class="talk-card rounded-xl overflow-hidden talk-item" data-category="article">
+              <div class="p-6">
+                <div class="flex items-center mb-4">
+                  <div class="w-10 h-10 rounded-lg bg-blue-100 flex items-center justify-center mr-3">
+                    <i class="bi bi-file-earmark-text text-lg text-blue-600"></i>
+                  </div>
+                  <div>
+                    <h4 class="text-lg font-bold text-gray-900">API Design Best Practices</h4>
+                    <p class="text-gray-600 text-sm">Designing RESTful APIs that are scalable and maintainable</p>
+                  </div>
+                </div>
+                <p class="text-gray-600 text-sm mb-4">
+                  Principles and patterns for designing robust APIs, including versioning strategies, error handling, authentication, and documentation approaches.
+                </p>
+                <div class="flex justify-between items-center">
+                  <span class="text-gray-500 text-sm">Published: Jul 2025</span>
+                  <a href="#" class="text-primary hover:text-primary-dark font-medium text-sm">Read Full Article →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Upcoming Events -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Upcoming Events</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Join me at these upcoming speaking engagements and workshops
+          </p>
+        </div>
+
+        <div class="max-w-4xl mx-auto">
+          <!-- Event 1 -->
+          <div class="bg-white rounded-xl p-6 mb-6 talk-card" data-aos="fade-up">
+            <div class="flex flex-col md:flex-row md:items-center">
+              <div class="md:w-1/4 mb-4 md:mb-0">
+                <div class="text-center p-4 rounded-lg conference-bg text-white">
+                  <div class="text-2xl font-bold">NOV</div>
+                  <div class="text-4xl font-bold">15</div>
+                  <div class="text-sm">2025</div>
+                </div>
+              </div>
+              <div class="md:w-2/3 md:pl-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Modern Full-Stack Architecture</h3>
+                <p class="text-gray-600 mb-4">Exploring architectural patterns for building scalable full-stack applications with React, Node.js, and cloud services.</p>
+                <div class="flex flex-wrap gap-3">
+                  <span class="talk-badge conference text-xs px-3 py-1 rounded-full">Conference Talk</span>
+                  <span class="text-gray-500 text-sm"><i class="bi bi-clock mr-1"></i>2:00 PM - 3:00 PM</span>
+                  <span class="text-gray-500 text-sm"><i class="bi bi-geo-alt mr-1"></i>Tech Summit 2025, Lagos</span>
+                </div>
+                <a href="#" class="inline-block mt-4 text-primary hover:text-primary-dark font-medium">Learn More & Register →</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Event 2 -->
+          <div class="bg-white rounded-xl p-6 mb-6 talk-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="flex flex-col md:flex-row md:items-center">
+              <div class="md:w-1/4 mb-4 md:mb-0">
+                <div class="text-center p-4 rounded-lg webinar-bg text-white">
+                  <div class="text-2xl font-bold">DEC</div>
+                  <div class="text-4xl font-bold">03</div>
+                  <div class="text-sm">2025</div>
+                </div>
+              </div>
+              <div class="md:w-2/3 md:pl-6">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Advanced JavaScript Workshop</h3>
+                <p class="text-gray-600 mb-4">Hands-on workshop covering advanced JavaScript concepts, modern ES features, and performance optimization techniques.</p>
+                <div class="flex flex-wrap gap-3">
+                  <span class="talk-badge workshop text-xs px-3 py-1 rounded-full">Workshop</span>
+                  <span class="text-gray-500 text-sm"><i class="bi bi-clock mr-1"></i>10:00 AM - 4:00 PM</span>
+                  <span class="text-gray-500 text-sm"><i class="bi bi-globe mr-1"></i>Virtual Event</span>
+                </div>
+                <a href="#" class="inline-block mt-4 text-primary hover:text-primary-dark font-medium">Register Now →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Speaking Topics -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Speaking Topics & Expertise</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Areas of expertise available for speaking engagements, panels, and interviews
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div class="bg-gray-50 rounded-xl p-6 talk-card" data-aos="fade-up">
+            <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
+              <i class="bi bi-diagram-3 text-xl text-blue-600"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Software Architecture</h3>
+            <p class="text-gray-600">
+              Microservices, monolithic to microservices migration, system design patterns, and scalable architecture decisions.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6 talk-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+              <i class="bi bi-code-slash text-xl text-green-600"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Full-Stack Development</h3>
+            <p class="text-gray-600">
+              Modern JavaScript frameworks, API design, database optimization, and end-to-end application development.
+            </p>
+          </div>
+
+          <div class="bg-gray-50 rounded-xl p-6 talk-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mb-4">
+              <i class="bi bi-people text-xl text-purple-600"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Tech Career Development</h3>
+            <p class="text-gray-600">
+              Building developer skills, career progression in tech, mentorship, and creating inclusive tech communities.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-20 talks-cta-bg relative">
+      <div class="container mx-auto px-4 section-content text-center">
+        <div data-aos="fade-up">
+          <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">Invite Me to Speak</h3>
+          <p class="text-gray-100 mb-10 max-w-2xl mx-auto text-lg md:text-xl">
+            Interested in having me speak at your event, podcast, or contribute to your publication?
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-dark rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gap-3">
+              <i class="bi bi-mic text-xl"></i>
+              Book a Speaking Engagement
+            </a>
+            <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white/30 text-white rounded-lg font-bold hover:bg-white/10 transition-all gap-3">
+              <i class="bi bi-envelope text-xl"></i>
+              Media Inquiry
+            </a>
+          </div>
+          <p class="text-gray-300 mt-6 text-sm">Available for conferences, podcasts, workshops, and guest articles</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer - Matching project portfolio -->
+  <footer class="bg-white border-t border-gray-200 py-6">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-col justify-center items-center text-center lg:space-y-4">
+        <div class="mb-4 lg:mb-0 lg:w-full">
+          <p class="text-gray-600 text-sm md:text-base">
+            © <span id="currentYear"></span> <strong class="text-gray-900">Rabiu S.M.</strong> All Rights Reserved.
+          </p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-linkedin text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <i class="bi bi-github text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <i class="bi bi-twitter-x text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-envelope text-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <button id="scrollTop" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all opacity-0 invisible hover:opacity-100 z-40">
+    <i class="bi bi-arrow-up text-lg"></i>
+  </button>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+      });
+
+      // Set current year in footer
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById('mobileMenuButton');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+
+      mobileMenuButton.addEventListener('click', () => {
+        sidebar.classList.toggle('-translate-x-full');
+        overlay.classList.toggle('hidden');
+      });
+
+      overlay.addEventListener('click', () => {
+        sidebar.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+      });
+
+      // Sidebar More Dropdown
+      const sidebarMoreButton = document.getElementById('sidebarMoreButton');
+      const sidebarMoreIcon = document.getElementById('sidebarMoreIcon');
+      const sidebarMoreContent = document.getElementById('sidebarMoreContent');
+
+      sidebarMoreButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sidebarMoreContent.classList.toggle('hidden');
+        sidebarMoreIcon.classList.toggle('rotate-180');
+      });
+
+      // Talks Filter Functionality
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const talkItems = document.querySelectorAll('.talk-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          button.classList.add('active');
+          
+          const filterValue = button.getAttribute('data-filter') || 'all';
+          
+          talkItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category').includes(filterValue)) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+              }, 10);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+
+      // Scroll to top functionality
+      const scrollTop = document.getElementById('scrollTop');
+      
+      function toggleScrollTop() {
+        if (window.pageYOffset > 300) {
+          scrollTop.classList.remove('opacity-0', 'invisible');
+          scrollTop.classList.add('opacity-100', 'visible');
+        } else {
+          scrollTop.classList.remove('opacity-100', 'visible');
+          scrollTop.classList.add('opacity-0', 'invisible');
+        }
+      }
+      
+      scrollTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      window.addEventListener('scroll', toggleScrollTop);
+      toggleScrollTop(); // Initial check
+    });
+
+    // Keyboard shortcuts for better UX
+    document.addEventListener('keydown', (e) => {
+      // Close sidebar with Escape key on mobile
+      if (e.key === 'Escape' && window.innerWidth < 768) {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        if (!sidebar.classList.contains('-translate-x-full')) {
+          sidebar.classList.add('-translate-x-full');
+          overlay.classList.add('hidden');
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>

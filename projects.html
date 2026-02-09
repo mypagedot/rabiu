@@ -1,0 +1,1293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | Rabiu S.M - Software Systems Engineer</title>
+  <meta name="description" content="Explore my portfolio of scalable software projects for growth-stage companies across multiple industries">
+  <meta name="keywords" content="Software Projects, Portfolio, Case Studies, Web Development, Mobile Apps, Enterprise Solutions">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Project Portfolio | Rabiu S.M - Software Systems Engineer">
+  <meta property="og:description" content="Showcasing scalable software solutions for global businesses">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicons -->
+  <link href="assets/img/favicon_io/favicon.ico" rel="icon">
+  <link href="assets/img/favicon_io/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              DEFAULT: '#0440708e',
+              dark: '#02274e'
+            },
+            secondary: {
+              light: '#2c3e50',
+              DEFAULT: '#02274e'
+            }
+          },
+          backgroundImage: {
+            'primary-gradient': 'linear-gradient(135deg, #036ee1 0%, #02274e 100%)',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+            'slide-up': 'slideUp 0.3s ease-out',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(10px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Project card hover effects */
+    .project-card {
+      transition: all 0.3s ease;
+      border: 1px solid #e5e7eb;
+    }
+    
+    .project-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border-color: #0440708e;
+    }
+    
+    /* Tech badge styling */
+    .tech-badge {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border: 1px solid #bae6fd;
+      color: #0369a1;
+      font-weight: 500;
+    }
+    
+    /* Project filter buttons */
+    .filter-btn.active {
+      background: linear-gradient(135deg, #0440708e 0%, #02274e 100%);
+      color: white;
+      border-color: #0440708e;
+    }
+    
+    /* Custom scrollbar for project details */
+    .project-details-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .project-details-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    
+    .project-details-scrollbar::-webkit-scrollbar-thumb {
+      background: #0440708e;
+      border-radius: 10px;
+    }
+    
+    /* Animation for modal */
+    @keyframes modalFadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(-20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+    
+    .modal-animate {
+      animation: modalFadeIn 0.3s ease-out;
+    }
+    
+    /* Ensure content is visible */
+    .main-content {
+      margin-top: 80px;
+    }
+
+    @media (min-width: 1024px) {
+      .main-content {
+        margin-top: 0;
+      }
+    }
+
+    /* Sidebar solid background */
+    .sidebar-solid-bg {
+      background: #01233a !important;
+    }
+    
+    /* Mobile menu button with solid background */
+    .mobile-menu-btn {
+      background: #02274e !important;
+    }
+    
+    /* Custom scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #0440708e;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #02274e;
+    }
+    
+    /* Sidebar scrollbar */
+    .sidebar-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+    }
+
+    /* Hero section - EXACTLY like contact page */
+    .hero-section-bg {
+      background-image: url('assets/img/hero-bg-img.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .hero-section-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.85) 0%, rgba(2, 57, 101, 0.873) 100%);
+      z-index: 1;
+    }
+
+    /* CTA section */
+    .cta-section-bg {
+      background-image: url('assets/img/CTA.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .cta-section-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.9) 0%, rgba(4, 64, 112, 0.9) 100%);
+      z-index: 1;
+    }
+
+    /* Ensure content stays above background */
+    .section-content {
+      position: relative;
+      z-index: 20;
+    }
+    
+    /* Project category badges */
+    .project-category-badge {
+      background: linear-gradient(135deg, rgba(255, 255, 255, 0.95) 0%, rgba(255, 255, 255, 0.85) 100%);
+      backdrop-filter: blur(10px);
+      color: #02274e;
+      font-weight: 600;
+    }
+
+    /* Ribbon for featured projects */
+    .ribbon {
+      position: absolute;
+      top: 10px;
+      right: -10px;
+      padding: 0.25rem 1.5rem;
+      background: linear-gradient(135deg, #0440708e, #02274e);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      transform: rotate(45deg);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    /* Status indicators */
+    .status-active {
+      background: linear-gradient(135deg, #10b981, #059669);
+      color: white;
+    }
+    
+    .status-completed {
+      background: linear-gradient(135deg, #0440708e, #02274e);
+      color: white;
+    }
+    
+    .status-inprogress {
+      background: linear-gradient(135deg, #f59e0b, #d97706);
+      color: white;
+    }
+
+    /* Updated button colors */
+    .btn-primary {
+      background: linear-gradient(135deg, #0440708e 0%, #02274e 100%);
+      color: white;
+    }
+    
+    .btn-primary:hover {
+      background: linear-gradient(135deg, #02274e 0%, #011c3a 100%);
+    }
+
+    /* Project card image backgrounds */
+    .project-img-1 {
+      background-image: linear-gradient(rgba(2, 39, 78, 0.8), rgba(2, 39, 78, 0.8)), url('assets/img/icice.png');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .project-img-2 {
+      background-image: linear-gradient(rgba(2, 39, 78, 0.8), rgba(2, 39, 78, 0.8)), url('assets/img/abbaIsa.png');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .project-img-3 {
+      background-image: linear-gradient(rgba(2, 39, 78, 0.8), rgba(2, 39, 78, 0.8)), url('assets/img/halal PF.png');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .project-img-4 {
+      background-image: linear-gradient(rgba(2, 39, 78, 0.8), rgba(2, 39, 78, 0.8)), url('https://images.unsplash.com/photo-1542744095-fcf48d80b0fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .project-img-5 {
+      background-image: linear-gradient(rgba(2, 39, 78, 0.8), rgba(2, 39, 78, 0.8)), url('https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .project-img-6 {
+      background-image: linear-gradient(rgba(2, 39, 78, 0.8), rgba(2, 39, 78, 0.8)), url('https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80');
+      background-size: cover;
+      background-position: center;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-inter">
+    
+  <!-- Mobile Menu Button -->
+  <button id="mobileMenuButton" class="mobile-menu-btn md:hidden fixed top-4 left-4 z-50 w-10 h-10 text-white rounded-full shadow-lg flex items-center justify-center">
+    <i class="bi bi-list text-xl"></i>
+  </button>
+
+  <!-- Left Sidebar -->
+  <aside id="sidebar" class="sidebar-solid-bg text-white fixed left-0 top-0 h-screen w-64 z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 shadow-2xl">
+    <div class="flex flex-col h-full">
+      <!-- Profile Section -->
+      <div class="p-6 border-b border-white/10">
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-white/20 mb-4">
+            <img src="assets/img/rsm-pic.jpg" 
+                 alt="Rabiu S.M." 
+                 class="w-full h-full object-cover">
+          </div>
+          <h2 class="text-lg font-bold">Rabiu S.M.</h2>
+          <p class="text-white/70 text-sm mt-1">Software Engineer</p>
+        </div>
+      </div>
+      
+      <!-- Navigation Links -->
+      <nav class="flex-1 overflow-y-auto sidebar-scrollbar p-4 space-y-2">
+        <a href="index.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-house-door text-lg"></i>
+          <span>Home</span>
+        </a>
+        
+        <a href="about.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-person text-lg"></i>
+          <span>About Me</span>
+        </a>
+        
+        <a href="skills.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-tools text-lg"></i>
+          <span>Skills</span>
+        </a>
+        
+        <a href="projects.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-primary text-white transition-all">
+          <i class="bi bi-briefcase text-lg"></i>
+          <span>Projects</span>
+        </a>
+        
+        <a href="system-design.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-diagram-3 text-lg"></i>
+          <span>System Design</span>
+        </a>
+        
+        <a href="experience.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-clock-history text-lg"></i>
+          <span>Experience</span>
+        </a>
+        
+        <!-- More Dropdown -->
+        <div class="relative">
+          <button id="sidebarMoreButton" class="flex items-center justify-between w-full px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+            <div class="flex items-center space-x-3">
+              <i class="bi bi-three-dots text-lg"></i>
+              <span>More</span>
+            </div>
+            <i id="sidebarMoreIcon" class="bi bi-chevron-down text-sm transition-transform duration-300"></i>
+          </button>
+          
+          <div id="sidebarMoreContent" class="hidden pl-6 space-y-2 mt-2">
+            <a href="blogs.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-pencil-square text-sm"></i>
+              <span class="text-sm">Blogs</span>
+            </a>
+            <a href="certification.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-award text-sm"></i>
+              <span class="text-sm">Certification</span>
+            </a>
+            <a href="open-source.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-github text-sm"></i>
+              <span class="text-sm">Open Source</span>
+            </a>
+            <a href="testimonials.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-chat-quote text-sm"></i>
+              <span class="text-sm">Testimonials</span>
+            </a>
+            <a href="talks-media.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-mic text-sm"></i>
+              <span class="text-sm">Talks & Media</span>
+            </a>
+          </div>
+        </div>
+        
+        <a href="contact.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-gradient-to-r from-primary to-primary/80 text-white mt-4 hover:opacity-90 transition-all">
+          <i class="bi bi-chat-dots text-lg"></i>
+          <span>Contact Me</span>
+        </a>
+      </nav>
+      
+      <!-- Social Links & Copyright -->
+      <div class="p-4 border-t border-white/10">
+        <div class="flex justify-center space-x-4 mb-4">
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+        <p class="text-white/50 text-xs text-center">
+          © 2024 Rabiu S.M.
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay for mobile -->
+  <div id="overlay" class="fixed inset-0 bg-black/50 z-30 md:hidden hidden"></div>
+
+  <!-- Main Content -->
+  <main class="main-content lg:ml-64 min-h-screen">
+    <!-- Page Header with Background Image - EXACTLY like contact page -->
+    <section class="hero-section-bg text-white py-16 md:py-24 relative">
+      <div class="container mx-auto px-4 section-content">
+        <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Let's Build your Project today
+          </h1>
+          <p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+            Ready to transform your ideas into reality? Explore my portfolio of scalable software solutions for growth-stage companies
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-briefcase mr-2"></i>5 Projects Completed
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-people mr-2"></i>5+ Happy Clients
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-globe mr-2"></i>5+ Countries Served
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-lightbulb mr-2"></i>99% Satisfaction
+            </span>
+          </div>
+          <a href="#projectsGrid" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-dark rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all hover:-translate-y-1 animate-bounce">
+            <i class="bi bi-arrow-down-circle mr-2"></i>
+            Explore Projects
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Filter -->
+    <section class="py-8 bg-white border-b border-gray-200 sticky top-0 z-30 shadow-sm">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center gap-3" data-aos="fade-up">
+          <button class="filter-btn active px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base">
+            All Projects
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="web">
+            <i class="bi bi-globe2 mr-2"></i>Web Apps
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="mobile">
+            <i class="bi bi-phone mr-2"></i>Mobile Apps
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="enterprise">
+            <i class="bi bi-building mr-2"></i>Enterprise
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="ecommerce">
+            <i class="bi bi-cart mr-2"></i>E-commerce
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="api">
+            <i class="bi bi-plug mr-2"></i>API/Backend
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="py-16 bg-gray-50" id="projectsGrid">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Featured Projects</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Highlighting international projects that demonstrate scalability, performance, and business impact
+          </p>
+        </div>
+
+        <!-- Project Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Project 1: Global E-commerce Platform -->
+          <div class="project-card bg-white rounded-xl overflow-hidden project-item" data-category="ecommerce web enterprise" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative h-48 project-img-1 overflow-hidden">
+              <div class="absolute top-4 left-4">
+                <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-primary-dark text-xs font-semibold">
+                  Featured
+                </span>
+              </div>
+              <div class="absolute bottom-4 right-4">
+                <span class="px-3 py-1 bg-black/50 backdrop-blur-sm rounded-full text-white text-xs">
+                  <i class="bi bi-globe mr-1"></i>International
+                </span>
+              </div>
+              <div class="ribbon">Featured</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">ICICE Al-Noor Masjid Community Care Support Services Platform</h3>
+              <p class="text-gray-600 mb-4">
+                Scalable multi-vendor marketplace serving 50+ countries with real-time inventory, multi-currency support, and AI-powered recommendations.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">Blade</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">PhP</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">AWS</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">Redis</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="bi bi-calendar mr-1"></i>
+                  <span>4 Weeks</span>
+                  <span class="status-completed px-2 py-1 rounded-full text-xs font-semibold ml-2">Completed</span>
+                </div>
+                <button class="view-project-btn px-4 py-2 btn-primary rounded-lg text-sm font-medium transition-colors"
+                        data-project="1">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2: Healthcare Management System -->
+          <div class="project-card bg-white rounded-xl overflow-hidden project-item" data-category="enterprise web api" data-aos="fade-up" data-aos-delay="150">
+            <div class="relative h-48 project-img-2 overflow-hidden">
+              <div class="absolute top-4 left-4">
+                <span class="project-category-badge px-3 py-1 rounded-full text-xs font-semibold">
+                  Enterprise
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Fashion and Design</h3>
+              <p class="text-gray-600 mb-4"> a fashion designer and computer science student from Jalingo, Taraba State, creating innovative designs that blend traditional Nigerian aesthetics with modern technology.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">Laravel</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">Blade</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="bi bi-calendar mr-1"></i>
+                  <span>24 hours</span>
+                  <span class="status-active px-2 py-1 rounded-full text-xs font-semibold ml-2">Active live</span>
+                </div>
+                <button class="view-project-btn px-4 py-2 btn-primary rounded-lg text-sm font-medium transition-colors"
+                        data-project="2">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3: Agency booking Platform -->
+          <div class="project-card bg-white rounded-xl overflow-hidden project-item" data-category="mobile api enterprise" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative h-48 project-img-3 overflow-hidden">
+              <div class="absolute top-4 left-4">
+                <span class="project-category-badge px-3 py-1 rounded-full text-xs font-semibold">
+                  Agency
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Halal Promotion Foundation Platform</h3>
+              <p class="text-gray-600 mb-4">
+                Cross-platform mobile banking app with biometric authentication, real-time transactions, and AI-powered fraud detection.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">Next.js</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">Java/Spring</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">MySQL</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">Firebase</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">Microservices</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="bi bi-calendar mr-1"></i>
+                  <span>5 Weeks</span>
+                  <span class="status-active px-2 py-1 rounded-full text-xs font-semibold ml-2">In active</span>
+                </div>
+                <button class="view-project-btn px-4 py-2 btn-primary rounded-lg text-sm font-medium transition-colors"
+                        data-project="3">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 4: Logistics & Supply Chain -->
+          <div class="project-card bg-white rounded-xl overflow-hidden project-item" data-category="web api enterprise" data-aos="fade-up" data-aos-delay="100">
+            <div class="relative h-48 project-img-4 overflow-hidden">
+              <div class="absolute top-4 left-4">
+                <span class="project-category-badge px-3 py-1 rounded-full text-xs font-semibold">
+                  Logistics
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Masjidus-Sahabah, Maitama, FCT-Abuja Platform</h3>
+              <p class="text-gray-600 mb-4">
+                Real-time logistics management system with GPS tracking, inventory optimization, and automated route planning.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">Next.js</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">Postgre</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">SQL Server</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">Azure</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">WebRTC</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="bi bi-calendar mr-1"></i>
+                  <span>7 Weeks</span>
+                  <span class="status-active px-2 py-1 rounded-full text-xs font-semibold ml-2">Active</span>
+                </div>
+                <button class="view-project-btn px-4 py-2 btn-primary rounded-lg text-sm font-medium transition-colors"
+                        data-project="4">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 5: Education LMS -->
+          <div class="project-card bg-white rounded-xl overflow-hidden project-item" data-category="web mobile" data-aos="fade-up" data-aos-delay="150">
+            <div class="relative h-48 project-img-5 overflow-hidden">
+              <div class="absolute top-4 left-4">
+                <span class="project-category-badge px-3 py-1 rounded-full text-xs font-semibold">
+                  Education
+                </span>
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">Al-Itqaan Intensive Academy, Dakwa-Niger State, Platform</h3>
+              <p class="text-gray-600 mb-4">
+                Comprehensive Learning Management System with video streaming, interactive quizzes, and progress analytics for 10K+ students.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">Next.js</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">Express.js</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">MongoDB</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">WebRTC</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">CDN</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="bi bi-calendar mr-1"></i>
+                  <span>6 Months</span>
+                  <span class="status-completed px-2 py-1 rounded-full text-xs font-semibold ml-2">Completed</span>
+                </div>
+                <button class="view-project-btn px-4 py-2 btn-primary rounded-lg text-sm font-medium transition-colors"
+                        data-project="5">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 6: Real Estate Platform -->
+          <div class="project-card bg-white rounded-xl overflow-hidden project-item" data-category="web mobile api" data-aos="fade-up" data-aos-delay="200">
+            <div class="relative h-48 project-img-6 overflow-hidden">
+              <div class="absolute top-4 left-4">
+                <span class="project-category-badge px-3 py-1 rounded-full text-xs font-semibold">
+                  Real Estate
+                </span>
+              </div>
+              <div class="ribbon">New</div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-gray-900 mb-2">PropertyPro VR Platform</h3>
+              <p class="text-gray-600 mb-4">
+                Virtual reality real estate platform with 3D property tours, mortgage calculators, and automated valuation models.
+              </p>
+              <div class="flex flex-wrap gap-2 mb-6">
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">React Three Fiber</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">Node.js</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">PostgreSQL</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">WebGL</span>
+                <span class="tech-badge px-3 py-1 rounded-full text-xs font-medium">AWS S3</span>
+              </div>
+              <div class="flex justify-between items-center">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="bi bi-calendar mr-1"></i>
+                  <span>9 Months</span>
+                  <span class="status-inprogress px-2 py-1 rounded-full text-xs font-semibold ml-2">In Progress</span>
+                </div>
+                <button class="view-project-btn px-4 py-2 btn-primary rounded-lg text-sm font-medium transition-colors"
+                        data-project="6">
+                  View Details
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Load More Button -->
+        <div class="text-center mt-12" data-aos="fade-up">
+          <button id="loadMore" class="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-all">
+            <i class="bi bi-arrow-clockwise mr-2"></i><a href="uiux.html" class="text-current">Explore My UI/UX Projects</a>
+          </button>
+        </div>
+
+      <!-------graphics-->
+
+       <div class="text-center mt-12" data-aos="fade-up">
+          <button id="loadMore" class="px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-all">
+            <i class="bi bi-arrow-clockwise mr-2"></i><a href="graphics.html" class="text-current">Explore Graphics Projects</a>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Project Statistics -->
+    <section class="py-16 bg-white border-t border-gray-200">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-4xl font-bold text-primary mb-2">48+</div>
+            <p class="text-gray-600">Projects Completed</p>
+          </div>
+          <div class="text-center" data-aos="fade-up" data-aos-delay="150">
+            <div class="text-4xl font-bold text-primary mb-2">25+</div>
+            <p class="text-gray-600">Happy Clients</p>
+          </div>
+          <div class="text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-4xl font-bold text-primary mb-2">15+</div>
+            <p class="text-gray-600">Countries Served</p>
+          </div>
+          <div class="text-center" data-aos="fade-up" data-aos-delay="250">
+            <div class="text-4xl font-bold text-primary mb-2">
+              99<span class="text-xl">%</span>
+            </div>
+            <p class="text-gray-600">Client Satisfaction</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section with Background Image -->
+    <section class="py-16 md:py-20 cta-section-bg relative">
+      <div class="container mx-auto px-4 section-content text-center">
+        <div data-aos="fade-up">
+          <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Start Your Project?</h3>
+          <p class="text-gray-100 mb-10 max-w-2xl mx-auto text-lg md:text-xl">
+            Let's collaborate to build scalable, high-performance solutions for your business growth.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-dark rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gap-3">
+              <i class="bi bi-chat-dots text-xl"></i>
+              Start a Project
+            </a>
+            <a href="system-design.html" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white/30 text-white rounded-lg font-bold hover:bg-white/10 transition-all gap-3">
+              <i class="bi bi-diagram-3 text-xl"></i>
+              View System Designs
+            </a>
+          </div>
+          <p class="text-gray-300 mt-6 text-sm">Get a free 30-minute strategy consultation</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-6">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-col justify-center items-center text-center lg:space-y-4">
+        <div class="mb-4 lg:mb-0 lg:w-full">
+          <p class="text-gray-600 text-sm md:text-base">
+            © <span id="currentYear"></span> <strong class="text-gray-900">Rabiu S.M.</strong> All Rights Reserved.
+          </p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-linkedin text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-primary-dark transition-colors">
+            <i class="bi bi-github text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-primary-dark transition-colors">
+            <i class="bi bi-twitter-x text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-envelope text-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Details Modal -->
+  <div id="projectModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+    <div class="fixed inset-0 bg-black/70 backdrop-blur-sm"></div>
+    <div class="relative min-h-screen flex items-center justify-center p-4">
+      <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden modal-animate">
+        <div class="p-6 border-b border-gray-200 flex justify-between items-center">
+          <h3 id="modalTitle" class="text-2xl font-bold text-gray-900">Project Details</h3>
+          <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+            <i class="bi bi-x text-2xl"></i>
+          </button>
+        </div>
+        <div class="p-6 overflow-y-auto project-details-scrollbar" style="max-height: calc(90vh - 120px)">
+          <div id="modalContent">
+            <!-- Dynamic content will be loaded here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Top -->
+  <button id="scrollTop" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all opacity-0 invisible hover:bg-primary-dark z-40">
+    <i class="bi bi-arrow-up text-lg"></i>
+  </button>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+
+  <script>
+    // Project data for modal - UPDATED TO MATCH CARDS
+    const projects = {
+      1: {
+        title: "ICICE Al-Noor Masjid Community Care Support Services Platform",
+        category: "E-commerce • Web • Enterprise",
+        duration: "4 Weeks",
+        client: "ICICE Al-Noor Masjid",
+        location: "Nigeria",
+        description: "A comprehensive community care support platform for Al-Noor Masjid providing essential services including Zakat collection, Sadaqah distribution, and community welfare management with real-time tracking and transparent reporting.",
+        challenge: "The community needed a digital solution to streamline their welfare services, ensure transparent tracking of donations, and efficiently manage beneficiary data across multiple support programs.",
+        solution: "Built a Laravel-based platform with secure payment integration, real-time transaction tracking, and automated reporting system. Implemented role-based access control for different community roles and integrated SMS notifications for updates.",
+        features: [
+          "Zakat calculation and collection system",
+          "Sadaqah donation management",
+          "Beneficiary database with needs assessment",
+          "Real-time donation tracking and reporting",
+          "Automated receipt generation",
+          "Multi-currency donation support",
+          "Volunteer management system",
+          "Event management for community programs"
+        ],
+        technologies: ["Laravel", "Blade", "PHP", "MySQL", "AWS", "Redis", "Payment Gateways"],
+        results: [
+          "90% reduction in manual record keeping",
+          "40% increase in regular donations",
+          "Real-time tracking of 500+ beneficiaries",
+          "100% transparent donation reporting"
+        ],
+        testimonial: "Rabiu transformed our community welfare management. The platform brought transparency and efficiency we never had before. Donor confidence increased significantly.",
+        testimonialAuthor: "Imam Abdullah, Community Leader - Al-Noor Masjid",
+        liveDemo: "#",
+        sourceCode: "#"
+      },
+      2: {
+        title: "Fashion and Design Platform",
+        category: "Enterprise • Web • API",
+        duration: "8 Weeks",
+        client: "Fashion Design Studio",
+        location: "International",
+        description: "A modern fashion and design platform connecting designers with clients, featuring portfolio management, virtual fittings, and collaborative design tools.",
+        challenge: "Designers needed a centralized platform to showcase their work, manage client relationships, and streamline the design-to-production workflow.",
+        solution: "Developed a Laravel and Blade-based platform with virtual fitting room technology, real-time collaboration tools, and integrated e-commerce for design services.",
+        features: [
+          "Portfolio showcase with 3D garment viewing",
+          "Virtual fitting room with AR technology",
+          "Client-designer messaging and collaboration",
+          "Design project management dashboard",
+          "Material and inventory management",
+          "Client feedback and revision system",
+          "Payment processing for design services",
+          "Production timeline tracking"
+        ],
+        technologies: ["laravel", "blade", "html", "javaScript", "MySQL", "CSS"],
+        results: [
+          "60% reduction in design iteration time",
+          "30% increase in client acquisition",
+          "Virtual fittings reduced physical sample costs by 70%",
+          "Centralized management of 200+ design projects"
+        ],
+        testimonial: "The platform revolutionized how we work with clients. The virtual fittings saved us thousands in sample costs.",
+        testimonialAuthor: "Abba Isa Mohammed, CEO - Fashion Studio",
+        liveDemo: "https://mypagedot.github.io/abbaIsa/",
+        sourceCode: "#"
+      },
+      3: {
+        title: "Halal Promotion Foundation Platform",
+        category: "Agency • Mobile • API",
+        duration: "5 Weeks",
+        client: "Halal Promotion Foundation",
+        location: "International",
+        description: "An agency booking and management platform for Halal certification services with automated workflows, document management, and real-time status tracking.",
+        challenge: "The foundation needed to digitize their certification process, manage client applications efficiently, and provide real-time status updates to applicants.",
+        solution: "Built a Next.js and Spring Boot microservices architecture with document upload, automated workflow management, and real-time notification system for certification status.",
+        features: [
+          "Online halal certification application",
+          "Document upload and verification system",
+          "Real-time application status tracking",
+          "Automated workflow management",
+          "Inspection scheduling and management",
+          "Certificate generation and validation",
+          "Client portal with history tracking",
+          "Multi-language support"
+        ],
+        technologies: ["Next.js", "Java/Spring", "MySQL", "Microservices", "Firebase", "Docker"],
+        results: [
+          "80% reduction in certification processing time",
+          "50% increase in applications processed",
+          "Real-time tracking reduced inquiry calls by 90%",
+          "Digital certificates eliminated paper waste"
+        ],
+        testimonial: "This platform transformed our certification process. We can now handle 3x more applications with the same team.",
+        testimonialAuthor: "Dr. Ibrahim, Director - Halal Promotion Foundation",
+        liveDemo: "#",
+        sourceCode: "#"
+      },
+      4: {
+        title: "Masjidus-Sahabah, Maitama Platform",
+        category: "Logistics • Web • API",
+        duration: "7 Weeks",
+        client: "Masjidus-Sahabah Islamic Center",
+        location: "Abuja, Nigeria",
+        description: "A comprehensive mosque management platform for Masjidus-Sahabah handling prayer timing, event management, donation tracking, and community engagement.",
+        challenge: "The mosque needed an integrated system to manage daily operations, track donations transparently, and engage with the growing community effectively.",
+        solution: "Developed a Next.js platform with PostgreSQL backend featuring automated prayer time calculations, event management, donation tracking, and community messaging.",
+        features: [
+          "Automated prayer time calculations",
+          "Event management and registration",
+          "Donation tracking with receipt generation",
+          "Khutbah (sermon) schedule management",
+          "Community announcement system",
+          "Volunteer management module",
+          "Islamic calendar integration",
+          "Mobile app for notifications"
+        ],
+        technologies: ["Next.js", "PostgreSQL", "SQL Server", "Azure", "WebRTC", "Node.js"],
+        results: [
+          "95% reduction in manual scheduling work",
+          "Transparent donation tracking increased giving by 40%",
+          "Community engagement improved by 60%",
+          "Automated reminders reduced missed prayers"
+        ],
+        testimonial: "Rabiu delivered exactly what our community needed. The platform brought our mosque into the digital age.",
+        testimonialAuthor: "Sheikh Ahmed, Imam - Masjidus-Sahabah",
+        liveDemo: "#",
+        sourceCode: "#"
+      },
+      5: {
+        title: "Al-Itqaan Intensive Academy Platform",
+        category: "Education • Web • Mobile",
+        duration: "6 Months",
+        client: "Al-Itqaan Intensive Academy",
+        location: "Dakwa, Niger State, Nigeria",
+        description: "A comprehensive Learning Management System (LMS) for Islamic education with video streaming, interactive lessons, student progress tracking, and parent monitoring.",
+        challenge: "The academy needed to transition to digital learning while maintaining the quality of traditional Islamic education and keeping parents involved in student progress.",
+        solution: "Built a full-featured LMS with video conferencing, interactive quizzes, progress analytics, and parent portals for monitoring student performance.",
+        features: [
+          "Live and recorded video lessons",
+          "Interactive Quran memorization tools",
+          "Student progress tracking dashboard",
+          "Parent portal for monitoring",
+          "Assignment submission and grading",
+          "Islamic knowledge quizzes",
+          "Attendance tracking system",
+          "Mobile app for on-the-go learning"
+        ],
+        technologies: ["Next.js", "Express.js", "MongoDB", "WebRTC", "CDN", "Firebase"],
+        results: [
+          "Extended reach to 500+ remote students",
+          "95% parent satisfaction with progress tracking",
+          "Student performance improved by 35%",
+          "Reduced administrative workload by 70%"
+        ],
+        testimonial: "This platform transformed our academy. We can now teach students across Nigeria while maintaining our educational standards.",
+        testimonialAuthor: "Ustadh Khalid, Principal - Al-Itqaan Academy",
+        liveDemo: "#",
+        sourceCode: "#"
+      },
+      6: {
+        title: "PropertyPro VR Platform",
+        category: "Real Estate • Web • Mobile • API",
+        duration: "9 Months",
+        client: "PropertyPro Real Estate",
+        location: "International",
+        description: "An innovative virtual reality real estate platform featuring 3D property tours, AI-powered property matching, and comprehensive property management tools.",
+        challenge: "The real estate market needed immersive property viewing experiences and intelligent matching to help buyers find perfect properties without physical visits.",
+        solution: "Developed a VR-enabled platform using React Three Fiber for immersive 3D tours, with AI algorithms for property matching and comprehensive backend for property management.",
+        features: [
+          "360° VR property tours",
+          "AI-powered property recommendations",
+          "Virtual staging of empty properties",
+          "Mortgage calculator integration",
+          "Property comparison tools",
+          "Agent-client matching system",
+          "Document management for transactions",
+          "Market trend analysis dashboard"
+        ],
+        technologies: ["React Three Fiber", "Node.js", "PostgreSQL", "WebGL", "AWS S3", "Three.js"],
+        results: [
+          "80% reduction in unnecessary physical viewings",
+          "30% faster property sales cycle",
+          "AI matching improved client satisfaction by 65%",
+          "VR tours increased engagement by 400%"
+        ],
+        testimonial: "The VR platform gave us a competitive edge we never imagined. Clients love the immersive tours.",
+        testimonialAuthor: "Sarah Johnson, CEO - PropertyPro",
+        liveDemo: "#",
+        sourceCode: "#"
+      }
+    };
+
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+      });
+
+      // Set current year in footer
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById('mobileMenuButton');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+
+      mobileMenuButton.addEventListener('click', () => {
+        sidebar.classList.toggle('-translate-x-full');
+        overlay.classList.toggle('hidden');
+      });
+
+      overlay.addEventListener('click', () => {
+        sidebar.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+      });
+
+      // Sidebar More Dropdown
+      const sidebarMoreButton = document.getElementById('sidebarMoreButton');
+      const sidebarMoreIcon = document.getElementById('sidebarMoreIcon');
+      const sidebarMoreContent = document.getElementById('sidebarMoreContent');
+
+      sidebarMoreButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sidebarMoreContent.classList.toggle('hidden');
+        sidebarMoreIcon.classList.toggle('rotate-180');
+      });
+
+      // Project Filter Functionality
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const projectItems = document.querySelectorAll('.project-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          button.classList.add('active');
+          
+          const filterValue = button.getAttribute('data-filter');
+          
+          projectItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category').includes(filterValue)) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+              }, 10);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+
+      // Load More Projects
+      const loadMoreBtn = document.getElementById('loadMore');
+      loadMoreBtn.addEventListener('click', () => {
+        // Simulate loading more projects
+        loadMoreBtn.innerHTML = '<i class="bi bi-arrow-clockwise animate-spin mr-2"></i>Loading...';
+        
+        setTimeout(() => {
+          // In a real application, this would fetch more projects from an API
+          loadMoreBtn.innerHTML = '<i class="bi bi-check-circle mr-2"></i>All Projects Loaded';
+          loadMoreBtn.disabled = true;
+          loadMoreBtn.classList.remove('border-primary', 'text-primary', 'hover:bg-primary');
+          loadMoreBtn.classList.add('border-gray-300', 'text-gray-500', 'cursor-not-allowed');
+        }, 1500);
+      });
+
+      // Project Modal Functionality
+      const modal = document.getElementById('projectModal');
+      const closeModal = document.getElementById('closeModal');
+      const viewProjectBtns = document.querySelectorAll('.view-project-btn');
+
+      viewProjectBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const projectId = btn.getAttribute('data-project');
+          const project = projects[projectId];
+          
+          if (project) {
+            document.getElementById('modalTitle').textContent = project.title;
+            
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+              <div class="space-y-6">
+                <!-- Project Header -->
+                <div class="bg-gradient-to-r from-primary/10 to-blue-50 p-4 rounded-lg">
+                  <div class="flex flex-wrap items-center justify-between mb-2">
+                    <span class="text-primary font-semibold">${project.category}</span>
+                    <span class="text-gray-600"><i class="bi bi-calendar mr-1"></i>${project.duration}</span>
+                  </div>
+                  <div class="flex flex-wrap gap-4 text-sm text-gray-600">
+                    <span><i class="bi bi-building mr-1"></i>${project.client}</span>
+                    <span><i class="bi bi-geo-alt mr-1"></i>${project.location}</span>
+                  </div>
+                </div>
+                
+                <!-- Description -->
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-2">Project Overview</h4>
+                  <p class="text-gray-600">${project.description}</p>
+                </div>
+                
+                <!-- Challenge & Solution -->
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div class="bg-red-50 p-4 rounded-lg">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2"><i class="bi bi-exclamation-triangle text-red-500 mr-2"></i>The Challenge</h4>
+                    <p class="text-gray-600">${project.challenge}</p>
+                  </div>
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2"><i class="bi bi-lightbulb text-green-500 mr-2"></i>Our Solution</h4>
+                    <p class="text-gray-600">${project.solution}</p>
+                  </div>
+                </div>
+                
+                <!-- Features -->
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-2">Key Features</h4>
+                  <div class="grid sm:grid-cols-2 gap-3">
+                    ${project.features.map(feature => `
+                      <div class="flex items-start">
+                        <i class="bi bi-check-circle text-primary mt-1 mr-2"></i>
+                        <span class="text-gray-600">${feature}</span>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+                
+                <!-- Technologies -->
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-2">Technologies Used</h4>
+                  <div class="flex flex-wrap gap-2">
+                    ${project.technologies.map(tech => `
+                      <span class="tech-badge px-3 py-1 rounded-full text-sm font-medium">${tech}</span>
+                    `).join('')}
+                  </div>
+                </div>
+                
+                <!-- Results -->
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <h4 class="text-lg font-semibold text-gray-900 mb-2">Business Results</h4>
+                  <div class="grid sm:grid-cols-2 gap-4">
+                    ${project.results.map(result => `
+                      <div class="flex items-center">
+                        <i class="bi bi-graph-up-arrow text-primary text-xl mr-3"></i>
+                        <span class="text-gray-700">${result}</span>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+                
+                <!-- Testimonial -->
+                <div class="bg-gradient-to-r from-primary/5 to-blue-50 p-6 rounded-lg border-l-4 border-primary">
+                  <i class="bi bi-chat-quote text-primary text-2xl mb-3"></i>
+                  <p class="text-gray-600 italic mb-3">"${project.testimonial}"</p>
+                  <p class="font-semibold text-gray-900">- ${project.testimonialAuthor}</p>
+                </div>
+                
+                <!-- Action Buttons - UPDATED WITH LINKS -->
+                <div class="flex flex-col sm:flex-row gap-4 pt-4 border-t border-gray-200">
+                  <a href="${project.liveDemo}" target="_blank" class="inline-flex items-center justify-center px-6 py-3 btn-primary rounded-lg font-semibold transition-colors flex-1 text-center">
+                    <i class="bi bi-eye mr-2"></i>View Live Demo
+                  </a>
+                  <a href="${project.sourceCode}" target="_blank" class="inline-flex items-center justify-center px-6 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary/5 transition-colors flex-1 text-center">
+                    <i class="bi bi-github mr-2"></i>View Source Code
+                  </a>
+                </div>
+              </div>
+            `;
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+      });
+
+      closeModal.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      });
+
+      // Close modal when clicking outside
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target.classList.contains('fixed')) {
+          modal.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
+      });
+
+      // Scroll to top functionality
+      const scrollTop = document.getElementById('scrollTop');
+      
+      function toggleScrollTop() {
+        if (window.pageYOffset > 300) {
+          scrollTop.classList.remove('opacity-0', 'invisible');
+          scrollTop.classList.add('opacity-100', 'visible');
+        } else {
+          scrollTop.classList.remove('opacity-100', 'visible');
+          scrollTop.classList.add('opacity-0', 'invisible');
+        }
+      }
+      
+      scrollTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      window.addEventListener('scroll', toggleScrollTop);
+      toggleScrollTop(); // Initial check
+
+      // Keyboard shortcuts for better UX
+      document.addEventListener('keydown', (e) => {
+        const modal = document.getElementById('projectModal');
+        
+        // Close modal with Escape key
+        if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+          modal.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
+        
+        // Close sidebar with Escape key on mobile
+        if (e.key === 'Escape' && window.innerWidth < 768) {
+          const sidebar = document.getElementById('sidebar');
+          const overlay = document.getElementById('overlay');
+          if (!sidebar.classList.contains('-translate-x-full')) {
+            sidebar.classList.add('-translate-x-full');
+            overlay.classList.add('hidden');
+          }
+        }
+      });
+    });
+  </script>
+
+</body>
+
+</html>

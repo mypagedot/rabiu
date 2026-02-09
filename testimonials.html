@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Testimonials | Rabiu S.M - Software Systems Engineer</title>
+  <meta name="description" content="Professional testimonials and recommendations from colleagues, clients, and industry professionals">
+  <meta name="keywords" content="Testimonials, Recommendations, Client Feedback, Professional References, Colleague Reviews">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="Testimonials | Rabiu S.M - Software Systems Engineer">
+  <meta property="og:description" content="Professional testimonials and recommendations from colleagues, clients, and industry professionals">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicons -->
+  <link href="assets/img/favicon_io/favicon.ico" rel="icon">
+  <link href="assets/img/favicon_io/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Add Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              DEFAULT: '#0440708e',
+              dark: '#02274e'
+            },
+            secondary: {
+              light: '#2c3e50',
+              DEFAULT: '#02274e'
+            },
+            testimonial: {
+              client: '#10B981',
+              colleague: '#3B82F6',
+              manager: '#8B5CF6',
+              academic: '#EF4444'
+            }
+          },
+          backgroundImage: {
+            'primary-gradient': 'linear-gradient(135deg, #036ee1 0%, #02274e 100%)',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+            'slide-up': 'slideUp 0.3s ease-out',
+            'pulse-slow': 'pulse 3s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(10px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* Testimonial card styling - Matching certification page */
+    .testimonial-card {
+      transition: all 0.3s ease;
+      border: 1px solid #e5e7eb;
+      background: white;
+    }
+    
+    .testimonial-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border-color: #036ee1;
+    }
+    
+    /* Testimonial badges */
+    .testimonial-badge {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border: 1px solid #bae6fd;
+      color: #0369a1;
+      font-weight: 500;
+    }
+    
+    .testimonial-badge.client {
+      background: linear-gradient(135deg, #d1fae5 0%, #a7f3d0 100%);
+      border-color: #34d399;
+      color: #065f46;
+    }
+    
+    .testimonial-badge.colleague {
+      background: linear-gradient(135deg, #dbeafe 0%, #bfdbfe 100%);
+      border-color: #60a5fa;
+      color: #1e40af;
+    }
+    
+    .testimonial-badge.manager {
+      background: linear-gradient(135deg, #ede9fe 0%, #ddd6fe 100%);
+      border-color: #a78bfa;
+      color: #5b21b6;
+    }
+    
+    .testimonial-badge.academic {
+      background: linear-gradient(135deg, #fee2e2 0%, #fecaca 100%);
+      border-color: #f87171;
+      color: #991b1b;
+    }
+    
+    /* Rating stars */
+    .rating-stars {
+      color: #fbbf24;
+    }
+    
+    /* Quote styling */
+    .quote-icon {
+      color: #036ee1;
+      opacity: 0.2;
+    }
+    
+    /* Filter buttons matching certification page */
+    .filter-btn.active {
+      background: linear-gradient(135deg, #036ee1 0%, #02274e 100%);
+      color: white;
+      border-color: #036ee1;
+    }
+    
+    /* Custom scrollbar */
+    .testimonial-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .testimonial-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    
+    .testimonial-scrollbar::-webkit-scrollbar-thumb {
+      background: #036ee1;
+      border-radius: 10px;
+    }
+    
+    /* Hero background matching certification page */
+    .testimonial-hero-bg {
+      background-image: url('assets/img/hero-bg-img.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .testimonial-hero-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.85) 0%, rgba(2, 57, 101, 0.873) 100%);
+      z-index: 1;
+    }
+
+    /* CTA section background matching certification page */
+    .testimonial-cta-bg {
+      background-image: url('assets/img/CTA.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .testimonial-cta-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.9) 0%, rgba(4, 64, 112, 0.9) 100%);
+      z-index: 1;
+    }
+
+    /* Ensure content stays above background */
+    .section-content {
+      position: relative;
+      z-index: 20;
+    }
+
+    /* Fixed: Sidebar solid background - Matching certification page */
+    .sidebar-solid-bg {
+      background: #01233a !important;
+    }
+    
+    /* Fixed: Mobile menu button with solid background - Matching certification page */
+    .mobile-menu-btn {
+      background: #022b46 !important;
+    }
+    
+    /* Custom scrollbar - Matching certification page */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #222b46;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #222b46;
+    }
+    
+    /* Sidebar scrollbar - Matching certification page */
+    .sidebar-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+    }
+
+    /* Fixed: Ensure content is visible - Matching certification page */
+    .main-content {
+      margin-top: 80px;
+    }
+
+    /* Featured testimonial ribbon */
+    .featured-ribbon {
+      position: absolute;
+      top: 10px;
+      right: -10px;
+      padding: 0.25rem 1.5rem;
+      background: linear-gradient(135deg, #036ee1, #02274e);
+      color: white;
+      font-size: 0.75rem;
+      font-weight: 600;
+      transform: rotate(45deg);
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    @media (min-width: 1024px) {
+      .main-content {
+        margin-top: 0;
+      }
+    }
+    
+    /* Swiper slider styles */
+    .testimonial-slider .swiper-pagination-bullet {
+      background-color: #036ee1;
+      opacity: 0.5;
+      width: 10px;
+      height: 10px;
+    }
+    
+    .testimonial-slider .swiper-pagination-bullet-active {
+      opacity: 1;
+    }
+    
+    .testimonial-slider .swiper-button-next,
+    .testimonial-slider .swiper-button-prev {
+      color: #036ee1;
+      background: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+    
+    .testimonial-slider .swiper-button-next:after,
+    .testimonial-slider .swiper-button-prev:after {
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-inter">
+    
+  <!-- Mobile Menu Button - Matching certification page -->
+  <button id="mobileMenuButton" class="mobile-menu-btn md:hidden fixed top-4 left-4 z-50 w-10 h-10 text-white rounded-full shadow-lg flex items-center justify-center">
+    <i class="bi bi-list text-xl"></i>
+  </button>
+
+  <!-- Left Sidebar - EXACT MATCH to certification page -->
+  <aside id="sidebar" class="sidebar-solid-bg text-white fixed left-0 top-0 h-screen w-64 z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 shadow-2xl">
+    <div class="flex flex-col h-full">
+      <!-- Profile Section -->
+      <div class="p-6 border-b border-white/10">
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-white/20 mb-4">
+            <img src="assets/img/rsm-pic.jpg" 
+                 alt="Rabiu S.M." 
+                 class="w-full h-full object-cover">
+          </div>
+          <h2 class="text-lg font-bold">Rabiu S.M.</h2>
+          <p class="text-white/70 text-sm mt-1">Software Engineer</p>
+        </div>
+      </div>
+      
+      <!-- Navigation Links -->
+      <nav class="flex-1 overflow-y-auto sidebar-scrollbar p-4 space-y-2">
+        <a href="index.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-house-door text-lg"></i>
+          <span>Home</span>
+        </a>
+        
+        <a href="about.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-person text-lg"></i>
+          <span>About Me</span>
+        </a>
+        
+        <a href="skills.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-tools text-lg"></i>
+          <span>Skills</span>
+        </a>
+        
+        <a href="projects.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-briefcase text-lg"></i>
+          <span>Projects</span>
+        </a>
+        
+        <a href="system-design.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-diagram-3 text-lg"></i>
+          <span>System Design</span>
+        </a>
+        
+        <a href="experience.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-clock-history text-lg"></i>
+          <span>Experience</span>
+        </a>
+        
+        <!-- More Dropdown -->
+        <div class="relative">
+          <button id="sidebarMoreButton" class="flex items-center justify-between w-full px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+            <div class="flex items-center space-x-3">
+              <i class="bi bi-three-dots text-lg"></i>
+              <span>More</span>
+            </div>
+            <i id="sidebarMoreIcon" class="bi bi-chevron-down text-sm transition-transform duration-300"></i>
+          </button>
+          
+          <div id="sidebarMoreContent" class="hidden pl-6 space-y-2 mt-2">
+            <a href="blogs.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-pencil-square text-sm"></i>
+              <span class="text-sm">Blogs</span>
+            </a>
+            <a href="certification.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-award text-sm"></i>
+              <span class="text-sm">Certification</span>
+            </a>
+            <a href="open-source.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-github text-sm"></i>
+              <span class="text-sm">Open Source</span>
+            </a>
+            <a href="testimonials.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg bg-primary text-white transition-all">
+              <i class="bi bi-chat-quote text-sm"></i>
+              <span class="text-sm">Testimonials</span>
+            </a>
+            <a href="talks-media.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-mic text-sm"></i>
+              <span class="text-sm">Talks & Media</span>
+            </a>
+          </div>
+        </div>
+        
+        <a href="contact.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-gradient-to-r from-primary to-primary/80 text-white mt-4 hover:opacity-90 transition-all">
+          <i class="bi bi-chat-dots text-lg"></i>
+          <span>Contact Me</span>
+        </a>
+      </nav>
+      
+      <!-- Social Links & Copyright -->
+      <div class="p-4 border-t border-white/10">
+        <div class="flex justify-center space-x-4 mb-4">
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+        <p class="text-white/50 text-xs text-center">
+          © 2024 Rabiu S.M.
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay for mobile - Matching certification page -->
+  <div id="overlay" class="fixed inset-0 bg-black/50 z-30 md:hidden hidden"></div>
+
+  <!-- Main Content -->
+  <main class="main-content lg:ml-64 min-h-screen">
+    <!-- Hero Section -->
+    <section class="testimonial-hero-bg text-white py-16 md:py-24 relative">
+      <div class="container mx-auto px-4 section-content">
+        <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            Professional Testimonials
+          </h1>
+          <p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+            What colleagues, clients, and industry professionals say about working with me
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-person-workspace mr-2"></i>Client Reviews
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-people mr-2"></i>Colleague References
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-award mr-2"></i>Professional Recommendations
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-chat-quote mr-2"></i>Verified Endorsements
+            </span>
+          </div>
+          <a href="#testimonials" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-dark rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all hover:-translate-y-1 animate-bounce">
+            <i class="bi bi-arrow-down-circle mr-2"></i>
+            Read Testimonials
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Overview -->
+    <section class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="bg-white rounded-xl p-6 text-center testimonial-card" data-aos="fade-up">
+            <div class="text-3xl font-bold text-testimonial-client mb-2">24+</div>
+            <p class="text-gray-600">Client Testimonials</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center testimonial-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-3xl font-bold text-testimonial-colleague mb-2">18+</div>
+            <p class="text-gray-600">Colleague References</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center testimonial-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-3xl font-bold text-testimonial-manager mb-2">12+</div>
+            <p class="text-gray-600">Manager Reviews</p>
+          </div>
+          <div class="bg-white rounded-xl p-6 text-center testimonial-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-3xl font-bold text-testimonial-academic mb-2">8+</div>
+            <p class="text-gray-600">Academic References</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Filter -->
+    <section class="py-8 bg-white border-b border-gray-200 sticky top-0 z-30 shadow-sm">
+      <div class="container mx-auto px-4">
+        <div class="flex flex-wrap justify-center gap-3" data-aos="fade-up">
+          <button class="filter-btn active px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base">
+            All Testimonials
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="client">
+            <i class="bi bi-person-check mr-2"></i>Clients
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="colleague">
+            <i class="bi bi-people mr-2"></i>Colleagues
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="manager">
+            <i class="bi bi-person-badge mr-2"></i>Managers
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="academic">
+            <i class="bi bi-mortarboard mr-2"></i>Academic
+          </button>
+          <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="featured">
+            <i class="bi bi-star mr-2"></i>Featured
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Testimonials Slider -->
+    <section class="py-12 bg-gradient-to-b from-gray-50 to-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-10" data-aos="fade-up">
+          <h2 class="text-3xl font-bold text-gray-900 mb-3">Featured Testimonials</h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">Highlighted endorsements from industry leaders and key stakeholders</p>
+        </div>
+        
+        <!-- Swiper Slider -->
+        <div class="testimonial-slider" data-aos="fade-up">
+          <div class="swiper-container">
+            <div class="swiper-wrapper">
+              <!-- Slide 1 -->
+              <div class="swiper-slide">
+                <div class="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto relative">
+                  <div class="absolute top-6 right-6 quote-icon">
+                    <i class="bi bi-chat-quote text-6xl"></i>
+                  </div>
+                  <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                    <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary/20">
+                      <img src="assets/img/man icon.webp" alt="Alex Johnson" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                      <div class="flex flex-wrap items-center gap-3 mb-4">
+                        <span class="featured-ribbon">Featured</span>
+                        <div class="rating-stars flex">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <span class="testimonial-badge client">Client</span>
+                      </div>
+                      <p class="text-gray-700 text-lg italic mb-6">
+                        "Rabiu's expertise in cloud architecture transformed our infrastructure. His implementation of AWS solutions reduced our operational costs by 40% while improving system reliability. His attention to detail and proactive approach to problem-solving made him an invaluable asset to our team."
+                      </p>
+                      <div>
+                        <h4 class="font-bold text-gray-900">Alex Johnson</h4>
+                        <p class="text-gray-600">CTO at TechSolutions Inc.</p>
+                        <p class="text-gray-500 text-sm mt-1">Project: Enterprise Cloud Migration • September 2023</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Slide 2 -->
+              <div class="swiper-slide">
+                <div class="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto relative">
+                  <div class="absolute top-6 right-6 quote-icon">
+                    <i class="bi bi-chat-quote text-6xl"></i>
+                  </div>
+                  <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                    <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary/20">
+                      <img src="assets/img/man icon.webp" alt="Sarah Williams" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                      <div class="flex flex-wrap items-center gap-3 mb-4">
+                        <div class="rating-stars flex">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-half"></i>
+                        </div>
+                        <span class="testimonial-badge manager">Manager</span>
+                      </div>
+                      <p class="text-gray-700 text-lg italic mb-6">
+                        "As Rabiu's direct manager for two years, I consistently observed exceptional technical skills combined with strong leadership qualities. He mentored junior developers effectively and always delivered projects ahead of schedule. His system design documentation remains the gold standard in our department."
+                      </p>
+                      <div>
+                        <h4 class="font-bold text-gray-900">Sarah Williams</h4>
+                        <p class="text-gray-600">Senior Engineering Manager at GlobalSoft</p>
+                        <p class="text-gray-500 text-sm mt-1">Direct Manager • 2021-2023</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Slide 3 -->
+              <div class="swiper-slide">
+                <div class="bg-white rounded-2xl p-8 shadow-lg max-w-4xl mx-auto relative">
+                  <div class="absolute top-6 right-6 quote-icon">
+                    <i class="bi bi-chat-quote text-6xl"></i>
+                  </div>
+                  <div class="flex flex-col md:flex-row items-center md:items-start gap-6">
+                    <div class="w-24 h-24 rounded-full overflow-hidden flex-shrink-0 border-4 border-primary/20">
+                      <img src="assets/img/man icon.webp" alt="Dr. Michael Chen" class="w-full h-full object-cover">
+                    </div>
+                    <div class="flex-1">
+                      <div class="flex flex-wrap items-center gap-3 mb-4">
+                        <div class="rating-stars flex">
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                          <i class="bi bi-star-fill"></i>
+                        </div>
+                        <span class="testimonial-badge academic">Academic</span>
+                      </div>
+                      <p class="text-gray-700 text-lg italic mb-6">
+                        "Rabiu demonstrated exceptional aptitude in software engineering principles during his graduate studies. His thesis on distributed systems was published in the International Journal of Computer Science. He consistently showed deep analytical thinking and innovative problem-solving approaches."
+                      </p>
+                      <div>
+                        <h4 class="font-bold text-gray-900">Dr. Michael Chen</h4>
+                        <p class="text-gray-600">Professor of Computer Science, Stanford University</p>
+                        <p class="text-gray-500 text-sm mt-1">Academic Advisor • 2018-2020</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="swiper-pagination mt-6"></div>
+            
+            <!-- Navigation buttons -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonials Grid -->
+    <section id="testimonials" class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Professional Testimonials</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Verified recommendations from colleagues, clients, and industry professionals
+          </p>
+        </div>
+
+        <!-- Client Testimonials -->
+        <div class="mb-16" data-aos="fade-up">
+          <div class="flex items-center mb-8">
+            <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mr-4">
+              <i class="bi bi-person-check text-2xl text-testimonial-client"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900">Client Testimonials</h3>
+              <p class="text-gray-600">Feedback from organizations and businesses I've worked with</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Client 1 -->
+            <div class="testimonial-card rounded-xl overflow-hidden testimonial-item" data-category="client">
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+                      <img src="assets/img/man icon.webp" alt="Lisa Rodriguez" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900">Lisa Rodriguez</h4>
+                      <p class="text-gray-600 text-sm">Product Director, FinTech Corp</p>
+                    </div>
+                  </div>
+                  <div class="rating-stars flex text-sm">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4 italic">
+                  "Rabiu delivered our payment processing system ahead of schedule with exceptional quality. His architectural decisions have saved us thousands in monthly infrastructure costs."
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="testimonial-badge client text-xs px-2 py-1">Client</span>
+                  <span class="text-gray-500 text-sm">March 2023</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Client 2 -->
+            <div class="testimonial-card rounded-xl overflow-hidden testimonial-item" data-category="client">
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+                      <img src="assets/img/man icon.webp" alt="David Kim" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900">David Kim</h4>
+                      <p class="text-gray-600 text-sm">CEO, HealthTech Solutions</p>
+                    </div>
+                  </div>
+                  <div class="rating-stars flex text-sm">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4 italic">
+                  "Working with Rabiu was a game-changer for our healthcare platform. His security implementations exceeded industry compliance standards and his documentation was impeccable."
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="testimonial-badge client text-xs px-2 py-1">Client</span>
+                  <span class="text-gray-500 text-sm">August 2023</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Client 3 -->
+            <div class="testimonial-card rounded-xl overflow-hidden testimonial-item" data-category="client featured">
+              <div class="p-6 relative">
+                <div class="featured-ribbon">Featured</div>
+                <div class="flex items-start justify-between mb-4">
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+                      <img src="assets/img/man icon.webp" alt="Priya Sharma" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900">Priya Sharma</h4>
+                      <p class="text-gray-600 text-sm">VP Engineering, E-Commerce Global</p>
+                    </div>
+                  </div>
+                  <div class="rating-stars flex text-sm">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star"></i>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4 italic">
+                  "Rabiu's microservices architecture scaled seamlessly during our peak sales season handling 10x traffic. His proactive monitoring solutions prevented potential outages."
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="testimonial-badge client text-xs px-2 py-1">Client</span>
+                  <span class="text-gray-500 text-sm">November 2023</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Colleague Testimonials -->
+        <div class="mb-16" data-aos="fade-up" data-aos-delay="100">
+          <div class="flex items-center mb-8">
+            <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mr-4">
+              <i class="bi bi-people text-2xl text-testimonial-colleague"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900">Colleague References</h3>
+              <p class="text-gray-600">Recommendations from peers and team members</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Colleague 1 -->
+            <div class="testimonial-card rounded-xl overflow-hidden testimonial-item" data-category="colleague">
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+                      <img src="assets/img/man icon.webp" alt="James Wilson" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900">Al-Amin Ibrahim</h4>
+                      <p class="text-gray-600 text-sm">Product-Focused Software Developer</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4 italic">
+                  "
+“Rabiu is the kind of developer that thinks beyond the brief. Curious, passionate, and not afraid to experiment. You can tell he loves what he does and that integrity shows in his work every time.”
+                  </p>
+                <div class="flex items-center justify-between">
+                  <span class="testimonial-badge colleague text-xs px-2 py-1">Colleague</span>
+                  <span class="text-gray-500 text-sm">Current Team</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colleague 2 -->
+            <div class="testimonial-card rounded-xl overflow-hidden testimonial-item" data-category="colleague">
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+                      <img src="assets/img/us madani.jpeg" alt="Maria Garcia" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900">Usman Madani Zanna</h4>
+                      <p class="text-gray-600 text-sm">Software Developer</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4 italic">
+                  "Rabiu is the most knowledgeable engineer I've worked with. His debugging skills are exceptional, and he's always willing to help teammates understand complex systems."
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="testimonial-badge colleague text-xs px-2 py-1">Colleague</span>
+                  <span class="text-gray-500 text-sm">2022-2023</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Colleague 3 -->
+            <div class="testimonial-card rounded-xl overflow-hidden testimonial-item" data-category="colleague featured">
+              <div class="p-6 relative">
+                <div class="featured-ribbon">Featured</div>
+                <div class="flex items-start justify-between mb-4">
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+                      <img src="assets/img/Pi tech.jpeg" alt="Robert Chen" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900">Nnadi Prince Ugochukwu</h4>
+                      <p class="text-gray-600 text-sm">CEO, PI TECHNOLOGY</p>
+                    </div>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4 italic">
+                  "Rabiu's system design documents are the standard I now require from all engineers. His ability to balance technical depth with business requirements is exceptional."
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="testimonial-badge colleague text-xs px-2 py-1">Colleague</span>
+                  <span class="text-gray-500 text-sm">2025-2027</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Manager Testimonials -->
+        <div class="mb-16" data-aos="fade-up" data-aos-delay="200">
+          <div class="flex items-center mb-8">
+            <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mr-4">
+              <i class="bi bi-person-badge text-2xl text-testimonial-manager"></i>
+            </div>
+            <div>
+              <h3 class="text-2xl font-bold text-gray-900">Manager Reviews</h3>
+              <p class="text-gray-600">Feedback from direct supervisors and leadership</p>
+            </div>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <!-- Manager 1 -->
+            <div class="testimonial-card rounded-xl overflow-hidden testimonial-item" data-category="manager">
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+                      <img src="assets/img/man icon.webp" alt="Thomas Anderson" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900">Thomas Anderson</h4>
+                      <p class="text-gray-600 text-sm">Director of Engineering</p>
+                    </div>
+                  </div>
+                  <div class="rating-stars flex text-sm">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4 italic">
+                  "Rabiu consistently exceeded performance expectations. His initiative in implementing cost-saving measures across our cloud infrastructure resulted in annual savings of $250K+."
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="testimonial-badge manager text-xs px-2 py-1">Manager</span>
+                  <span class="text-gray-500 text-sm">Performance Review 2023</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Manager 2 -->
+            <div class="testimonial-card rounded-xl overflow-hidden testimonial-item" data-category="manager">
+              <div class="p-6">
+                <div class="flex items-start justify-between mb-4">
+                  <div class="flex items-center">
+                    <div class="w-12 h-12 rounded-full overflow-hidden mr-3">
+                      <img src="assets/img/man icon.webp" alt="Jennifer Lee" class="w-full h-full object-cover">
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-gray-900">Jennifer Lee</h4>
+                      <p class="text-gray-600 text-sm">VP of Technology</p>
+                    </div>
+                  </div>
+                  <div class="rating-stars flex text-sm">
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-fill"></i>
+                    <i class="bi bi-star-half"></i>
+                  </div>
+                </div>
+                <p class="text-gray-700 mb-4 italic">
+                  "Rabiu's leadership in our migration to Kubernetes was instrumental to its success. He mentored 5 junior engineers who are now proficient in container orchestration."
+                </p>
+                <div class="flex items-center justify-between">
+                  <span class="testimonial-badge manager text-xs px-2 py-1">Manager</span>
+                  <span class="text-gray-500 text-sm">Project Review 2022</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Verification Section -->
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-8 mb-12" data-aos="fade-up">
+          <div class="text-center">
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">Verification Available</h3>
+            <p class="text-gray-700 mb-6 max-w-2xl mx-auto">
+              All testimonials are verifiable through professional networks. Contact me for specific references or verification requests.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+              <a href="https://linkedin.com" target="_blank" class="inline-flex items-center px-5 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all">
+                <i class="bi bi-linkedin mr-2"></i>
+                LinkedIn Recommendations
+              </a>
+              <a href="contact.html" class="inline-flex items-center px-5 py-3 bg-white text-primary border border-gray-300 rounded-lg hover:bg-gray-50 transition-all">
+                <i class="bi bi-envelope mr-2"></i>
+                Request References
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-20 testimonial-cta-bg relative">
+      <div class="container mx-auto px-4 section-content text-center">
+        <div data-aos="fade-up">
+          <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">Ready to Work Together?</h3>
+          <p class="text-gray-100 mb-10 max-w-2xl mx-auto text-lg md:text-xl">
+            Let's discuss how my expertise can contribute to your next project or organization.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-dark rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gap-3">
+              <i class="bi bi-envelope text-xl"></i>
+              Contact Me
+            </a>
+            <a href="experience.html" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white/30 text-white rounded-lg font-bold hover:bg-white/10 transition-all gap-3">
+              <i class="bi bi-clock-history text-xl"></i>
+              View Experience
+            </a>
+          </div>
+          <p class="text-gray-300 mt-6 text-sm">References available upon request</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer - Matching certification page -->
+  <footer class="bg-white border-t border-gray-200 py-6">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-col justify-center items-center text-center lg:space-y-4">
+        <div class="mb-4 lg:mb-0 lg:w-full">
+          <p class="text-gray-600 text-sm md:text-base">
+            © <span id="currentYear"></span> <strong class="text-gray-900">Rabiu S.M. Creadable Page</strong> All Rights Reserved.
+          </p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-linkedin text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <i class="bi bi-github text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <i class="bi bi-twitter-x text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-envelope text-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <button id="scrollTop" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all opacity-0 invisible hover:opacity-100 z-40">
+    <i class="bi bi-arrow-up text-lg"></i>
+  </button>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+      });
+
+      // Set current year in footer
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById('mobileMenuButton');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+
+      mobileMenuButton.addEventListener('click', () => {
+        sidebar.classList.toggle('-translate-x-full');
+        overlay.classList.toggle('hidden');
+      });
+
+      overlay.addEventListener('click', () => {
+        sidebar.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+      });
+
+      // Sidebar More Dropdown
+      const sidebarMoreButton = document.getElementById('sidebarMoreButton');
+      const sidebarMoreIcon = document.getElementById('sidebarMoreIcon');
+      const sidebarMoreContent = document.getElementById('sidebarMoreContent');
+
+      sidebarMoreButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sidebarMoreContent.classList.toggle('hidden');
+        sidebarMoreIcon.classList.toggle('rotate-180');
+      });
+
+      // Testimonials Filter Functionality
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const testimonialItems = document.querySelectorAll('.testimonial-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          button.classList.add('active');
+          
+          const filterValue = button.getAttribute('data-filter');
+          
+          testimonialItems.forEach(item => {
+            const itemCategories = item.getAttribute('data-category');
+            
+            if (filterValue === 'all' || !filterValue || itemCategories.includes(filterValue)) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+              }, 10);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+
+      // Initialize Swiper slider for featured testimonials
+      const swiper = new Swiper('.testimonial-slider .swiper-container', {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+          delay: 5000,
+          disableOnInteraction: false,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        breakpoints: {
+          768: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          1024: {
+            slidesPerView: 1,
+            spaceBetween: 30,
+          },
+        }
+      });
+
+      // Scroll to top functionality
+      const scrollTop = document.getElementById('scrollTop');
+      
+      function toggleScrollTop() {
+        if (window.pageYOffset > 300) {
+          scrollTop.classList.remove('opacity-0', 'invisible');
+          scrollTop.classList.add('opacity-100', 'visible');
+        } else {
+          scrollTop.classList.remove('opacity-100', 'visible');
+          scrollTop.classList.add('opacity-0', 'invisible');
+        }
+      }
+      
+      scrollTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      window.addEventListener('scroll', toggleScrollTop);
+      toggleScrollTop(); // Initial check
+    });
+
+    // Keyboard shortcuts for better UX
+    document.addEventListener('keydown', (e) => {
+      // Close sidebar with Escape key on mobile
+      if (e.key === 'Escape' && window.innerWidth < 768) {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        if (!sidebar.classList.contains('-translate-x-full')) {
+          sidebar.classList.add('-translate-x-full');
+          overlay.classList.add('hidden');
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>

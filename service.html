@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Services - Rabiu S.M. | Software Engineering Student</title>
+  <meta content="Professional software development services including web development, mobile apps, database design, and technical consultation. Expert solutions using modern technologies." name="description">
+  <meta content="web development, mobile app development, software engineering, database design, UI/UX consultation, technical consultation, software maintenance" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <style>
+    /* International Standard Services Page Styles */
+    .services-page .section-title {
+      margin-bottom: 3rem;
+      position: relative;
+      padding-bottom: 1rem;
+    }
+    
+    .services-page .section-title::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 60px;
+      height: 3px;
+      background: linear-gradient(90deg, #3498db, #2c3e50);
+      border-radius: 2px;
+    }
+    
+    .services-page .section-title.text-center::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .service-card {
+      background: #fff;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 12px;
+      padding: 2rem;
+      height: 100%;
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .service-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, #3498db, #2c3e50);
+      transform: scaleX(0);
+      transition: transform 0.3s ease;
+      transform-origin: left;
+    }
+    
+    .service-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .service-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.1);
+      border-color: transparent;
+    }
+    
+    .service-icon-wrapper {
+      width: 70px;
+      height: 70px;
+      background: linear-gradient(135deg, #3498db, #2c3e50);
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 1.5rem;
+      transition: all 0.3s ease;
+    }
+    
+    .service-card:hover .service-icon-wrapper {
+      transform: rotateY(180deg);
+      background: linear-gradient(135deg, #2c3e50, #3498db);
+    }
+    
+    .service-icon {
+      font-size: 2rem;
+      color: white;
+    }
+    
+    .service-features {
+      margin: 1.5rem 0;
+    }
+    
+    .service-features li {
+      padding: 0.5rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+    }
+    
+    .service-features li:last-child {
+      border-bottom: none;
+    }
+    
+    .service-features i {
+      color: #3498db;
+      margin-right: 10px;
+      font-size: 0.875rem;
+    }
+    
+    .tech-stack-section {
+      background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+      padding: 4rem 0;
+      border-radius: 20px;
+      margin: 4rem 0;
+    }
+    
+    .tech-category-card {
+      background: white;
+      border-radius: 12px;
+      padding: 2rem;
+      height: 100%;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+      transition: all 0.3s ease;
+    }
+    
+    .tech-category-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    }
+    
+    .tech-item {
+      display: flex;
+      align-items: center;
+      padding: 0.75rem;
+      margin-bottom: 0.75rem;
+      background: #f8f9fa;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+    }
+    
+    .tech-item:hover {
+      background: #e9ecef;
+      transform: translateX(5px);
+    }
+    
+    .tech-icon {
+      font-size: 1.5rem;
+      margin-right: 12px;
+      width: 40px;
+      text-align: center;
+    }
+    
+    .tech-level-badge {
+      padding: 0.25rem 0.75rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+      margin-left: auto;
+    }
+    
+    .tech-level-badge.advanced {
+      background: #d4edda;
+      color: #155724;
+    }
+    
+    .tech-level-badge.intermediate {
+      background: #fff3cd;
+      color: #856404;
+    }
+    
+    .tech-level-badge.basic {
+      background: #d1ecf1;
+      color: #0c5460;
+    }
+    
+    .process-timeline {
+      position: relative;
+      padding-left: 2rem;
+    }
+    
+    .process-timeline::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: linear-gradient(to bottom, #3498db, #2c3e50);
+    }
+    
+    .process-step {
+      position: relative;
+      padding-bottom: 2rem;
+    }
+    
+    .process-step:last-child {
+      padding-bottom: 0;
+    }
+    
+    .process-step::before {
+      content: '';
+      position: absolute;
+      left: -2.5rem;
+      top: 0;
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background: #3498db;
+      border: 3px solid white;
+      box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+    }
+    
+    .pricing-card {
+      border: 2px solid #e9ecef;
+      border-radius: 16px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      height: 100%;
+    }
+    
+    .pricing-card.featured {
+      border-color: #3498db;
+      transform: scale(1.05);
+    }
+    
+    .pricing-card:hover {
+      border-color: #3498db;
+      box-shadow: 0 15px 35px rgba(52, 152, 219, 0.1);
+    }
+    
+    .pricing-header {
+      background: linear-gradient(135deg, #3498db, #2c3e50);
+      color: white;
+      padding: 2rem;
+      text-align: center;
+    }
+    
+    .pricing-price {
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 1rem 0;
+    }
+    
+    .pricing-period {
+      font-size: 1rem;
+      opacity: 0.9;
+    }
+    
+    .pricing-features {
+      padding: 2rem;
+    }
+    
+    .pricing-features li {
+      padding: 0.75rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+    }
+    
+    .pricing-features li:last-child {
+      border-bottom: none;
+    }
+    
+    .pricing-features i {
+      color: #28a745;
+      margin-right: 10px;
+    }
+    
+    .cta-section {
+      background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+      color: white;
+      padding: 4rem 0;
+      border-radius: 20px;
+      margin-top: 4rem;
+    }
+    
+    @media (max-width: 768px) {
+      .pricing-card.featured {
+        transform: scale(1);
+      }
+      
+      .tech-stack-section {
+        padding: 2rem 0;
+      }
+      
+      .service-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+
+<body class="services-page">
+
+  <header id="header" class="header dark-background d-flex flex-column">
+    <i class="header-toggle d-xl-none bi bi-list"></i>
+
+    <div class="profile-img">
+      <img src="assets/img/ceo.png" alt="Rabiu S.M. Profile Picture" class="img-fluid rounded-circle">
+    </div>
+
+    <a href="index.html" class="logo d-flex align-items-center justify-content-center">
+      <h1 class="sitename">Rabiu S.M.</h1>
+    </a>
+
+    <div class="social-links text-center">
+      <a href="#" class="twitter" aria-label="Twitter"><i class="bi bi-twitter-x"></i></a>
+      <a href="#" class="facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="instagram" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+      <a href="#" class="google-plus" aria-label="Skype"><i class="bi bi-skype"></i></a>
+      <a href="#" class="linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+    </div>
+
+    <nav id="navmenu" class="navmenu">
+      <ul>
+        <li><a href="index.html#hero"><i class="bi bi-house navicon"></i>Home</a></li>
+        <li><a href="about.html"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="index.html#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
+        <li><a href="index.html#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
+        <li><a href="services.html" class="active"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
+        <li><a href="contact.html"><i class="bi bi-envelope navicon"></i> Contact</a></li>
+      </ul>
+    </nav>
+
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title dark-background">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0">My Services</h1>
+        <nav class="breadcrumbs" aria-label="breadcrumb">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li class="current">Services</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Services Section -->
+    <section id="services" class="services section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <!-- Services Introduction -->
+        <div class="row mb-5">
+          <div class="col-lg-12">
+            <div class="content text-center" data-aos="fade-up" data-aos-delay="150">
+              <h2 class="section-title text-center">Professional Services</h2>
+              <p class="lead mb-4">
+                As a dedicated software engineering student with hands-on experience in modern technologies, I offer comprehensive development services designed to transform your digital ideas into reality. Each solution is crafted with precision, following international standards and best practices.
+              </p>
+              <p class="text-muted">
+                I bridge the gap between academic excellence and practical implementation, delivering solutions that are not only technically sound but also business-focused and user-centric.
+              </p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Main Services -->
+        <div class="row gy-4 mb-5">
+          <h3 class="section-title text-center mb-4" data-aos="fade-up" data-aos-delay="100">Core Service Offerings</h3>
+          
+          <!-- Service 1: Web Development -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
+            <div class="service-card">
+              <div class="service-icon-wrapper">
+                <i class="service-icon bi bi-code-slash"></i>
+              </div>
+              <h4 class="mb-3">Full-Stack Web Development</h4>
+              <p class="text-muted mb-4">Comprehensive web solutions from frontend interfaces to backend systems, built with modern frameworks and best practices.</p>
+              
+              <div class="service-features">
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill"></i> Responsive & Mobile-First Design</li>
+                  <li><i class="bi bi-check-circle-fill"></i> React & Vue.js Applications</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Node.js & PHP Backend</li>
+                  <li><i class="bi bi-check-circle-fill"></i> RESTful API Development</li>
+                  <li><i class="bi bi-check-circle-fill"></i> E-commerce Solutions</li>
+                </ul>
+              </div>
+              
+              <div class="mt-4">
+                <span class="badge bg-primary me-2">HTML5</span>
+                <span class="badge bg-primary me-2">CSS3</span>
+                <span class="badge bg-primary me-2">JavaScript</span>
+                <span class="badge bg-primary">React</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Service 2: Mobile Development -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="service-card">
+              <div class="service-icon-wrapper">
+                <i class="service-icon bi bi-phone"></i>
+              </div>
+              <h4 class="mb-3">Cross-Platform Mobile Development</h4>
+              <p class="text-muted mb-4">Native-like mobile applications for iOS and Android using modern cross-platform frameworks for optimal performance.</p>
+              
+              <div class="service-features">
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill"></i> Flutter Applications</li>
+                  <li><i class="bi bi-check-circle-fill"></i> React Native Development</li>
+                  <li><i class="bi bi-check-circle-fill"></i> UI/UX Mobile Design</li>
+                  <li><i class="bi bi-check-circle-fill"></i> API Integration</li>
+                  <li><i class="bi bi-check-circle-fill"></i> App Store Deployment</li>
+                </ul>
+              </div>
+              
+              <div class="mt-4">
+                <span class="badge bg-primary me-2">Flutter</span>
+                <span class="badge bg-primary me-2">Dart</span>
+                <span class="badge bg-primary me-2">React Native</span>
+                <span class="badge bg-primary">JavaScript</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Service 3: Database Solutions -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
+            <div class="service-card">
+              <div class="service-icon-wrapper">
+                <i class="service-icon bi bi-database"></i>
+              </div>
+              <h4 class="mb-3">Database Design & Management</h4>
+              <p class="text-muted mb-4">Robust database architecture and management solutions ensuring data integrity, security, and optimal performance.</p>
+              
+              <div class="service-features">
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill"></i> Database Architecture Design</li>
+                  <li><i class="bi bi-check-circle-fill"></i> SQL & NoSQL Solutions</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Data Migration Services</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Performance Optimization</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Backup & Recovery Plans</li>
+                </ul>
+              </div>
+              
+              <div class="mt-4">
+                <span class="badge bg-primary me-2">MySQL</span>
+                <span class="badge bg-primary me-2">MongoDB</span>
+                <span class="badge bg-primary me-2">SQL</span>
+                <span class="badge bg-primary">Database Design</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Service 4: Maintenance & Support -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+            <div class="service-card">
+              <div class="service-icon-wrapper">
+                <i class="service-icon bi bi-tools"></i>
+              </div>
+              <h4 class="mb-3">Software Maintenance & Support</h4>
+              <p class="text-muted mb-4">Ongoing maintenance and support services to ensure your software remains secure, efficient, and up-to-date.</p>
+              
+              <div class="service-features">
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill"></i> Bug Fixes & Debugging</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Performance Optimization</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Security Updates</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Feature Enhancements</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Technical Documentation</li>
+                </ul>
+              </div>
+              
+              <div class="mt-4">
+                <span class="badge bg-primary me-2">Debugging</span>
+                <span class="badge bg-primary me-2">Optimization</span>
+                <span class="badge bg-primary me-2">Security</span>
+                <span class="badge bg-primary">Support</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Service 5: UI/UX Design -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="350">
+            <div class="service-card">
+              <div class="service-icon-wrapper">
+                <i class="service-icon bi bi-palette"></i>
+              </div>
+              <h4 class="mb-3">UI/UX Design Consultation</h4>
+              <p class="text-muted mb-4">User-centered design solutions that enhance usability, engagement, and overall user experience.</p>
+              
+              <div class="service-features">
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill"></i> Wireframing & Prototyping</li>
+                  <li><i class="bi bi-check-circle-fill"></i> User Experience Analysis</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Interface Design</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Usability Testing</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Design System Creation</li>
+                </ul>
+              </div>
+              
+              <div class="mt-4">
+                <span class="badge bg-primary me-2">Figma</span>
+                <span class="badge bg-primary me-2">Adobe XD</span>
+                <span class="badge bg-primary me-2">UI Design</span>
+                <span class="badge bg-primary">UX Research</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Service 6: Technical Consultation -->
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-card">
+              <div class="service-icon-wrapper">
+                <i class="service-icon bi bi-lightbulb"></i>
+              </div>
+              <h4 class="mb-3">Technical Consultation</h4>
+              <p class="text-muted mb-4">Expert guidance on technology selection, architecture planning, and implementation strategies.</p>
+              
+              <div class="service-features">
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill"></i> Technology Stack Selection</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Software Architecture Planning</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Code Review & Quality Assurance</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Development Best Practices</li>
+                  <li><i class="bi bi-check-circle-fill"></i> Project Roadmapping</li>
+                </ul>
+              </div>
+              
+              <div class="mt-4">
+                <span class="badge bg-primary me-2">Architecture</span>
+                <span class="badge bg-primary me-2">Best Practices</span>
+                <span class="badge bg-primary me-2">Code Review</span>
+                <span class="badge bg-primary">Consultation</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Technology Stack Section -->
+        <div class="tech-stack-section" data-aos="fade-up" data-aos-delay="100">
+          <div class="container">
+            <h2 class="section-title text-center">Technology Stack</h2>
+            <p class="text-center mb-5 text-muted">I work with modern technologies and tools to deliver cutting-edge solutions</p>
+            
+            <div class="row gy-4">
+              <!-- Frontend Technologies -->
+              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="150">
+                <div class="tech-category-card">
+                  <h4 class="mb-4">Frontend Development</h4>
+                  <div class="tech-item">
+                    <i class="tech-icon bi bi-filetype-html text-danger"></i>
+                    <div>
+                      <div class="fw-medium">HTML5</div>
+                      <small class="text-muted">Semantic markup & accessibility</small>
+                    </div>
+                    <span class="tech-level-badge advanced">Advanced</span>
+                  </div>
+                  <div class="tech-item">
+                    <i class="tech-icon bi bi-filetype-css text-primary"></i>
+                    <div>
+                      <div class="fw-medium">CSS3</div>
+                      <small class="text-muted">Modern layouts & animations</small>
+                    </div>
+                    <span class="tech-level-badge advanced">Advanced</span>
+                  </div>
+                  <div class="tech-item">
+                    <i class="tech-icon bi bi-filetype-js text-warning"></i>
+                    <div>
+                      <div class="fw-medium">JavaScript (ES6+)</div>
+                      <small class="text-muted">Interactive web applications</small>
+                    </div>
+                    <span class="tech-level-badge advanced">Advanced</span>
+                  </div>
+                  <div class="tech-item">
+                    <i class="tech-icon bi bi-react text-info"></i>
+                    <div>
+                      <div class="fw-medium">React.js</div>
+                      <small class="text-muted">Component-based UIs</small>
+                    </div>
+                    <span class="tech-level-badge intermediate">Intermediate</span>
+                  </div>
+                  <div class="tech-item">
+                    <i class="tech-icon bi bi-bootstrap text-purple"></i>
+                    <div>
+                      <div class="fw-medium">Bootstrap 5</div>
+                      <small class="text-muted">Responsive frameworks</small>
+                    </div>
+                    <span class="tech-level-badge advanced">Advanced</span>
+                  </div>
+                </div>
+              </div>
+              
+              <!-- Backend & Database -->
+              <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="tech-category-card">
+                  <h4 class="mb-4">Backend & Database</h4>
+                  <div class="tech-item">
+                    <i class="tech-icon bi bi-node-plus text-success"></i>
+                    <div>
+                      <div class="fw-medium">Node.js</div>
+                      <small class="text-muted">Server-side JavaScript</small>
+                    </div>
+                    <span class="tech-level-badge intermediate">Intermediate</span>
+                  </div>
+                  <div class="tech-item">
+                    <i class="tech-icon bi bi-filetype-php text-indigo"></i>
+                    <div>
+                      <div class="fw-medium">PHP</div>
+                      <small class="text-muted">Web application development</small>
+                    </div>
+                    <span class="tech-level-badge intermediate">Intermediate</span>
+                  </div>
+                  <div class="tech-item">
+                    <i class="tech-icon bi bi-database text-primary"></i>
+                    <div>
+                      <div class="fw-medium">MySQL</div>
+                      <small class="text-muted">Relational database management</small>
+                    </div>
+                    <span class="tech-level-badge intermediate">Intermediate</span>
+                  </div>
+                  <div class="tech-item">
+                    <i class="tech-icon bi bi-database text-success"></i>
+                    <div>
+                      <div class="fw-medium">MongoDB</div>
+                      <small class="text-muted">NoSQL database solutions</small>
+                    </div>
+                    <span class="tech-level-badge basic">Basic</span>
+                  </div>
+                  <div class="tech-item">
+                    <i class="tech-icon bi bi-git text-orange"></i>
+                    <div>
+                      <div class="fw-medium">Git & GitHub</div>
+                      <small class="text-muted">Version control & collaboration</small>
+                    </div>
+                    <span class="tech-level-badge advanced">Advanced</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Development Process -->
+        <div class="row mb-5">
+          <div class="col-lg-12">
+            <div class="content" data-aos="fade-up" data-aos-delay="100">
+              <h2 class="section-title text-center mb-5">Development Process</h2>
+              
+              <div class="process-timeline">
+                <div class="process-step">
+                  <h5>1. Discovery & Requirements Analysis</h5>
+                  <p class="text-muted mb-0">In-depth consultation to understand your business goals, target audience, and project requirements. We define scope, timelines, and success metrics.</p>
+                </div>
+                
+                <div class="process-step">
+                  <h5>2. Planning & Architecture Design</h5>
+                  <p class="text-muted mb-0">Creation of detailed project plans, technical specifications, and architecture diagrams. Selection of appropriate technology stack and tools.</p>
+                </div>
+                
+                <div class="process-step">
+                  <h5>3. Design & Prototyping</h5>
+                  <p class="text-muted mb-0">Development of wireframes, mockups, and interactive prototypes. User experience design and interface planning.</p>
+                </div>
+                
+                <div class="process-step">
+                  <h5>4. Development & Implementation</h5>
+                  <p class="text-muted mb-0">Agile development process with regular milestones. Clean, maintainable code following best practices and coding standards.</p>
+                </div>
+                
+                <div class="process-step">
+                  <h5>5. Testing & Quality Assurance</h5>
+                  <p class="text-muted mb-0">Comprehensive testing including unit tests, integration tests, and user acceptance testing. Performance optimization and security audits.</p>
+                </div>
+                
+                <div class="process-step">
+                  <h5>6. Deployment & Maintenance</h5>
+                  <p class="text-muted mb-0">Seamless deployment to production environment. Ongoing maintenance, updates, and support services.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Pricing Models -->
+        <div class="row mb-5">
+          <div class="col-lg-12">
+            <div class="content" data-aos="fade-up" data-aos-delay="100">
+              <h2 class="section-title text-center mb-5">Engagement Models</h2>
+              <p class="text-center text-muted mb-5">Flexible engagement options tailored to your project requirements</p>
+            </div>
+          </div>
+          
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="150">
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h4 class="mb-3">Project-Based</h4>
+                <div class="pricing-price">Fixed</div>
+                <p class="pricing-period">Scope & Timeline</p>
+              </div>
+              <div class="pricing-features">
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Clear project requirements</li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Fixed timeline and budget</li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Milestone-based payments</li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Final delivery and handover</li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Ideal for well-defined projects</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="pricing-card featured">
+              <div class="pricing-header">
+                <h4 class="mb-3">Hourly Rate</h4>
+                <div class="pricing-price">Flexible</div>
+                <p class="pricing-period">Pay as you go</p>
+              </div>
+              <div class="pricing-features">
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Pay only for time spent</li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Flexible scheduling</li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Adaptable to changing needs</li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Regular progress updates</li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Ideal for ongoing projects</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="250">
+            <div class="pricing-card">
+              <div class="pricing-header">
+                <h4 class="mb-3">Retainer Model</h4>
+                <div class="pricing-price">Monthly</div>
+                <p class="pricing-period">Ongoing partnership</p>
+              </div>
+              <div class="pricing-features">
+                <ul class="list-unstyled">
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Monthly fixed hours</li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Priority support</li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Regular maintenance</li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Proactive improvements</li>
+                  <li><i class="bi bi-check-circle-fill text-success"></i> Long-term collaboration</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- CTA Section -->
+        <div class="cta-section" data-aos="fade-up" data-aos-delay="100">
+          <div class="container text-center">
+            <h2 class="mb-3">Ready to Start Your Project?</h2>
+            <p class="mb-4">Let's collaborate to bring your digital vision to life with professional software solutions.</p>
+            <div class="d-flex flex-column flex-sm-row justify-content-center gap-3">
+              <a href="contact.html" class="btn btn-light btn-lg px-4 py-3">
+                <i class="bi bi-chat-dots me-2"></i> Start a Conversation
+              </a>
+              <a href="index.html#portfolio" class="btn btn-outline-light btn-lg px-4 py-3">
+                <i class="bi bi-images me-2"></i> View My Portfolio
+              </a>
+            </div>
+          </div>
+        </div>
+        
+      </div>
+    </section>
+    <!-- /Services Section -->
+
+  </main>
+
+  <footer id="footer" class="footer position-relative light-background">
+    <div class="container">
+      <div class="copyright text-center">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">Rabiu S.M. Portfolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,1780 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>System Design | Rabiu S.M - Software Systems Engineer</title>
+  <meta name="description" content="Enterprise-grade system design patterns, architectures, and solutions for scalable international applications">
+  <meta name="keywords" content="System Design, Software Architecture, Microservices, Cloud Architecture, Scalability, Performance Engineering">
+  
+  <!-- Open Graph / Social Media Meta Tags -->
+  <meta property="og:title" content="System Design | Rabiu S.M - Software Systems Engineer">
+  <meta property="og:description" content="Enterprise system architecture patterns and scalable solutions">
+  <meta property="og:type" content="website">
+  
+  <!-- Favicons -->
+  <link href="assets/img/favicon_io/favicon.ico" rel="icon">
+  <link href="assets/img/favicon_io/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Mermaid.js for diagrams -->
+  <script src="https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js"></script>
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            'inter': ['Inter', 'sans-serif'],
+            'poppins': ['Poppins', 'sans-serif'],
+          },
+          colors: {
+            primary: {
+              DEFAULT: '#0440708e',
+              dark: '#02274e'
+            },
+            secondary: {
+              light: '#2c3e50',
+              DEFAULT: '#02274e'
+            },
+            // Updated to match project portfolio colors
+            system: {
+              frontend: '#036ee1',      // Primary blue
+              backend: '#10B981',       // Green
+              database: '#8B5CF6',      // Purple
+              cache: '#F59E0B',         // Amber
+              queue: '#EF4444',         // Red
+              search: '#EC4899',        // Pink
+              storage: '#14B8A6',       // Teal
+              messaging: '#6366F1'      // Indigo
+            }
+          },
+          backgroundImage: {
+            'primary-gradient': 'linear-gradient(135deg, #036ee1 0%, #02274e 100%)',
+            'system-gradient': 'linear-gradient(135deg, #036ee1 0%, #02274e 100%)',
+          },
+          animation: {
+            'fade-in': 'fadeIn 0.5s ease-in-out',
+            'slide-up': 'slideUp 0.3s ease-out',
+            'pulse-slow': 'pulse 3s ease-in-out infinite',
+            'float': 'float 6s ease-in-out infinite',
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' },
+            },
+            slideUp: {
+              '0%': { transform: 'translateY(10px)', opacity: '0' },
+              '100%': { transform: 'translateY(0)', opacity: '1' },
+            },
+            float: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-20px)' },
+            }
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+    
+    /* System card styling - Matching project portfolio */
+    .system-card {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      border: 1px solid #e5e7eb;
+      background: white;
+    }
+    
+    .system-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      border-color: #036ee1;
+    }
+    
+    /* Architecture visualization */
+    .arch-node {
+      transition: all 0.3s ease;
+    }
+    
+    .arch-node:hover {
+      transform: scale(1.05);
+      z-index: 10;
+    }
+    
+    /* Diagram styling */
+    .mermaid {
+      background: white !important;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* System category badges - Matching project portfolio tech-badge */
+    .system-badge {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border: 1px solid #bae6fd;
+      color: #0369a1;
+      font-weight: 500;
+    }
+    
+    .system-badge.microservices {
+      background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+      border-color: #bae6fd;
+      color: #036ee1;
+    }
+    
+    .system-badge.event-driven {
+      background: linear-gradient(135deg, #fef2f2 0%, #fee2e2 100%);
+      border-color: #fecaca;
+      color: #dc2626;
+    }
+    
+    .system-badge.serverless {
+      background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+      border-color: #bbf7d0;
+      color: #16a34a;
+    }
+    
+    .system-badge.cloud-native {
+      background: linear-gradient(135deg, #f5f3ff 0%, #ede9fe 100%);
+      border-color: #c4b5fd;
+      color: #7c3aed;
+    }
+    
+    /* System metric cards */
+    .metric-card {
+      background: white;
+      border: 1px solid #e5e7eb;
+      transition: all 0.3s ease;
+    }
+    
+    .metric-card:hover {
+      border-color: #036ee1;
+      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    }
+    
+    /* Custom scrollbar - Matching project portfolio */
+    .system-scrollbar::-webkit-scrollbar {
+      width: 6px;
+    }
+    
+    .system-scrollbar::-webkit-scrollbar-track {
+      background: #f1f1f1;
+      border-radius: 10px;
+    }
+    
+    .system-scrollbar::-webkit-scrollbar-thumb {
+      background: #036ee1;
+      border-radius: 10px;
+    }
+    
+    /* Hero background matching project portfolio */
+    .system-hero-bg {
+      background-image: url('assets/img/hero-bg-img.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .system-hero-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.85) 0%, rgba(2, 57, 101, 0.873) 100%);
+      z-index: 1;
+    }
+
+
+
+    /* Add to your existing CSS */
+.modal-animate {
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Add hover effect for images in cards */
+.system-card img {
+  transition: transform 0.5s ease;
+}
+
+.system-card:hover img {
+  transform: scale(1.05);
+}
+
+
+    /* CTA section background matching project portfolio */
+    .system-cta-bg {
+      background-image: url('assets/img/CTA.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      position: relative;
+    }
+
+    .system-cta-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(135deg, rgba(2, 39, 78, 0.9) 0%, rgba(4, 64, 112, 0.9) 100%);
+      z-index: 1;
+    }
+
+    /* Ensure content stays above background */
+    .section-content {
+      position: relative;
+      z-index: 20;
+    }
+
+    /* Pattern background placeholders - Matching project portfolio */
+    .microservices-bg {
+      background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+    }
+    
+    .event-driven-bg {
+      background: linear-gradient(135deg, #10b981 0%, #047857 100%);
+    }
+    
+    .serverless-bg {
+      background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+    }
+    
+    .cloud-native-bg {
+      background: linear-gradient(135deg, #f97316 0%, #ea580c 100%);
+    }
+
+    /* Button styles matching project portfolio */
+    .view-pattern-btn {
+      background: linear-gradient(135deg, #036ee1 0%, #02274e 100%);
+      color: white;
+    }
+    
+    .view-pattern-btn:hover {
+      opacity: 0.9;
+    }
+
+    /* Filter buttons matching project portfolio */
+    .filter-btn.active {
+      background: linear-gradient(135deg, #036ee1 0%, #02274e 100%);
+      color: white;
+      border-color: #036ee1;
+    }
+
+    /* Component glow effect */
+    .component-glow {
+      box-shadow: 0 0 30px rgba(3, 110, 225, 0.2);
+    }
+
+    /* Fixed: Sidebar solid background - Matching project portfolio */
+    .sidebar-solid-bg {
+      background: #01233a !important;
+    }
+    
+    /* Fixed: Mobile menu button with solid background - Matching project portfolio */
+    .mobile-menu-btn {
+      background: #022b46 !important;
+    }
+    
+    /* Custom scrollbar - Matching project portfolio */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+      background: #222b46;
+      border-radius: 4px;
+    }
+    
+    ::-webkit-scrollbar-thumb:hover {
+      background: #222b46;
+    }
+    
+    /* Sidebar scrollbar - Matching project portfolio */
+    .sidebar-scrollbar::-webkit-scrollbar {
+      width: 5px;
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-track {
+      background: rgba(255, 255, 255, 0.1);
+    }
+    
+    .sidebar-scrollbar::-webkit-scrollbar-thumb {
+      background: rgba(255, 255, 255, 0.3);
+      border-radius: 10px;
+    }
+
+    /* Fixed: Ensure content is visible - Matching project portfolio */
+    .main-content {
+      margin-top: 80px;
+    }
+
+    @media (min-width: 1024px) {
+      .main-content {
+        margin-top: 0;
+      }
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 font-inter">
+    
+  <!-- Mobile Menu Button - Updated to match project portfolio -->
+  <button id="mobileMenuButton" class="mobile-menu-btn md:hidden fixed top-4 left-4 z-50 w-10 h-10 text-white rounded-full shadow-lg flex items-center justify-center">
+    <i class="bi bi-list text-xl"></i>
+  </button>
+
+  <!-- Left Sidebar - Updated to match project portfolio -->
+  <aside id="sidebar" class="sidebar-solid-bg text-white fixed left-0 top-0 h-screen w-64 z-40 transform -translate-x-full md:translate-x-0 transition-transform duration-300 shadow-2xl">
+    <div class="flex flex-col h-full">
+      <!-- Profile Section -->
+      <div class="p-6 border-b border-white/10">
+        <div class="flex flex-col items-center">
+          <div class="w-24 h-24 rounded-full overflow-hidden border-4 border-white/20 mb-4">
+            <img src="assets/img/rsm-pic.jpg" 
+                 alt="Rabiu S.M." 
+                 class="w-full h-full object-cover">
+          </div>
+          <h2 class="text-lg font-bold">Rabiu S.M.</h2>
+          <p class="text-white/70 text-sm mt-1">Software Engineer</p>
+        </div>
+      </div>
+      
+      <!-- Navigation Links -->
+      <nav class="flex-1 overflow-y-auto sidebar-scrollbar p-4 space-y-2">
+        <a href="index.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-house-door text-lg"></i>
+          <span>Home</span>
+        </a>
+        
+        <a href="about.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-person text-lg"></i>
+          <span>About Me</span>
+        </a>
+        
+        <a href="skills.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-tools text-lg"></i>
+          <span>Skills</span>
+        </a>
+        
+        <a href="projects.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-briefcase text-lg"></i>
+          <span>Projects</span>
+        </a>
+        
+        <a href="system-design.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-primary text-white transition-all">
+          <i class="bi bi-diagram-3 text-lg"></i>
+          <span>System Design</span>
+        </a>
+        
+        <a href="experience.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+          <i class="bi bi-clock-history text-lg"></i>
+          <span>Experience</span>
+        </a>
+        
+        <!-- More Dropdown -->
+        <div class="relative">
+          <button id="sidebarMoreButton" class="flex items-center justify-between w-full px-4 py-3 rounded-lg text-white/80 hover:bg-white/10 hover:text-white transition-all">
+            <div class="flex items-center space-x-3">
+              <i class="bi bi-three-dots text-lg"></i>
+              <span>More</span>
+            </div>
+            <i id="sidebarMoreIcon" class="bi bi-chevron-down text-sm transition-transform duration-300"></i>
+          </button>
+          
+          <div id="sidebarMoreContent" class="hidden pl-6 space-y-2 mt-2">
+            <a href="blogs.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-pencil-square text-sm"></i>
+              <span class="text-sm">Blogs</span>
+            </a>
+            <a href="certification.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-award text-sm"></i>
+              <span class="text-sm">Certification</span>
+            </a>
+            <a href="open-source.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-github text-sm"></i>
+              <span class="text-sm">Open Source</span>
+            </a>
+            <a href="testimonials.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-chat-quote text-sm"></i>
+              <span class="text-sm">Testimonials</span>
+            </a>
+            <a href="talks-media.html" class="flex items-center space-x-3 px-4 py-2 rounded-lg text-white/60 hover:bg-white/10 hover:text-white transition-all">
+              <i class="bi bi-mic text-sm"></i>
+              <span class="text-sm">Talks & Media</span>
+            </a>
+          </div>
+        </div>
+        
+        <a href="contact.html" class="flex items-center space-x-3 px-4 py-3 rounded-lg bg-gradient-to-r from-primary to-primary/80 text-white mt-4 hover:opacity-90 transition-all">
+          <i class="bi bi-chat-dots text-lg"></i>
+          <span>Contact Me</span>
+        </a>
+      </nav>
+      
+      <!-- Social Links & Copyright -->
+      <div class="p-4 border-t border-white/10">
+        <div class="flex justify-center space-x-4 mb-4">
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-twitter-x"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-linkedin"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-github"></i>
+          </a>
+          <a href="#" class="text-white/70 hover:text-white transition-colors">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </div>
+        <p class="text-white/50 text-xs text-center">
+          © 2026 Rabiu S.M.
+        </p>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Overlay for mobile - Matching project portfolio -->
+  <div id="overlay" class="fixed inset-0 bg-black/50 z-30 md:hidden hidden"></div>
+
+  <!-- Main Content - Updated to match project portfolio -->
+  <main class="main-content lg:ml-64 min-h-screen">
+    <!-- Hero Section -->
+    <section class="system-hero-bg text-white py-16 md:py-24 relative">
+      <div class="container mx-auto px-4 section-content">
+        <div class="max-w-6xl mx-auto text-center" data-aos="fade-up">
+          <h1 class="text-4xl md:text-5xl lg:text-6xl font-bold mb-6">
+            <span class="block">System Design</span>
+            <span class="text-blue-200">Architecture & Patterns</span>
+          </h1>
+          <p class="text-xl text-blue-100 mb-10 max-w-3xl mx-auto">
+            Enterprise-grade architectural patterns, scalability solutions, and performance optimization strategies for global applications
+          </p>
+          <div class="flex flex-wrap justify-center gap-4 mb-8">
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-lightning-charge mr-2"></i>High Scalability
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-shield-check mr-2"></i>Fault Tolerance
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-globe mr-2"></i>Global Distribution
+            </span>
+            <span class="px-5 py-2 bg-white/20 backdrop-blur-sm rounded-full text-white text-sm font-medium">
+              <i class="bi bi-speedometer2 mr-2"></i>Performance Optimized
+            </span>
+          </div>
+          <a href="#architecturePatterns" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-dark rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all hover:-translate-y-1 animate-bounce">
+            <i class="bi bi-arrow-down-circle mr-2"></i>
+            Explore Architectures
+          </a>
+        </div>
+      </div>
+      
+      <!-- Animated Architecture Visualization -->
+      <div class="absolute inset-0 overflow-hidden opacity-20">
+        <div class="absolute top-1/4 left-1/4 w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg animate-float" style="animation-delay: 0s;"></div>
+        <div class="absolute top-1/3 right-1/4 w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg animate-float" style="animation-delay: 1s;"></div>
+        <div class="absolute bottom-1/4 left-1/3 w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-700 rounded-lg animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-1/3 right-1/3 w-10 h-10 bg-gradient-to-br from-amber-500 to-amber-700 rounded-lg animate-float" style="animation-delay: 3s;"></div>
+        <div class="absolute top-2/3 left-2/3 w-16 h-16 bg-gradient-to-br from-red-500 to-red-700 rounded-lg animate-float" style="animation-delay: 4s;"></div>
+      </div>
+    </section>
+
+    <!-- System Metrics -->
+    <section class="py-12 bg-gray-100">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="metric-card p-6 rounded-xl text-center" data-aos="fade-up">
+            <div class="text-3xl font-bold text-primary mb-2">99.99%</div>
+            <p class="text-gray-600">System Uptime</p>
+          </div>
+          <div class="metric-card p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="100">
+            <div class="text-3xl font-bold text-primary mb-2">&lt; 100ms</div>
+            <p class="text-gray-600">Response Time P95</p>
+          </div>
+          <div class="metric-card p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="200">
+            <div class="text-3xl font-bold text-primary mb-2">10M+</div>
+            <p class="text-gray-600">RPS Handled</p>
+          </div>
+          <div class="metric-card p-6 rounded-xl text-center" data-aos="fade-up" data-aos-delay="300">
+            <div class="text-3xl font-bold text-primary mb-2">50+</div>
+            <p class="text-gray-600">Microservices</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Architecture Patterns -->
+<section id="architecturePatterns" class="py-16 bg-white">
+  <div class="container mx-auto px-4">
+    <div class="text-center mb-12" data-aos="fade-up">
+      <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Architecture Patterns</h2>
+      <p class="text-gray-600 max-w-3xl mx-auto">
+        Proven architectural patterns for building scalable, maintainable, and resilient systems
+      </p>
+    </div>
+
+    <!-- Pattern Filter -->
+    <div class="flex flex-wrap justify-center gap-3 mb-12" data-aos="fade-up">
+      <button class="filter-btn active px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base">
+        All Patterns
+      </button>
+      <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="microservices">
+        <i class="bi bi-box-seam mr-2"></i>Microservices
+      </button>
+      <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="event-driven">
+        <i class="bi bi-arrow-repeat mr-2"></i>Event-Driven
+      </button>
+      <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="serverless">
+        <i class="bi bi-cloud mr-2"></i>Serverless
+      </button>
+      <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="monolith">
+        <i class="bi bi-cube mr-2"></i>Monolith
+      </button>
+      <button class="filter-btn px-5 py-2.5 rounded-full border border-gray-300 bg-white hover:bg-gray-50 transition-all text-sm md:text-base" data-filter="cloud-native">
+        <i class="bi bi-cloud-arrow-up mr-2"></i>Cloud Native
+      </button>
+    </div>
+
+    <!-- Patterns Grid -->
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+      
+      <!-- Microservices Pattern -->
+      <div class="system-card rounded-xl overflow-hidden pattern-item" data-category="microservices cloud-native" data-aos="fade-up">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1172&q=80"
+               alt="Microservices Architecture"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-br from-blue-600/30 to-transparent"></div>
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-blue-700 text-xs font-semibold">
+              Featured
+            </span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <span class="system-badge microservices px-3 py-1 rounded-full text-xs font-semibold mb-2 inline-block">
+                Microservices
+              </span>
+              <h3 class="text-xl font-bold text-gray-900">Microservices Architecture</h3>
+            </div>
+          </div>
+          
+          <p class="text-gray-600 mb-6">
+            Decompose applications into small, independently deployable services that communicate via APIs.
+          </p>
+          
+          <div class="mb-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Key Components:</h4>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-blue-500 mr-2"></div>
+                <span class="text-sm text-gray-600">API Gateway</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
+                <span class="text-sm text-gray-600">Service Discovery</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-purple-500 mr-2"></div>
+                <span class="text-sm text-gray-600">Database per Service</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-amber-500 mr-2"></div>
+                <span class="text-sm text-gray-600">Circuit Breaker</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div class="text-sm text-gray-500">
+              <i class="bi bi-check-circle text-green-500 mr-1"></i>Best for: Large Scale
+            </div>
+            <button class="view-pattern-btn px-4 py-2 rounded-lg text-sm font-medium transition-all"
+                    data-pattern="microservices">
+              Explore Pattern
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Event-Driven Architecture -->
+      <div class="system-card rounded-xl overflow-hidden pattern-item" data-category="event-driven" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80"
+               alt="Event-Driven Architecture"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-br from-green-600/30 to-transparent"></div>
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-green-700 text-xs font-semibold">
+              Event-Driven
+            </span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <span class="system-badge event-driven px-3 py-1 rounded-full text-xs font-semibold mb-2 inline-block">
+                Event-Driven
+              </span>
+              <h3 class="text-xl font-bold text-gray-900">Event-Driven Architecture</h3>
+            </div>
+          </div>
+          
+          <p class="text-gray-600 mb-6">
+            Loosely coupled systems that communicate through asynchronous events for real-time processing.
+          </p>
+          
+          <div class="mb-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Key Components:</h4>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                <span class="text-sm text-gray-600">Message Broker</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
+                <span class="text-sm text-gray-600">Event Producers</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-blue-500 mr-2"></div>
+                <span class="text-sm text-gray-600">Event Consumers</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-purple-500 mr-2"></div>
+                <span class="text-sm text-gray-600">Event Store</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div class="text-sm text-gray-500">
+              <i class="bi bi-check-circle text-green-500 mr-1"></i>Best for: Real-time
+            </div>
+            <button class="view-pattern-btn px-4 py-2 rounded-lg text-sm font-medium transition-all"
+                    data-pattern="event-driven">
+              Explore Pattern
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Serverless Architecture -->
+      <div class="system-card rounded-xl overflow-hidden pattern-item" data-category="serverless cloud-native" data-aos="fade-up">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1627398242454-45a1465c2479?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1174&q=80"
+               alt="Serverless Architecture"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-br from-purple-600/30 to-transparent"></div>
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-purple-700 text-xs font-semibold">
+              Serverless
+            </span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <span class="system-badge serverless px-3 py-1 rounded-full text-xs font-semibold mb-2 inline-block">
+                Serverless
+              </span>
+              <h3 class="text-xl font-bold text-gray-900">Serverless Architecture</h3>
+            </div>
+          </div>
+          
+          <p class="text-gray-600 mb-6">
+            Build and run applications without managing servers, scaling automatically with usage.
+          </p>
+          
+          <div class="mb-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Key Components:</h4>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-teal-500 mr-2"></div>
+                <span class="text-sm text-gray-600">FaaS</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
+                <span class="text-sm text-gray-600">BaaS</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-blue-500 mr-2"></div>
+                <span class="text-sm text-gray-600">API Gateway</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-purple-500 mr-2"></div>
+                <span class="text-sm text-gray-600">Managed DB</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div class="text-sm text-gray-500">
+              <i class="bi bi-check-circle text-green-500 mr-1"></i>Best for: Event-based
+            </div>
+            <button class="view-pattern-btn px-4 py-2 rounded-lg text-sm font-medium transition-all"
+                    data-pattern="serverless">
+              Explore Pattern
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Cloud Native Architecture -->
+      <div class="system-card rounded-xl overflow-hidden pattern-item" data-category="cloud-native microservices" data-aos="fade-up" data-aos-delay="100">
+        <div class="relative h-48 overflow-hidden">
+          <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80"
+               alt="Cloud Native Architecture"
+               class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+          <div class="absolute inset-0 bg-gradient-to-br from-orange-600/30 to-transparent"></div>
+          <div class="absolute top-4 left-4">
+            <span class="px-3 py-1 bg-white/90 backdrop-blur-sm rounded-full text-orange-700 text-xs font-semibold">
+              Cloud Native
+            </span>
+          </div>
+        </div>
+        <div class="p-6">
+          <div class="flex items-start justify-between mb-4">
+            <div>
+              <span class="system-badge cloud-native px-3 py-1 rounded-full text-xs font-semibold mb-2 inline-block">
+                Cloud Native
+              </span>
+              <h3 class="text-xl font-bold text-gray-900">Cloud Native Architecture</h3>
+            </div>
+          </div>
+          
+          <p class="text-gray-600 mb-6">
+            Design applications specifically for cloud environments with containerization and orchestration.
+          </p>
+          
+          <div class="mb-6">
+            <h4 class="font-semibold text-gray-900 mb-3">Key Components:</h4>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-indigo-500 mr-2"></div>
+                <span class="text-sm text-gray-600">Containers</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
+                <span class="text-sm text-gray-600">Orchestration</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-blue-500 mr-2"></div>
+                <span class="text-sm text-gray-600">CI/CD</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-3 h-3 rounded-full bg-purple-500 mr-2"></div>
+                <span class="text-sm text-gray-600">Infra as Code</span>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex items-center justify-between">
+            <div class="text-sm text-gray-500">
+              <i class="bi bi-check-circle text-green-500 mr-1"></i>Best for: Scalability
+            </div>
+            <button class="view-pattern-btn px-4 py-2 rounded-lg text-sm font-medium transition-all"
+                    data-pattern="cloud-native">
+              Explore Pattern
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+    <!-- System Design Principles -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Design Principles</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Core principles guiding scalable and maintainable system architecture
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          
+          <!-- Principle 1 -->
+          <div class="bg-white rounded-xl p-6 shadow-lg system-card" data-aos="fade-up">
+            <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mb-4">
+              <i class="bi bi-arrows-angle-expand text-2xl text-primary"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Scalability</h3>
+            <p class="text-gray-600">
+              Design systems that can handle growth in users, data volume, and transaction frequency without performance degradation.
+            </p>
+            <div class="mt-4">
+              <span class="text-xs font-medium text-primary bg-blue-50 px-2 py-1 rounded">Horizontal Scaling</span>
+              <span class="text-xs font-medium text-primary bg-blue-50 px-2 py-1 rounded ml-2">Load Balancing</span>
+            </div>
+          </div>
+
+          <!-- Principle 2 -->
+          <div class="bg-white rounded-xl p-6 shadow-lg system-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mb-4">
+              <i class="bi bi-shield-check text-2xl text-green-600"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Reliability</h3>
+            <p class="text-gray-600">
+              Build fault-tolerant systems with redundancy, monitoring, and automated recovery mechanisms.
+            </p>
+            <div class="mt-4">
+              <span class="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded">Redundancy</span>
+              <span class="text-xs font-medium text-green-600 bg-green-50 px-2 py-1 rounded ml-2">Monitoring</span>
+            </div>
+          </div>
+
+          <!-- Principle 3 -->
+          <div class="bg-white rounded-xl p-6 shadow-lg system-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mb-4">
+              <i class="bi bi-speedometer2 text-2xl text-purple-600"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Performance</h3>
+            <p class="text-gray-600">
+              Optimize for low latency, high throughput, and efficient resource utilization across all system components.
+            </p>
+            <div class="mt-4">
+              <span class="text-xs font-medium text-purple-600 bg-purple-50 px-2 py-1 rounded">Caching</span>
+              <span class="text-xs font-medium text-purple-600 bg-purple-50 px-2 py-1 rounded ml-2">CDN</span>
+            </div>
+          </div>
+
+          <!-- Principle 4 -->
+          <div class="bg-white rounded-xl p-6 shadow-lg system-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="w-12 h-12 rounded-lg bg-amber-50 flex items-center justify-center mb-4">
+              <i class="bi bi-currency-dollar text-2xl text-amber-600"></i>
+            </div>
+            <h3 class="text-lg font-bold text-gray-900 mb-3">Cost Efficiency</h3>
+            <p class="text-gray-600">
+              Design cost-effective solutions that optimize resource usage while maintaining performance and reliability.
+            </p>
+            <div class="mt-4">
+              <span class="text-xs font-medium text-amber-600 bg-amber-50 px-2 py-1 rounded">Auto-scaling</span>
+              <span class="text-xs font-medium text-amber-600 bg-amber-50 px-2 py-1 rounded ml-2">Resource Opt</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Technology Stack</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Comprehensive stack for building robust, scalable international systems
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" data-aos="fade-up">
+          
+          <!-- Frontend -->
+          <div class="bg-gray-50 rounded-xl p-6 system-card">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mr-3">
+                <i class="bi bi-window text-primary"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">Frontend</h3>
+            </div>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-primary mr-3"></div>
+                <span class="text-gray-700">React/Next.js</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-primary mr-3"></div>
+                <span class="text-gray-700">Vue.js/Nuxt.js</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-primary mr-3"></div>
+                <span class="text-gray-700">TypeScript</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-primary mr-3"></div>
+                <span class="text-gray-700">Tailwind CSS</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Backend -->
+          <div class="bg-gray-50 rounded-xl p-6 system-card">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 rounded-lg bg-green-50 flex items-center justify-center mr-3">
+                <i class="bi bi-server text-green-600"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">Backend</h3>
+            </div>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                <span class="text-gray-700">Node.js/Express</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                <span class="text-gray-700">Python/Django</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                <span class="text-gray-700">Java/Spring Boot</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-green-600 mr-3"></div>
+                <span class="text-gray-700">Go/Gin</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="bg-gray-50 rounded-xl p-6 system-card">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 rounded-lg bg-purple-50 flex items-center justify-center mr-3">
+                <i class="bi bi-database text-purple-600"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">Database</h3>
+            </div>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-purple-600 mr-3"></div>
+                <span class="text-gray-700">PostgreSQL</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-purple-600 mr-3"></div>
+                <span class="text-gray-700">MongoDB</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-purple-600 mr-3"></div>
+                <span class="text-gray-700">Redis</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-purple-600 mr-3"></div>
+                <span class="text-gray-700">Elasticsearch</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cloud & DevOps -->
+          <div class="bg-gray-50 rounded-xl p-6 system-card">
+            <div class="flex items-center mb-4">
+              <div class="w-10 h-10 rounded-lg bg-amber-50 flex items-center justify-center mr-3">
+                <i class="bi bi-cloud-arrow-up text-amber-600"></i>
+              </div>
+              <h3 class="text-lg font-bold text-gray-900">Cloud & DevOps</h3>
+            </div>
+            <div class="space-y-3">
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-amber-600 mr-3"></div>
+                <span class="text-gray-700">AWS/GCP/Azure</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-amber-600 mr-3"></div>
+                <span class="text-gray-700">Docker/Kubernetes</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-amber-600 mr-3"></div>
+                <span class="text-gray-700">Terraform</span>
+              </div>
+              <div class="flex items-center">
+                <div class="w-2 h-2 rounded-full bg-amber-600 mr-3"></div>
+                <span class="text-gray-700">GitLab CI/CD</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Case Studies -->
+    <section class="py-16 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12" data-aos="fade-up">
+          <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">System Design Case Studies</h2>
+          <p class="text-gray-600 max-w-3xl mx-auto">
+            Real-world implementations of scalable system architectures
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+          
+          <!-- Case Study 1 -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg system-card" data-aos="fade-up">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-lg bg-blue-50 flex items-center justify-center mr-4">
+                  <i class="bi bi-cart4 text-primary text-xl"></i>
+                </div>
+                <div>
+                  <span class="system-badge px-3 py-1 rounded-full text-xs font-semibold">E-commerce</span>
+                  <h3 class="text-lg font-bold text-gray-900 mt-2">Global E-commerce Platform</h3>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                Microservices architecture handling 10K+ RPS with real-time inventory and global CDN distribution.
+              </p>
+              <div class="space-y-2">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="bi bi-check-circle text-green-500 mr-2"></i>
+                  <span>99.99% availability</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="bi bi-check-circle text-green-500 mr-2"></i>
+                  <span>&lt; 200ms response time</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="bi bi-check-circle text-green-500 mr-2"></i>
+                  <span>50+ microservices</span>
+                </div>
+              </div>
+              <button class="mt-6 w-full px-4 py-2 border border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-white transition-colors">
+                View Architecture
+              </button>
+            </div>
+          </div>
+
+          <!-- Case Study 2 -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg system-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-lg bg-green-50 flex items-center justify-center mr-4">
+                  <i class="bi bi-heart-pulse text-green-600 text-xl"></i>
+                </div>
+                <div>
+                  <span class="system-badge px-3 py-1 rounded-full text-xs font-semibold">Healthcare</span>
+                  <h3 class="text-lg font-bold text-gray-900 mt-2">Telemedicine Platform</h3>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                HIPAA-compliant event-driven architecture with real-time video streaming and secure data handling.
+              </p>
+              <div class="space-y-2">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="bi bi-check-circle text-green-500 mr-2"></i>
+                  <span>End-to-end encryption</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="bi bi-check-circle text-green-500 mr-2"></i>
+                  <span>Real-time video processing</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="bi bi-check-circle text-green-500 mr-2"></i>
+                  <span>Multi-region deployment</span>
+                </div>
+              </div>
+              <button class="mt-6 w-full px-4 py-2 border border-green-600 text-green-600 rounded-lg font-medium hover:bg-green-600 hover:text-white transition-colors">
+                View Architecture
+              </button>
+            </div>
+          </div>
+
+          <!-- Case Study 3 -->
+          <div class="bg-white rounded-xl overflow-hidden shadow-lg system-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="p-6">
+              <div class="flex items-center mb-4">
+                <div class="w-12 h-12 rounded-lg bg-purple-50 flex items-center justify-center mr-4">
+                  <i class="bi bi-bank text-purple-600 text-xl"></i>
+                </div>
+                <div>
+                  <span class="system-badge px-3 py-1 rounded-full text-xs font-semibold">FinTech</span>
+                  <h3 class="text-lg font-bold text-gray-900 mt-2">Mobile Banking System</h3>
+                </div>
+              </div>
+              <p class="text-gray-600 mb-4">
+                High-security distributed system with blockchain integration and real-time fraud detection.
+              </p>
+              <div class="space-y-2">
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="bi bi-check-circle text-green-500 mr-2"></i>
+                  <span>PCI DSS compliant</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="bi bi-check-circle text-green-500 mr-2"></i>
+                  <span>Zero-downtime deployments</span>
+                </div>
+                <div class="flex items-center text-sm text-gray-500">
+                  <i class="bi bi-check-circle text-green-500 mr-2"></i>
+                  <span>Real-time analytics</span>
+                </div>
+              </div>
+              <button class="mt-6 w-full px-4 py-2 border border-purple-600 text-purple-600 rounded-lg font-medium hover:bg-purple-600 hover:text-white transition-colors">
+                View Architecture
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 md:py-20 system-cta-bg relative">
+      <div class="container mx-auto px-4 section-content text-center">
+        <div data-aos="fade-up">
+          <h3 class="text-2xl md:text-3xl lg:text-4xl font-bold text-white mb-6">Need Expert System Design?</h3>
+          <p class="text-gray-100 mb-10 max-w-2xl mx-auto text-lg md:text-xl">
+            Let's architect scalable, high-performance systems for your business growth.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="contact.html" class="inline-flex items-center justify-center px-8 py-4 bg-white text-primary-dark rounded-lg font-bold shadow-2xl hover:shadow-xl transition-all duration-300 hover:-translate-y-1 gap-3">
+              <i class="bi bi-chat-dots text-xl"></i>
+              Schedule Consultation
+            </a>
+            <a href="projects.html" class="inline-flex items-center justify-center px-8 py-4 bg-transparent border-2 border-white/30 text-white rounded-lg font-bold hover:bg-white/10 transition-all gap-3">
+              <i class="bi bi-briefcase text-xl"></i>
+              View Projects
+            </a>
+          </div>
+          <p class="text-gray-300 mt-6 text-sm">Get a free system architecture review and recommendations</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white border-t border-gray-200 py-6">
+    <div class="container mx-auto px-4">
+      <div class="flex flex-col lg:flex-col justify-center items-center text-center lg:space-y-4">
+        <div class="mb-4 lg:mb-0 lg:w-full">
+          <p class="text-gray-600 text-sm md:text-base">
+            © <span id="currentYear"></span> <strong class="text-gray-900">Rabiu S.M.</strong> All Rights Reserved.
+          </p>
+        </div>
+        <div class="flex space-x-4">
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-linkedin text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <i class="bi bi-github text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-gray-900 transition-colors">
+            <i class="bi bi-twitter-x text-lg"></i>
+          </a>
+          <a href="#" class="text-gray-600 hover:text-primary transition-colors">
+            <i class="bi bi-envelope text-lg"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Pattern Details Modal -->
+  <div id="patternModal" class="fixed inset-0 z-50 hidden overflow-y-auto">
+    <div class="fixed inset-0 bg-black/70 backdrop-blur-sm"></div>
+    <div class="relative min-h-screen flex items-center justify-center p-4">
+      <div class="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-hidden modal-animate">
+        <div class="p-6 border-b border-gray-200 flex justify-between items-center">
+          <h3 id="modalTitle" class="text-2xl font-bold text-gray-900">Architecture Pattern</h3>
+          <button id="closeModal" class="text-gray-500 hover:text-gray-700">
+            <i class="bi bi-x text-2xl"></i>
+          </button>
+        </div>
+        <div class="p-6 overflow-y-auto system-scrollbar" style="max-height: calc(90vh - 120px)">
+          <div id="modalContent">
+            <!-- Dynamic content will be loaded here -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scroll Top -->
+  <button id="scrollTop" class="fixed bottom-8 right-8 bg-primary text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all opacity-0 invisible hover:opacity-100 z-40">
+    <i class="bi bi-arrow-up text-lg"></i>
+  </button>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    // Initialize mermaid
+    mermaid.initialize({
+      startOnLoad: true,
+      theme: 'neutral',
+      securityLevel: 'loose',
+      flowchart: {
+        useMaxWidth: false,
+        htmlLabels: true
+      }
+    });
+
+    
+    
+
+
+
+
+
+    // Pattern data for modal
+const patterns = {
+  'microservices': {
+    title: "Microservices Architecture",
+    overview: "An architectural style that structures an application as a collection of loosely coupled services, which implement business capabilities.",
+    useCases: [
+      "Large-scale enterprise applications",
+      "Applications requiring independent scaling",
+      "Teams practicing continuous delivery",
+      "Polyglot development environments"
+    ],
+    benefits: [
+      "Independent deployment and scaling",
+      "Technology heterogeneity",
+      "Resilience and fault isolation",
+      "Easier to understand and maintain"
+    ],
+    challenges: [
+      "Distributed system complexity",
+      "Data consistency across services",
+      "Network latency",
+      "Operational overhead"
+    ],
+    components: [
+      { name: "API Gateway", desc: "Single entry point for all clients" },
+      { name: "Service Discovery", desc: "Dynamic service registration and discovery" },
+      { name: "Configuration Server", desc: "Centralized configuration management" },
+      { name: "Circuit Breaker", desc: "Prevent cascading failures" }
+    ],
+    diagram: `
+      graph TB
+        subgraph Client Layer
+          C[Web Client]
+          M[Mobile Client]
+        end
+        
+        subgraph API Gateway Layer
+          G[API Gateway]
+        end
+        
+        subgraph Microservices Layer
+          MS1[User Service]
+          MS2[Product Service]
+          MS3[Order Service]
+          MS4[Payment Service]
+        end
+        
+        subgraph Data Layer
+          DB1[(User DB)]
+          DB2[(Product DB)]
+          DB3[(Order DB)]
+          DB4[(Payment DB)]
+        end
+        
+        C --> G
+        M --> G
+        G --> MS1
+        G --> MS2
+        G --> MS3
+        G --> MS4
+        MS1 --> DB1
+        MS2 --> DB2
+        MS3 --> DB3
+        MS4 --> DB4
+        
+        style MS1 fill:#3B82F6,color:#fff
+        style MS2 fill:#10B981,color:#fff
+        style MS3 fill:#8B5CF6,color:#fff
+        style MS4 fill:#F59E0B,color:#fff
+    `,
+    bestPractices: [
+      "Design around business capabilities",
+      "Decentralize everything",
+      "Implement smart endpoints and dumb pipes",
+      "Use asynchronous communication when possible"
+    ]
+  },
+  'event-driven': {
+    title: "Event-Driven Architecture",
+    overview: "A software architecture pattern promoting the production, detection, consumption of, and reaction to events.",
+    useCases: [
+      "Real-time data processing",
+      "Asynchronous workflows",
+      "Microservices communication",
+      "IoT systems"
+    ],
+    benefits: [
+      "Loose coupling between components",
+      "High scalability",
+      "Real-time processing capabilities",
+      "Better fault tolerance"
+    ],
+    challenges: [
+      "Event ordering and consistency",
+      "Complex debugging",
+      "Testing difficulties",
+      "Learning curve"
+    ],
+    components: [
+      { name: "Event Producer", desc: "Services that generate events" },
+      { name: "Event Consumer", desc: "Services that process events" },
+      { name: "Event Broker", desc: "Middleware for event distribution" },
+      { name: "Event Store", desc: "Persistent storage for events" }
+    ],
+    diagram: `
+      graph LR
+        subgraph Event Producers
+          P1[Producer 1]
+          P2[Producer 2]
+          P3[Producer 3]
+        end
+        
+        subgraph Event Broker
+          B[Message Broker]
+        end
+        
+        subgraph Event Consumers
+          C1[Consumer 1]
+          C2[Consumer 2]
+          C3[Consumer 3]
+        end
+        
+        P1 --> B
+        P2 --> B
+        P3 --> B
+        B --> C1
+        B --> C2
+        B --> C3
+        
+        style B fill:#EF4444,color:#fff
+        style P1 fill:#3B82F6,color:#fff
+        style C1 fill:#10B981,color:#fff
+    `,
+    bestPractices: [
+      "Use idempotent event processing",
+      "Implement proper error handling",
+      "Monitor event flow and processing",
+      "Use schema registry for events"
+    ]
+  },
+  'serverless': {
+    title: "Serverless Architecture",
+    overview: "A cloud-native development model that allows developers to build and run applications without managing servers.",
+    useCases: [
+      "Event-driven applications",
+      "API backends",
+      "Data processing pipelines",
+      "Scheduled tasks and cron jobs"
+    ],
+    benefits: [
+      "Zero server management",
+      "Automatic scaling",
+      "Pay-per-use pricing",
+      "Faster time to market"
+    ],
+    challenges: [
+      "Cold start latency",
+      "Vendor lock-in",
+      "Limited execution time",
+      "Debugging complexity"
+    ],
+    components: [
+      { name: "Function as a Service", desc: "Event-driven compute service" },
+      { name: "API Gateway", desc: "Manages and routes API requests" },
+      { name: "Managed Databases", desc: "Serverless databases like DynamoDB" },
+      { name: "Event Sources", desc: "Triggers for functions" }
+    ],
+    diagram: `
+      graph TB
+        subgraph Event Sources
+          ES1[HTTP Request]
+          ES2[S3 Event]
+          ES3[Queue Message]
+          ES4[Database Stream]
+        end
+        
+        subgraph Serverless Functions
+          F1[Function 1]
+          F2[Function 2]
+          F3[Function 3]
+          F4[Function 4]
+        end
+        
+        subgraph Managed Services
+          DB[(Serverless DB)]
+          S3[Object Storage]
+          CDN[CDN]
+        end
+        
+        ES1 --> F1
+        ES2 --> F2
+        ES3 --> F3
+        ES4 --> F4
+        
+        F1 --> DB
+        F2 --> S3
+        F3 --> CDN
+        F4 --> DB
+        
+        style F1 fill:#8B5CF6,color:#fff
+        style F2 fill:#3B82F6,color:#fff
+        style F3 fill:#10B981,color:#fff
+        style F4 fill:#F59E0B,color:#fff
+    `,
+    bestPractices: [
+      "Keep functions small and focused",
+      "Use environment variables for configuration",
+      "Implement proper error handling",
+      "Monitor function performance"
+    ]
+  },
+  'cloud-native': {
+    title: "Cloud Native Architecture",
+    overview: "An approach to building and running applications that fully exploit the advantages of the cloud computing model.",
+    useCases: [
+      "Global scale applications",
+      "High availability systems",
+      "Containerized applications",
+      "CI/CD automated deployments"
+    ],
+    benefits: [
+      "Elastic scalability",
+      "High availability",
+      "Automated operations",
+      "Cost optimization"
+    ],
+    challenges: [
+      "Complexity of distributed systems",
+      "Security considerations",
+      "Monitoring and observability",
+      "Skill requirements"
+    ],
+    components: [
+      { name: "Containers", desc: "Packaged application with dependencies" },
+      { name: "Container Orchestration", desc: "Manages container lifecycle" },
+      { name: "Service Mesh", desc: "Handles service-to-service communication" },
+      { name: "Infrastructure as Code", desc: "Automated infrastructure management" }
+    ],
+    diagram: `
+      graph TB
+        subgraph Cloud Infrastructure
+          LB[Load Balancer]
+        end
+        
+        subgraph Container Orchestration
+          K8S[Kubernetes Cluster]
+        end
+        
+        subgraph Microservices
+          subgraph Namespace 1
+            POD1[Pod 1]
+            POD2[Pod 2]
+          end
+          subgraph Namespace 2
+            POD3[Pod 3]
+            POD4[Pod 4]
+          end
+        end
+        
+        subgraph Storage
+          PV[Persistent Volumes]
+          SC[Storage Classes]
+        end
+        
+        subgraph Networking
+          CNI[Container Network]
+          ING[Ingress Controller]
+        end
+        
+        LB --> K8S
+        K8S --> POD1
+        K8S --> POD2
+        K8S --> POD3
+        K8S --> POD4
+        POD1 --> PV
+        POD2 --> PV
+        K8S --> CNI
+        CNI --> ING
+        
+        style K8S fill:#F97316,color:#fff
+        style POD1 fill:#3B82F6,color:#fff
+        style POD2 fill:#10B981,color:#fff
+        style POD3 fill:#8B5CF6,color:#fff
+        style POD4 fill:#F59E0B,color:#fff
+    `,
+    bestPractices: [
+      "Design for failure",
+      "Implement observability",
+      "Use declarative APIs",
+      "Automate everything"
+    ]
+  }
+};
+
+
+    // Initialize when DOM is loaded
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize AOS
+      AOS.init({
+        duration: 800,
+        once: true,
+        offset: 100
+      });
+
+      // Set current year in footer
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById('mobileMenuButton');
+      const sidebar = document.getElementById('sidebar');
+      const overlay = document.getElementById('overlay');
+
+      mobileMenuButton.addEventListener('click', () => {
+        sidebar.classList.toggle('-translate-x-full');
+        overlay.classList.toggle('hidden');
+      });
+
+      overlay.addEventListener('click', () => {
+        sidebar.classList.add('-translate-x-full');
+        overlay.classList.add('hidden');
+      });
+
+      // Sidebar More Dropdown
+      const sidebarMoreButton = document.getElementById('sidebarMoreButton');
+      const sidebarMoreIcon = document.getElementById('sidebarMoreIcon');
+      const sidebarMoreContent = document.getElementById('sidebarMoreContent');
+
+      sidebarMoreButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sidebarMoreContent.classList.toggle('hidden');
+        sidebarMoreIcon.classList.toggle('rotate-180');
+      });
+
+      // Pattern Filter Functionality
+      const filterButtons = document.querySelectorAll('.filter-btn');
+      const patternItems = document.querySelectorAll('.pattern-item');
+
+      filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+          // Remove active class from all buttons
+          filterButtons.forEach(btn => btn.classList.remove('active'));
+          // Add active class to clicked button
+          button.classList.add('active');
+          
+          const filterValue = button.getAttribute('data-filter');
+          
+          patternItems.forEach(item => {
+            if (filterValue === 'all' || item.getAttribute('data-category').includes(filterValue)) {
+              item.style.display = 'block';
+              setTimeout(() => {
+                item.style.opacity = '1';
+                item.style.transform = 'translateY(0)';
+              }, 10);
+            } else {
+              item.style.opacity = '0';
+              item.style.transform = 'translateY(20px)';
+              setTimeout(() => {
+                item.style.display = 'none';
+              }, 300);
+            }
+          });
+        });
+      });
+
+      // Pattern Modal Functionality
+      const modal = document.getElementById('patternModal');
+      const closeModal = document.getElementById('closeModal');
+      const viewPatternBtns = document.querySelectorAll('.view-pattern-btn');
+
+      viewPatternBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const patternId = btn.getAttribute('data-pattern');
+          const pattern = patterns[patternId];
+          
+          if (pattern) {
+            document.getElementById('modalTitle').textContent = pattern.title;
+            
+            const modalContent = document.getElementById('modalContent');
+            modalContent.innerHTML = `
+              <div class="space-y-6">
+                <!-- Pattern Overview -->
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-2">Overview</h4>
+                  <p class="text-gray-600">${pattern.overview}</p>
+                </div>
+                
+                <!-- Use Cases & Benefits -->
+                <div class="grid md:grid-cols-2 gap-6">
+                  <div class="bg-blue-50 p-4 rounded-lg">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Use Cases</h4>
+                    <ul class="space-y-2">
+                      ${pattern.useCases.map(useCase => `
+                        <li class="flex items-start">
+                          <i class="bi bi-check-circle text-blue-500 mt-1 mr-2"></i>
+                          <span class="text-gray-600">${useCase}</span>
+                        </li>
+                      `).join('')}
+                    </ul>
+                  </div>
+                  <div class="bg-green-50 p-4 rounded-lg">
+                    <h4 class="text-lg font-semibold text-gray-900 mb-2">Benefits</h4>
+                    <ul class="space-y-2">
+                      ${pattern.benefits.map(benefit => `
+                        <li class="flex items-start">
+                          <i class="bi bi-check-circle text-green-500 mt-1 mr-2"></i>
+                          <span class="text-gray-600">${benefit}</span>
+                        </li>
+                      `).join('')}
+                    </ul>
+                  </div>
+                </div>
+                
+                <!-- Challenges -->
+                <div class="bg-red-50 p-4 rounded-lg">
+                  <h4 class="text-lg font-semibold text-gray-900 mb-2">Challenges to Consider</h4>
+                  <ul class="space-y-2">
+                    ${pattern.challenges.map(challenge => `
+                      <li class="flex items-start">
+                        <i class="bi bi-exclamation-triangle text-red-500 mt-1 mr-2"></i>
+                        <span class="text-gray-600">${challenge}</span>
+                      </li>
+                    `).join('')}
+                  </ul>
+                </div>
+                
+                <!-- Components -->
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-2">Key Components</h4>
+                  <div class="grid sm:grid-cols-2 gap-4">
+                    ${pattern.components.map(component => `
+                      <div class="bg-white border border-gray-200 p-4 rounded-lg">
+                        <div class="font-medium text-gray-900 mb-1">${component.name}</div>
+                        <div class="text-sm text-gray-600">${component.desc}</div>
+                      </div>
+                    `).join('')}
+                  </div>
+                </div>
+                
+                <!-- Architecture Diagram -->
+                <div>
+                  <h4 class="text-lg font-semibold text-gray-900 mb-2">Architecture Diagram</h4>
+                  <div class="bg-gray-50 p-4 rounded-lg">
+                    <div class="mermaid">
+                      ${pattern.diagram}
+                    </div>
+                  </div>
+                </div>
+                
+                <!-- Best Practices -->
+                <div class="bg-purple-50 p-4 rounded-lg">
+                  <h4 class="text-lg font-semibold text-gray-900 mb-2">Best Practices</h4>
+                  <ul class="space-y-2">
+                    ${pattern.bestPractices.map(practice => `
+                      <li class="flex items-start">
+                        <i class="bi bi-lightbulb text-purple-500 mt-1 mr-2"></i>
+                        <span class="text-gray-600">${practice}</span>
+                      </li>
+                    `).join('')}
+                  </ul>
+                </div>
+              </div>
+            `;
+            
+            // Re-render mermaid diagram
+            mermaid.contentLoaded();
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+          }
+        });
+      });
+
+      closeModal.addEventListener('click', () => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      });
+
+      // Close modal when clicking outside
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal || e.target.classList.contains('fixed')) {
+          modal.classList.add('hidden');
+          document.body.style.overflow = 'auto';
+        }
+      });
+
+      // Scroll to top functionality
+      const scrollTop = document.getElementById('scrollTop');
+      
+      function toggleScrollTop() {
+        if (window.pageYOffset > 300) {
+          scrollTop.classList.remove('opacity-0', 'invisible');
+          scrollTop.classList.add('opacity-100', 'visible');
+        } else {
+          scrollTop.classList.remove('opacity-100', 'visible');
+          scrollTop.classList.add('opacity-0', 'invisible');
+        }
+      }
+      
+      scrollTop.addEventListener('click', () => {
+        window.scrollTo({
+          top: 0,
+          behavior: 'smooth'
+        });
+      });
+      
+      window.addEventListener('scroll', toggleScrollTop);
+      toggleScrollTop(); // Initial check
+    });
+
+    // Keyboard shortcuts for better UX
+    document.addEventListener('keydown', (e) => {
+      const modal = document.getElementById('patternModal');
+      
+      // Close modal with Escape key
+      if (e.key === 'Escape' && !modal.classList.contains('hidden')) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+      
+      // Close sidebar with Escape key on mobile
+      if (e.key === 'Escape' && window.innerWidth < 768) {
+        const sidebar = document.getElementById('sidebar');
+        const overlay = document.getElementById('overlay');
+        if (!sidebar.classList.contains('-translate-x-full')) {
+          sidebar.classList.add('-translate-x-full');
+          overlay.classList.add('hidden');
+        }
+      }
+    });
+  </script>
+
+</body>
+
+</html>
